@@ -3,6 +3,12 @@
 // topics: syllabus question keys, e.g. "1.6" = Splanchnology 1, question 6.
 // kind: drives the material colour.
 // wall: a body-wall muscle; shown only when it is the answer.
+// backdrop: parts drawn in soft colour behind the answer (e.g. the heart).
+// isolated: no faint surroundings — only the answer and its backdrop.
+
+const HEART = ['FMA7274']
+const CORONARY_ARTERIES = ['FMA4685', 'FMA3862nsn', 'FMA3895', 'FMA71670', 'FMA3802', 'FMA3818', 'FMA3840nsn', 'FMA76994', 'FMA71669']
+const CARDIAC_VEINS = ['FMA4706', 'FMA4707', 'FMA4713', 'FMA71567', 'FMA76751']
 
 export const STRUCTURES = [
   // Splanchnology 1 — head & neck
@@ -16,11 +22,11 @@ export const STRUCTURES = [
   { id: 'geniohyoid', name: 'Geniohyoid', aliases: ['geniohyoid muscle'], kind: 'muscle', fma: ['FMA46326', 'FMA46327'], topics: ['1.4'] },
   { id: 'digastric', name: 'Digastric', aliases: ['digastric muscle'], kind: 'muscle', fma: ['FMA46304', 'FMA46306'], topics: ['1.4'] },
   { id: 'mandible', name: 'Mandible', aliases: ['lower jaw'], kind: 'bone', fma: ['FMA52748'], topics: ['1.4'] },
-  { id: 'central-incisor', name: 'Central incisor', aliases: ['upper central incisor', 'medial incisor'], kind: 'tooth', fma: ['FMA55681'], topics: ['1.6'] },
-  { id: 'lateral-incisor', name: 'Lateral incisor', aliases: ['upper lateral incisor'], kind: 'tooth', fma: ['FMA55680'], topics: ['1.6'] },
-  { id: 'canine', name: 'Canine', aliases: ['canine tooth', 'cuspid'], kind: 'tooth', fma: ['FMA55798'], topics: ['1.6'] },
-  { id: 'first-premolar', name: 'First premolar', aliases: ['premolar', 'upper first premolar'], kind: 'tooth', fma: ['FMA55689'], topics: ['1.6'] },
-  { id: 'first-molar', name: 'First molar', aliases: ['molar', 'upper first molar'], kind: 'tooth', fma: ['FMA55698'], topics: ['1.6'] },
+  { id: 'central-incisor', name: 'Central incisor', aliases: ['upper central incisor', 'medial incisor'], kind: 'tooth', isolated: true, fma: ['FMA55681'], topics: ['1.6'] },
+  { id: 'lateral-incisor', name: 'Lateral incisor', aliases: ['upper lateral incisor'], kind: 'tooth', isolated: true, fma: ['FMA55680'], topics: ['1.6'] },
+  { id: 'canine', name: 'Canine', aliases: ['canine tooth', 'cuspid'], kind: 'tooth', isolated: true, fma: ['FMA55798'], topics: ['1.6'] },
+  { id: 'first-premolar', name: 'First premolar', aliases: ['premolar', 'upper first premolar'], kind: 'tooth', isolated: true, fma: ['FMA55689'], topics: ['1.6'] },
+  { id: 'first-molar', name: 'First molar', aliases: ['molar', 'upper first molar'], kind: 'tooth', isolated: true, fma: ['FMA55698'], topics: ['1.6'] },
 
   // Splanchnology 1 — thorax
   { id: 'trachea', name: 'Trachea', aliases: [], kind: 'cartilage', fma: ['FMA7394'], topics: ['1.11', '1.18'] },
@@ -31,20 +37,28 @@ export const STRUCTURES = [
   { id: 'left-upper-lobe', name: 'Upper lobe of left lung', aliases: ['left upper lobe', 'superior lobe of left lung'], kind: 'lung', fma: ['FMA7370'], topics: ['1.10', '1.18'] },
   { id: 'left-lower-lobe', name: 'Lower lobe of left lung', aliases: ['left lower lobe', 'inferior lobe of left lung'], kind: 'lung', fma: ['FMA7371'], topics: ['1.10', '1.18'] },
   { id: 'heart', name: 'Heart', aliases: ['wall of heart', 'cor'], kind: 'organ', fma: ['FMA7274'], topics: ['1.10', '1.13', '1.15', '1.17'] },
-  { id: 'tricuspid-valve', name: 'Tricuspid valve', aliases: ['right atrioventricular valve'], kind: 'valve', fma: ['FMA7234'], topics: ['1.14'] },
-  { id: 'mitral-valve', name: 'Mitral valve', aliases: ['bicuspid valve', 'left atrioventricular valve'], kind: 'valve', fma: ['FMA7235'], topics: ['1.14'] },
-  { id: 'pulmonary-valve', name: 'Pulmonary valve', aliases: ['pulmonary semilunar valve'], kind: 'valve', fma: ['FMA7246'], topics: ['1.14'] },
-  { id: 'papillary-muscles-rv', name: 'Papillary muscles', aliases: ['papillary muscle', 'papillary muscles of right ventricle'], kind: 'muscle', fma: ['FMA7260', 'FMA7261', 'FMA7262'], topics: ['1.15'] },
-  { id: 'right-coronary-artery', name: 'Right coronary artery', aliases: ['rca'], kind: 'artery', fma: ['FMA3802', 'FMA3818', 'FMA3840nsn', 'FMA76994'], topics: ['1.16'] },
-  { id: 'left-coronary-artery', name: 'Left coronary artery', aliases: ['lca'], kind: 'artery', fma: ['FMA4685', 'FMA3862nsn', 'FMA3895'], topics: ['1.16'] },
-  { id: 'anterior-interventricular', name: 'Anterior interventricular branch', aliases: ['lad', 'left anterior descending artery', 'anterior interventricular artery'], kind: 'artery', fma: ['FMA3862nsn'], topics: ['1.16'] },
-  { id: 'circumflex', name: 'Circumflex branch', aliases: ['circumflex artery', 'lcx'], kind: 'artery', fma: ['FMA3895'], topics: ['1.16'] },
-  { id: 'coronary-sinus', name: 'Coronary sinus', aliases: [], kind: 'vein', fma: ['FMA4706', 'FMA4707', 'FMA4713'], topics: ['1.16'] },
+  { id: 'tricuspid-valve', name: 'Tricuspid valve', aliases: ['right atrioventricular valve'], kind: 'valve', isolated: true, backdrop: HEART, fma: ['FMA7234'], topics: ['1.14'] },
+  { id: 'mitral-valve', name: 'Mitral valve', aliases: ['bicuspid valve', 'left atrioventricular valve'], kind: 'valve', isolated: true, backdrop: HEART, fma: ['FMA7235'], topics: ['1.14'] },
+  { id: 'pulmonary-valve', name: 'Pulmonary valve', aliases: ['pulmonary semilunar valve'], kind: 'valve', isolated: true, backdrop: HEART, fma: ['FMA7246'], topics: ['1.14'] },
+  { id: 'papillary-muscles-rv', name: 'Papillary muscles', aliases: ['papillary muscle', 'papillary muscles of right ventricle'], kind: 'muscle', isolated: true, backdrop: HEART, fma: ['FMA7260', 'FMA7261', 'FMA7262'], topics: ['1.15'] },
+  { id: 'right-coronary-artery', name: 'Right coronary artery', aliases: ['rca'], kind: 'artery', isolated: true, backdrop: HEART, fma: ['FMA3802', 'FMA3818', 'FMA3840nsn', 'FMA76994', 'FMA71669'], topics: ['1.16'] },
+  { id: 'left-coronary-artery', name: 'Left coronary artery', aliases: ['lca'], kind: 'artery', isolated: true, backdrop: HEART, fma: ['FMA4685', 'FMA3862nsn', 'FMA3895', 'FMA71670'], topics: ['1.16'] },
+  { id: 'anterior-interventricular', name: 'Anterior interventricular branch', aliases: ['lad', 'left anterior descending artery', 'anterior interventricular artery', 'anterior descending branch'], kind: 'artery', isolated: true, backdrop: [...HEART, ...CORONARY_ARTERIES], fma: ['FMA3862nsn'], topics: ['1.16'] },
+  { id: 'circumflex', name: 'Circumflex branch', aliases: ['circumflex artery', 'lcx', 'circumflex branch of left coronary artery'], kind: 'artery', isolated: true, backdrop: [...HEART, ...CORONARY_ARTERIES], fma: ['FMA3895'], topics: ['1.16'] },
+  { id: 'right-marginal', name: 'Right marginal branch', aliases: ['marginal branch', 'right marginal artery', 'acute marginal branch', 'marginal branch of right coronary artery'], kind: 'artery', isolated: true, backdrop: [...HEART, ...CORONARY_ARTERIES], fma: ['FMA3818'], topics: ['1.16'] },
+  { id: 'posterior-interventricular', name: 'Posterior interventricular branch', aliases: ['pda', 'posterior descending artery', 'posterior interventricular artery', 'posterior descending branch'], kind: 'artery', isolated: true, backdrop: [...HEART, ...CORONARY_ARTERIES], fma: ['FMA3840nsn'], topics: ['1.16'] },
+  { id: 'posterolateral', name: 'Right posterolateral branch', aliases: ['posterolateral branch', 'right posterolateral artery'], kind: 'artery', isolated: true, backdrop: [...HEART, ...CORONARY_ARTERIES], fma: ['FMA76994'], topics: ['1.16'] },
+  { id: 'septal-branches', name: 'Interventricular septal branches', aliases: ['septal branches', 'septal arteries', 'interventricular septal arteries', 'septal perforators'], kind: 'artery', isolated: true, backdrop: [...HEART, ...CORONARY_ARTERIES], fma: ['FMA71669', 'FMA71670'], topics: ['1.16'] },
+  { id: 'coronary-sinus', name: 'Coronary sinus', aliases: [], kind: 'vein', isolated: true, backdrop: [...HEART, ...CARDIAC_VEINS], fma: ['FMA4706'], topics: ['1.16'] },
+  { id: 'great-cardiac-vein', name: 'Great cardiac vein', aliases: ['vena cordis magna'], kind: 'vein', isolated: true, backdrop: [...HEART, ...CARDIAC_VEINS], fma: ['FMA4707'], topics: ['1.16'] },
+  { id: 'middle-cardiac-vein', name: 'Middle cardiac vein', aliases: ['posterior interventricular vein', 'vena cordis media'], kind: 'vein', isolated: true, backdrop: [...HEART, ...CARDIAC_VEINS], fma: ['FMA4713'], topics: ['1.16'] },
+  { id: 'anterior-cardiac-veins', name: 'Anterior cardiac veins', aliases: ['anterior cardiac vein', 'venae cordis anteriores'], kind: 'vein', isolated: true, backdrop: [...HEART, ...CARDIAC_VEINS], fma: ['FMA71567'], topics: ['1.16'] },
+  { id: 'posterior-vein-lv', name: 'Posterior vein of left ventricle', aliases: ['posterior veins of left ventricle', 'posterior left ventricular vein', 'left posterior ventricular vein'], kind: 'vein', isolated: true, backdrop: [...HEART, ...CARDIAC_VEINS], fma: ['FMA76751'], topics: ['1.16'] },
   { id: 'thymus', name: 'Thymus', aliases: [], kind: 'organ', fma: ['FMA71194', 'FMA71195'], topics: ['1.11'] },
-  { id: 'aortic-arch', name: 'Arch of aorta', aliases: ['aortic arch'], kind: 'artery', fma: ['FMA3736', 'FMA3768', 'FMA3932nsn', 'FMA4058', 'FMA4694'], topics: ['1.11', '1.19'] },
-  { id: 'pulmonary-trunk', name: 'Pulmonary trunk', aliases: ['pulmonary artery', 'pulmonary arteries'], kind: 'artery', fma: ['FMA66326'], topics: ['1.18'] },
-  { id: 'pulmonary-veins', name: 'Pulmonary veins', aliases: ['pulmonary vein'], kind: 'vein', fma: ['FMA66643'], topics: ['1.18'] },
-  { id: 'superior-vena-cava', name: 'Superior vena cava', aliases: ['svc'], kind: 'vein', fma: ['FMA4720', 'FMA4751', 'FMA4761'], topics: ['1.11', '1.13'] },
+  { id: 'aortic-arch', name: 'Arch of aorta', aliases: ['aortic arch'], kind: 'artery', backdrop: HEART, fma: ['FMA3736', 'FMA3768', 'FMA3932nsn', 'FMA4058', 'FMA4694'], topics: ['1.11', '1.19'] },
+  { id: 'pulmonary-trunk', name: 'Pulmonary trunk', aliases: ['pulmonary artery', 'pulmonary arteries'], kind: 'artery', backdrop: HEART, fma: ['FMA66326'], topics: ['1.18'] },
+  { id: 'pulmonary-veins', name: 'Pulmonary veins', aliases: ['pulmonary vein'], kind: 'vein', backdrop: HEART, fma: ['FMA66643'], topics: ['1.18'] },
+  { id: 'superior-vena-cava', name: 'Superior vena cava', aliases: ['svc'], kind: 'vein', backdrop: HEART, fma: ['FMA4720', 'FMA4751', 'FMA4761'], topics: ['1.11', '1.13'] },
   { id: 'esophagus', name: 'Esophagus', aliases: ['oesophagus'], kind: 'organ', fma: ['FMA7131'], topics: ['1.19'] },
   { id: 'descending-aorta', name: 'Descending aorta', aliases: ['thoracic aorta', 'aorta'], kind: 'artery', fma: ['FMA3784'], topics: ['1.19', '2.18'] },
   { id: 'transversus-thoracis', name: 'Transversus thoracis', aliases: ['transverse thoracic muscle'], kind: 'muscle', wall: true, fma: ['FMA9761', 'FMA9762'], topics: ['1.11'] },

@@ -6,14 +6,14 @@ import { stage } from './anatomy.js'
 // How much of the screen the framed region fills.
 const FRAME = 1.25
 
-function Body({ anatomy, ids }) {
+function Body({ anatomy, card }) {
   const pivot = useRef()
   const [framing, setFraming] = useState(null)
 
   useLayoutEffect(() => {
-    setFraming(stage(anatomy, ids))
+    setFraming(stage(anatomy, card))
     pivot.current.rotation.y = 0
-  }, [anatomy, ids])
+  }, [anatomy, card])
 
   useFrame((_, dt) => {
     pivot.current.rotation.y += dt * 0.3
@@ -31,13 +31,13 @@ function Body({ anatomy, ids }) {
   )
 }
 
-export default function Specimen({ anatomy, ids }) {
+export default function Specimen({ anatomy, card }) {
   return (
     <Canvas camera={{ position: [0, 0.1, 2.4], fov: 32 }} dpr={[1, 2]}>
       <hemisphereLight args={['#ffffff', '#b9b2a6', 1.1]} />
       <directionalLight position={[2.5, 3, 2]} intensity={1.6} />
       <directionalLight position={[-3, 1, -2]} intensity={0.5} />
-      <Body anatomy={anatomy} ids={ids} />
+      <Body anatomy={anatomy} card={card} />
       <OrbitControls enablePan={false} enableZoom={false} rotateSpeed={0.6} />
     </Canvas>
   )

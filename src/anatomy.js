@@ -16,8 +16,17 @@ const TINT = {
 }
 
 const solid = {}
+const soft = {}
 for (const [kind, color] of Object.entries(TINT)) {
   solid[kind] = new THREE.MeshStandardMaterial({ color, roughness: 0.78, side: THREE.DoubleSide })
+  soft[kind] = new THREE.MeshStandardMaterial({
+    color,
+    roughness: 0.9,
+    transparent: true,
+    opacity: kind === 'artery' || kind === 'vein' ? 0.16 : 0.3,
+    depthWrite: false,
+    side: THREE.DoubleSide,
+  })
 }
 
 // Surroundings share one soft neutral so the answer is the only colour.
@@ -54,15 +63,19 @@ export async function loadAnatomy(url) {
   return { root, parts }
 }
 
-// Highlights the card's parts, ghosts what lies around them, hides the rest.
+// Draws the card's parts solid and its backdrop (e.g. the heart) in soft colour,
+// ghosts what lies around them unless the card is isolated, hides the rest.
 // Returns the centre and the size of the region to frame.
-export function stage({ parts }, ids) {
-  const target = new Set(ids)
+export function stage({ parts }, card) {
+  const target = new Set(card.fma)
+  const backdrop = new Set(card.backdrop)
+  // Frame the backdrop too, so a single branch is seen on the whole heart.
   const box = new THREE.Box3()
-  for (const id of ids) box.union(parts[id].box)
+  for (const id of [...target, ...backdrop]) box.union(parts[id].box)
   const centre = box.getCenter(new THREE.Vector3())
   const size = box.getSize(new THREE.Vector3()).length()
-  const view = Math.max(size * 1.5, 0.08)
+  // Isolated cards have no surroundings to leave room for, so frame them tighter.
+  const view = card.isolated ? Math.max(size, 0.03) : Math.max(size * 1.5, 0.08)
 
   for (const [id, { mesh, box: b }] of Object.entries(parts)) {
     const kind = mesh.userData.kind
@@ -70,10 +83,14 @@ export function stage({ parts }, ids) {
       mesh.visible = true
       mesh.material = solid[kind]
       mesh.renderOrder = 0
-    } else {
-      mesh.visible = !WALL_PARTS.has(id) && b.distanceToPoint(centre) < view * 0.4
-      mesh.material = ghost
+    } else if (backdrop.has(id)) {
+      mesh.visible = true
+      mesh.material = soft[kind]
       mesh.renderOrder = 1
+    } else {
+      mesh.visible = !card.isolated && !WALL_PARTS.has(id) && b.distanceToPoint(centre) < view * 0.4
+      mesh.material = ghost
+      mesh.renderOrder = 2
     }
   }
   return { centre, view }

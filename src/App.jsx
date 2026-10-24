@@ -166,7 +166,7 @@ export default function App() {
           <>
             <section className="stage" onClick={() => inputRef.current?.focus()}>
               {anatomy ? (
-                <Specimen anatomy={anatomy} ids={card.fma} />
+                <Specimen anatomy={anatomy} card={card} />
               ) : (
                 <p className="loading">{failed ? 'The models could not be loaded.' : 'Loading specimens…'}</p>
               )}
