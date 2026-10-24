@@ -1,9 +1,13 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import Specimen, { preload } from './Specimen.jsx'
+import Specimen from './Specimen.jsx'
+import TopicPicker from './TopicPicker.jsx'
+import { loadAnatomy } from './anatomy.js'
 import { STRUCTURES } from './data/structures.js'
 import { SECTIONS } from './data/syllabus.js'
 
 const ROMAN = { 1: 'I', 2: 'II' }
+const MODEL_URL = `${import.meta.env.BASE_URL}${import.meta.env.VITE_MODEL_FILE ?? 'anatomy.glb'}`
+const STORE_KEY = 'splanchnology.topics'
 
 const normalize = (s) =>
   s
@@ -21,8 +25,7 @@ function shuffle(list) {
 }
 
 // "Superior vena cava", 4 → "Supe··· ···· ····"
-const mask = (name, shown) =>
-  [...name].map((c, i) => (i < shown || c === ' ' ? c : '·')).join('')
+const mask = (name, shown) => [...name].map((c, i) => (i < shown || c === ' ' ? c : '·')).join('')
 
 function topicLabel(key) {
   const [section, q] = key.split('.')
@@ -30,24 +33,44 @@ function topicLabel(key) {
   return { short: `${ROMAN[section]}·${q}`, title }
 }
 
-// Only questions that have at least one model are offered as filters.
-const COVERED = new Set(STRUCTURES.flatMap((s) => s.topics))
+// Questions with at least one model, and how many structures each has.
+const COUNTS = {}
+for (const s of STRUCTURES) for (const t of s.topics) COUNTS[t] = (COUNTS[t] ?? 0) + 1
+const COVERED = new Set(Object.keys(COUNTS))
+
+function loadTopics() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORE_KEY))
+    const valid = saved?.filter((k) => COVERED.has(k))
+    if (valid?.length) return new Set(valid)
+  } catch {}
+  return new Set(COVERED)
+}
+
+function saveTopics(set) {
+  try {
+    localStorage.setItem(STORE_KEY, JSON.stringify([...set]))
+  } catch {}
+}
 
 export default function App() {
-  const [filter, setFilter] = useState('all')
+  const [anatomy, setAnatomy] = useState(null)
+  const [failed, setFailed] = useState(false)
+  const [topics, setTopics] = useState(loadTopics)
+  const [picking, setPicking] = useState(false)
   const [deck, setDeck] = useState([])
   const [index, setIndex] = useState(0)
   const [input, setInput] = useState('')
   const [hint, setHint] = useState(0)
   const [status, setStatus] = useState('typing') // typing | correct | revealed
-  const [score, setScore] = useState({ clean: 0, done: 0 })
+  const [clean, setClean] = useState(0)
   const inputRef = useRef(null)
 
-  const pool = useMemo(() => {
-    if (filter === 'all') return STRUCTURES
-    if (filter.length === 1) return STRUCTURES.filter((s) => s.topics.some((t) => t.startsWith(`${filter}.`)))
-    return STRUCTURES.filter((s) => s.topics.includes(filter))
-  }, [filter])
+  useEffect(() => {
+    loadAnatomy(MODEL_URL).then(setAnatomy, () => setFailed(true))
+  }, [])
+
+  const pool = useMemo(() => STRUCTURES.filter((s) => s.topics.some((t) => topics.has(t))), [topics])
 
   const restart = () => {
     setDeck(shuffle(pool))
@@ -55,7 +78,7 @@ export default function App() {
     setInput('')
     setHint(0)
     setStatus('typing')
-    setScore({ clean: 0, done: 0 })
+    setClean(0)
   }
 
   useEffect(restart, [pool])
@@ -64,9 +87,8 @@ export default function App() {
   const finished = deck.length > 0 && index >= deck.length
 
   useEffect(() => {
-    if (deck[index + 1]) preload(deck[index + 1].id)
-    inputRef.current?.focus()
-  }, [deck, index])
+    if (!picking) inputRef.current?.focus()
+  }, [index, picking, anatomy])
 
   const answers = useMemo(() => (card ? [card.name, ...card.aliases].map(normalize) : []), [card])
 
@@ -83,7 +105,7 @@ export default function App() {
     setInput(value)
     if (answers.includes(normalize(value))) {
       setStatus('correct')
-      setScore((s) => ({ clean: s.clean + (hint === 0 ? 1 : 0), done: s.done + 1 }))
+      if (hint === 0) setClean((n) => n + 1)
       setTimeout(next, 750)
     }
   }
@@ -95,44 +117,43 @@ export default function App() {
     }
     if (e.key === 'Enter') {
       e.preventDefault()
-      if (status === 'typing') {
-        setStatus('revealed')
-        setScore((s) => ({ ...s, done: s.done + 1 }))
-      } else if (status === 'revealed') next()
+      if (status === 'typing') setStatus('revealed')
+      else if (status === 'revealed') next()
     }
   }
 
-  const topic = card && topicLabel(card.topics[0])
+  const changeTopics = (set) => {
+    setTopics(set)
+    saveTopics(set)
+  }
+
+  // Name the question the student picked, not just the card's first one.
+  const topic = card && topicLabel(card.topics.find((t) => topics.has(t)) ?? card.topics[0])
 
   return (
-    <main className="page" onClick={() => inputRef.current?.focus()}>
+    <main className="page">
       <header className="top">
         <span className="mark">Splanchnology</span>
-        <select className="filter" value={filter} onChange={(e) => setFilter(e.target.value)}>
-          <option value="all">All structures</option>
-          {SECTIONS.map((section) => (
-            <optgroup key={section.id} label={section.title}>
-              <option value={section.id}>All of {section.title}</option>
-              {section.questions.map((q, i) => {
-                const key = `${section.id}.${i + 1}`
-                return COVERED.has(key) ? (
-                  <option key={key} value={key}>
-                    {i + 1}. {q}
-                  </option>
-                ) : null
-              })}
-            </optgroup>
-          ))}
-        </select>
+        <button className="filter" onClick={() => setPicking(true)}>
+          {topics.size === COVERED.size ? 'All topics' : `${topics.size} topics`}
+        </button>
         <span className="count">
           {Math.min(index + 1, deck.length)} / {deck.length}
         </span>
       </header>
 
-      {finished ? (
+      {picking ? (
+        <TopicPicker
+          covered={COVERED}
+          counts={COUNTS}
+          selected={topics}
+          onChange={changeTopics}
+          onClose={() => topics.size && setPicking(false)}
+        />
+      ) : finished ? (
         <section className="done">
           <p className="done-figure">
-            {score.clean}
+            {clean}
             <span> / {deck.length}</span>
           </p>
           <p className="muted">named without hints</p>
@@ -143,8 +164,12 @@ export default function App() {
       ) : (
         card && (
           <>
-            <section className="stage">
-              <Specimen id={card.id} kind={card.kind} />
+            <section className="stage" onClick={() => inputRef.current?.focus()}>
+              {anatomy ? (
+                <Specimen anatomy={anatomy} ids={card.fma} />
+              ) : (
+                <p className="loading">{failed ? 'The models could not be loaded.' : 'Loading specimens…'}</p>
+              )}
             </section>
 
             <section className="prompt">
@@ -168,14 +193,18 @@ export default function App() {
               </div>
 
               <p className="hint" aria-live="polite">
-                {status === 'typing' && hint > 0 ? mask(card.name, hint) : '\u00a0'}
+                {status === 'typing' && hint > 0 ? mask(card.name, hint) : ' '}
               </p>
 
               <p className="keys">
                 {status === 'revealed' ? (
-                  <><kbd>enter</kbd> next</>
+                  <>
+                    <kbd>enter</kbd> next
+                  </>
                 ) : (
-                  <><kbd>tab</kbd> hint <span className="dot">·</span> <kbd>enter</kbd> reveal</>
+                  <>
+                    <kbd>tab</kbd> hint <span className="dot">·</span> <kbd>enter</kbd> reveal
+                  </>
                 )}
               </p>
             </section>

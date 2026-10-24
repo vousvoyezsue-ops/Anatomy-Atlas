@@ -1,23 +1,23 @@
-// Converts BodyParts3D STL files into small, centred GLB models.
+// Converts BodyParts3D STL files into one GLB scene, public/anatomy.glb.
 //   node scripts/build-models.mjs <path-to-BodyParts3D stl folder>
-// For each structure: merge its parts, convert mm → unit size, re-orient to
-// Y-up, weld + simplify, quantize, write public/models/<id>.glb.
+// Every part keeps its place in the body (metres, Y-up) so a structure can be
+// shown among its neighbours. Each node is named by its FMA id.
 // Normals are computed at load time: stored normals would unweld the mesh.
 
 import fs from 'node:fs'
 import path from 'node:path'
 import { Document, Logger, NodeIO } from '@gltf-transform/core'
 import { KHRMeshQuantization } from '@gltf-transform/extensions'
-import { weld, simplify, quantize } from '@gltf-transform/functions'
+import { weld, simplifyPrimitive, quantize } from '@gltf-transform/functions'
 import { MeshoptSimplifier } from 'meshoptimizer'
-import { STRUCTURES } from '../src/data/structures.js'
+import { STRUCTURES, PART_KIND } from '../src/data/structures.js'
 
 const STL_DIR = process.argv[2]
-const OUT_DIR = new URL('../public/models/', import.meta.url).pathname
-const TARGET_TRIANGLES = 9000
+const OUT = new URL('../public/anatomy.glb', import.meta.url).pathname
+const QUIZ_TRIANGLES = 4000
+const CONTEXT_TRIANGLES = 1200
 
 if (!STL_DIR) throw new Error('usage: build-models.mjs <stl dir>')
-fs.mkdirSync(OUT_DIR, { recursive: true })
 
 // Binary STL → flat Float32Array of triangle vertices.
 function readStl(file) {
@@ -32,59 +32,41 @@ function readStl(file) {
 }
 
 // BodyParts3D: x = left, y = posterior, z = superior (mm).
-// three.js:    x = right of screen, y = up, z = toward viewer.
+// three.js:    x = right of screen, y = up, z = toward viewer (m).
 // Viewed from the front the patient's left is on screen right, so (x, z, -y).
-function toYUp(v) {
+function toYUpMetres(v) {
   const out = new Float32Array(v.length)
   for (let i = 0; i < v.length; i += 3) {
-    out[i] = v[i]
-    out[i + 1] = v[i + 2]
-    out[i + 2] = -v[i + 1]
+    out[i] = v[i] / 1000
+    out[i + 1] = v[i + 2] / 1000
+    out[i + 2] = -v[i + 1] / 1000
   }
   return out
 }
 
-function centreAndScale(v) {
-  const min = [Infinity, Infinity, Infinity]
-  const max = [-Infinity, -Infinity, -Infinity]
-  for (let i = 0; i < v.length; i++) {
-    const a = i % 3
-    if (v[i] < min[a]) min[a] = v[i]
-    if (v[i] > max[a]) max[a] = v[i]
-  }
-  const c = min.map((m, a) => (m + max[a]) / 2)
-  const size = Math.max(...max.map((m, a) => m - min[a]))
-  for (let i = 0; i < v.length; i++) v[i] = (v[i] - c[i % 3]) / size
-}
-
 await MeshoptSimplifier.ready
-const io = new NodeIO().registerExtensions([KHRMeshQuantization])
+const quizParts = new Set(STRUCTURES.flatMap((s) => s.fma))
+const doc = new Document().setLogger(new Logger(Logger.Verbosity.WARN))
+const buffer = doc.createBuffer()
+const scene = doc.createScene()
 
-for (const s of STRUCTURES) {
-  const parts = s.fma.map((id) => readStl(path.join(STL_DIR, `${id}.stl`)))
-  const merged = new Float32Array(parts.reduce((n, p) => n + p.length, 0))
-  let offset = 0
-  for (const p of parts) merged.set(p, offset), (offset += p.length)
-
-  const positions = toYUp(merged)
-  centreAndScale(positions)
-  const triangles = positions.length / 9
-
-  const doc = new Document().setLogger(new Logger(Logger.Verbosity.WARN))
-  const buffer = doc.createBuffer()
+for (const id of Object.keys(PART_KIND)) {
+  const positions = toYUpMetres(readStl(path.join(STL_DIR, `${id}.stl`)))
   const attr = doc.createAccessor().setType('VEC3').setArray(positions).setBuffer(buffer)
   const prim = doc.createPrimitive().setAttribute('POSITION', attr)
-  const mesh = doc.createMesh(s.id).addPrimitive(prim)
-  doc.createScene().addChild(doc.createNode(s.id).setMesh(mesh))
-
-  await doc.transform(
-    weld(),
-    simplify({ simplifier: MeshoptSimplifier, ratio: Math.min(1, TARGET_TRIANGLES / triangles), error: 0.002 }),
-    quantize({ quantizePosition: 14 }),
-  )
-
-  const file = path.join(OUT_DIR, `${s.id}.glb`)
-  await io.write(file, doc)
-  const kb = Math.round(fs.statSync(file).size / 1024)
-  console.log(`${s.id.padEnd(30)} ${String(triangles).padStart(7)} tris → ${kb} KB`)
+  scene.addChild(doc.createNode(id).setMesh(doc.createMesh(id).addPrimitive(prim)))
 }
+
+await doc.transform(weld())
+
+// Quiz parts keep more detail than the faint surroundings.
+for (const mesh of doc.getRoot().listMeshes()) {
+  const prim = mesh.listPrimitives()[0]
+  const cap = quizParts.has(mesh.getName()) ? QUIZ_TRIANGLES : CONTEXT_TRIANGLES
+  const ratio = Math.min(1, cap / (prim.getIndices().getCount() / 3))
+  simplifyPrimitive(prim, { simplifier: MeshoptSimplifier, ratio, error: 0.01 })
+}
+
+await doc.transform(quantize({ quantizePosition: 14 }))
+await new NodeIO().registerExtensions([KHRMeshQuantization]).write(OUT, doc)
+console.log(`${Object.keys(PART_KIND).length} parts → ${(fs.statSync(OUT).size / 1e6).toFixed(1)} MB`)

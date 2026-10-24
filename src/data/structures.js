@@ -2,6 +2,7 @@
 // fma: BodyParts3D part ids merged into one model.
 // topics: syllabus question keys, e.g. "1.6" = Splanchnology 1, question 6.
 // kind: drives the material colour.
+// wall: a body-wall muscle; shown only when it is the answer.
 
 export const STRUCTURES = [
   // Splanchnology 1 — head & neck
@@ -46,14 +47,14 @@ export const STRUCTURES = [
   { id: 'superior-vena-cava', name: 'Superior vena cava', aliases: ['svc'], kind: 'vein', fma: ['FMA4720', 'FMA4751', 'FMA4761'], topics: ['1.11', '1.13'] },
   { id: 'esophagus', name: 'Esophagus', aliases: ['oesophagus'], kind: 'organ', fma: ['FMA7131'], topics: ['1.19'] },
   { id: 'descending-aorta', name: 'Descending aorta', aliases: ['thoracic aorta', 'aorta'], kind: 'artery', fma: ['FMA3784'], topics: ['1.19', '2.18'] },
-  { id: 'transversus-thoracis', name: 'Transversus thoracis', aliases: ['transverse thoracic muscle'], kind: 'muscle', fma: ['FMA9761', 'FMA9762'], topics: ['1.11'] },
+  { id: 'transversus-thoracis', name: 'Transversus thoracis', aliases: ['transverse thoracic muscle'], kind: 'muscle', wall: true, fma: ['FMA9761', 'FMA9762'], topics: ['1.11'] },
 
   // Splanchnology 2 — abdomen
-  { id: 'rectus-abdominis', name: 'Rectus abdominis', aliases: [], kind: 'muscle', fma: ['FMA13377', 'FMA13378'], topics: ['2.2'] },
-  { id: 'external-oblique', name: 'External oblique', aliases: ['external abdominal oblique', 'obliquus externus abdominis'], kind: 'muscle', fma: ['FMA13336'], topics: ['2.2'] },
-  { id: 'internal-oblique', name: 'Internal oblique', aliases: ['internal abdominal oblique', 'obliquus internus abdominis'], kind: 'muscle', fma: ['FMA13892'], topics: ['2.2'] },
-  { id: 'transversus-abdominis', name: 'Transversus abdominis', aliases: ['transverse abdominal muscle'], kind: 'muscle', fma: ['FMA22344'], topics: ['2.2'] },
-  { id: 'pyramidalis', name: 'Pyramidalis', aliases: [], kind: 'muscle', fma: ['FMA22346', 'FMA22347'], topics: ['2.2'] },
+  { id: 'rectus-abdominis', name: 'Rectus abdominis', aliases: [], kind: 'muscle', wall: true, fma: ['FMA13377', 'FMA13378'], topics: ['2.2'] },
+  { id: 'external-oblique', name: 'External oblique', aliases: ['external abdominal oblique', 'obliquus externus abdominis'], kind: 'muscle', wall: true, fma: ['FMA13336'], topics: ['2.2'] },
+  { id: 'internal-oblique', name: 'Internal oblique', aliases: ['internal abdominal oblique', 'obliquus internus abdominis'], kind: 'muscle', wall: true, fma: ['FMA13892'], topics: ['2.2'] },
+  { id: 'transversus-abdominis', name: 'Transversus abdominis', aliases: ['transverse abdominal muscle'], kind: 'muscle', wall: true, fma: ['FMA22344'], topics: ['2.2'] },
+  { id: 'pyramidalis', name: 'Pyramidalis', aliases: [], kind: 'muscle', wall: true, fma: ['FMA22346', 'FMA22347'], topics: ['2.2'] },
   { id: 'stomach', name: 'Stomach', aliases: ['gaster'], kind: 'organ', fma: ['FMA7148'], topics: ['2.1', '2.4'] },
   { id: 'diaphragm', name: 'Diaphragm', aliases: [], kind: 'muscle', fma: ['FMA13295'], topics: ['2.5'] },
   { id: 'liver', name: 'Liver', aliases: ['hepar'], kind: 'organ', fma: ['FMA7197'], topics: ['2.1', '2.7', '2.8'] },
@@ -99,3 +100,34 @@ export const STRUCTURES = [
   { id: 'corpus-cavernosum', name: 'Corpus cavernosum', aliases: ['corpora cavernosa'], kind: 'organ', fma: ['FMA19618'], topics: ['2.27'] },
   { id: 'corpus-spongiosum', name: 'Corpus spongiosum', aliases: [], kind: 'organ', fma: ['FMA19617nsn', 'FMA18247'], topics: ['2.27'] },
 ]
+
+// Shown only as faint surroundings, never asked.
+export const CONTEXT = [
+  { kind: 'organ', fma: ['FMA7205', 'FMA15630', 'FMA7212', 'FMA18257'] }, // left kidney, adrenal, testis, epididymis
+  { kind: 'artery', fma: ['FMA18806', 'FMA18807', 'FMA3941', 'FMA3953'] }, // external iliac arteries, right carotid & subclavian
+  { kind: 'vein', fma: ['FMA18885', 'FMA18886', 'FMA21387', 'FMA21388'] }, // external & common iliac veins
+  { kind: 'bone', fma: ['FMA16587', 'FMA7487', 'FMA53648', 'FMA53656', 'FMA54738'] }, // left hip bone, sternum, left nasal/palatine/concha
+  {
+    kind: 'bone',
+    fma: [
+      'FMA12521', 'FMA12522', 'FMA12523', 'FMA12524', 'FMA12525', // C3–C7
+      'FMA9165', 'FMA9187', 'FMA9209', 'FMA9248', 'FMA9922', 'FMA9945', 'FMA9968', 'FMA9991', 'FMA10014', 'FMA10037', 'FMA10059', 'FMA10081', // T1–T12
+      'FMA13072', 'FMA13073', 'FMA13074', 'FMA13075', 'FMA13076', // L1–L5
+    ],
+  },
+  {
+    kind: 'tooth',
+    fma: [
+      'FMA55682', 'FMA55683', 'FMA55799', 'FMA55690', 'FMA55691', 'FMA55699', 'FMA55700', 'FMA55688', 'FMA55697',
+      'FMA57140', 'FMA57141', 'FMA57142', 'FMA57143', 'FMA55686', 'FMA55687', 'FMA55692', 'FMA55693', 'FMA55694',
+      'FMA55695', 'FMA55703', 'FMA55704', 'FMA55705', 'FMA55706',
+    ],
+  },
+]
+
+// Every part in the scene, with the tissue kind used to tint it.
+export const PART_KIND = {}
+for (const s of [...CONTEXT, ...STRUCTURES]) for (const id of s.fma) PART_KIND[id] ??= s.kind
+
+// Body-wall muscles wrap everything else, so they are never drawn as surroundings.
+export const WALL_PARTS = new Set(STRUCTURES.filter((s) => s.wall).flatMap((s) => s.fma))

@@ -1,0 +1,80 @@
+import * as THREE from 'three'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import { PART_KIND, WALL_PARTS } from './data/structures.js'
+
+// Quiet, desaturated palette — one colour per tissue type.
+const TINT = {
+  bone: '#e6dfd1',
+  tooth: '#eee8dc',
+  cartilage: '#cdd6d3',
+  muscle: '#c49a91',
+  organ: '#d2ab9b',
+  lung: '#dcbcb6',
+  artery: '#bd7a72',
+  vein: '#8392a6',
+  valve: '#c79b7e',
+}
+
+const solid = {}
+for (const [kind, color] of Object.entries(TINT)) {
+  solid[kind] = new THREE.MeshStandardMaterial({ color, roughness: 0.78, side: THREE.DoubleSide })
+}
+
+// Surroundings share one soft neutral so the answer is the only colour.
+const ghost = new THREE.MeshStandardMaterial({
+  color: '#b9b3aa',
+  roughness: 1,
+  transparent: true,
+  opacity: 0.11,
+  depthWrite: false,
+  side: THREE.DoubleSide,
+})
+
+// The whole body as one scene. Parts sit where they are in the body (metres).
+// A ".txt" URL holds the same GLB as base64, for hosts that won't serve .glb.
+export async function loadAnatomy(url) {
+  const res = await fetch(url)
+  let data = await res.arrayBuffer()
+  if (url.endsWith('.txt')) {
+    const bin = atob(new TextDecoder().decode(data))
+    data = Uint8Array.from(bin, (c) => c.charCodeAt(0)).buffer
+  }
+  const gltf = await new GLTFLoader().parseAsync(data, '')
+  const root = gltf.scene
+  root.updateMatrixWorld(true)
+
+  const parts = {}
+  root.traverse((o) => {
+    if (!o.isMesh) return
+    o.geometry.computeVertexNormals()
+    const id = o.parent?.name && PART_KIND[o.parent.name] ? o.parent.name : o.name
+    o.userData.kind = PART_KIND[id]
+    parts[id] = { mesh: o, box: new THREE.Box3().setFromObject(o) }
+  })
+  return { root, parts }
+}
+
+// Highlights the card's parts, ghosts what lies around them, hides the rest.
+// Returns the centre and the size of the region to frame.
+export function stage({ parts }, ids) {
+  const target = new Set(ids)
+  const box = new THREE.Box3()
+  for (const id of ids) box.union(parts[id].box)
+  const centre = box.getCenter(new THREE.Vector3())
+  const size = box.getSize(new THREE.Vector3()).length()
+  const view = Math.max(size * 1.5, 0.08)
+
+  for (const [id, { mesh, box: b }] of Object.entries(parts)) {
+    const kind = mesh.userData.kind
+    if (target.has(id)) {
+      mesh.visible = true
+      mesh.material = solid[kind]
+      mesh.renderOrder = 0
+    } else {
+      mesh.visible = !WALL_PARTS.has(id) && b.distanceToPoint(centre) < view * 0.4
+      mesh.material = ghost
+      mesh.renderOrder = 1
+    }
+  }
+  return { centre, view }
+}
