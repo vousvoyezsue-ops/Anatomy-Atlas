@@ -2,7 +2,8 @@
 // groups: highlighted parts, each with its own colour and legend label.
 // soft:   parts drawn faintly behind them for orientation.
 // turn:   starting rotation in degrees (0 = front, 90 = patient's left side).
-// spin:   slow auto-rotation; off for figures meant to be read from the front.
+// spin:   slow auto-rotation; off for figures meant to be read from one side.
+// zoom:   below 1 to leave more room around the framed parts.
 // detail: triangle budget for very large parts (default set in the build).
 
 // Lit colours, a step lighter than the notes' ink colours so they read in 3D.
@@ -62,6 +63,30 @@ const TRANSVERSUS_THORACIS = ['FMA9761', 'FMA9762']
 const EXTERNAL_INTERCOSTAL = ['FMA9756']
 const INTERNAL_INTERCOSTAL = ['FMA9757']
 const INNERMOST_INTERCOSTAL = ['FMA9758']
+
+// Topic 19 — posterior mediastinum
+const DESCENDING_THORACIC_AORTA = ['FMA87217']
+const ABDOMINAL_AORTA = ['FMA3789']
+const AZYGOS = ['FMA4838']
+const HEMIAZYGOS = ['FMA4944']
+const ACCESSORY_HEMIAZYGOS = ['FMA5011']
+const SUPERIOR_INTERCOSTAL_VEINS = ['FMA4877', 'FMA4797']
+const SUBCOSTAL_VEINS = ['FMA4844', 'FMA4951']
+const ASCENDING_LUMBAR_VEINS = ['FMA4843', 'FMA4950']
+const IVC = ['FMA10951']
+const POSTERIOR_INTERCOSTAL_ARTERIES = ['FMA63822']
+const BRONCHIAL_ARTERY = ['FMA68109']
+const OESOPHAGEAL_BRANCHES = ['FMA4149', 'FMA71537']
+const MAIN_BRONCHI = ['FMA7396', 'FMA68418']
+const LEFT_MAIN_BRONCHUS = ['FMA7396']
+const CRICOID = ['FMA9615']
+const THYROID_CARTILAGE = ['FMA55099']
+const LEFT_ATRIUM = ['FMA9531']
+const DIAPHRAGM = ['FMA13295']
+const INFERIOR_CONSTRICTOR = ['FMA46635', 'FMA46636']
+const MIDDLE_CONSTRICTOR = ['FMA46633', 'FMA46634']
+const HYOID = ['FMA52749']
+const LUMBAR_VERTEBRAE = ['FMA13072', 'FMA13073', 'FMA13074', 'FMA13075', 'FMA13076']
 
 export const VIEWS = {
   'thoracic-cage': {
@@ -168,6 +193,96 @@ export const VIEWS = {
     ],
     soft: [...HEART, ...STERNUM],
     frame: [...THYMUS, ...VEINS, ...AORTA.slice(0, 2)],
+  },
+
+  'posterior-mediastinum': {
+    title: 'Behind the heart',
+    turn: 150,
+    spin: true,
+    groups: [
+      { label: 'D · Descending thoracic aorta', ko: '하행흉대동맥', colour: 'rose', parts: DESCENDING_THORACIC_AORTA },
+      { label: 'A · Azygos & hemiazygos vv.', ko: '홀정맥 · 반홀정맥', colour: 'sky', parts: [...AZYGOS, ...HEMIAZYGOS, ...ACCESSORY_HEMIAZYGOS] },
+      { label: 'E · Oesophagus', ko: '식도', colour: 'sage', parts: ESOPHAGUS },
+    ],
+    soft: [...HEART, ...TRACHEA, ...MAIN_BRONCHI, ...THORACIC_VERTEBRAE, ...AORTA.slice(0, 2)],
+    frame: [...DESCENDING_THORACIC_AORTA, ...AZYGOS, ...HEMIAZYGOS, ...ESOPHAGUS, ...HEART],
+  },
+
+  'thoracic-aorta': {
+    title: 'Thoracic aorta and its branches',
+    turn: 140,
+    zoom: 0.8,
+    spin: true,
+    groups: [
+      { label: 'Ascending aorta & arch', ko: '상행대동맥 · 대동맥궁', colour: 'paleRose', parts: AORTA.slice(0, 2) },
+      { label: 'Descending thoracic aorta', ko: '하행흉대동맥', colour: 'rose', parts: DESCENDING_THORACIC_AORTA },
+      { label: 'Posterior intercostal aa.', ko: '뒤늑간동맥', colour: 'gold', parts: POSTERIOR_INTERCOSTAL_ARTERIES },
+      { label: 'Bronchial a.', ko: '기관지동맥', colour: 'sky', parts: BRONCHIAL_ARTERY },
+      { label: 'Oesophageal branches', ko: '식도가지', colour: 'sage', parts: OESOPHAGEAL_BRANCHES },
+      { label: 'Abdominal aorta (below T12)', ko: '복대동맥', colour: 'slate', parts: ABDOMINAL_AORTA },
+    ],
+    soft: [...DIAPHRAGM, ...THORACIC_VERTEBRAE, ...ESOPHAGUS],
+    frame: [...AORTA.slice(0, 2), ...DESCENDING_THORACIC_AORTA, ...ABDOMINAL_AORTA.slice(0, 1)],
+  },
+
+  'azygos-system': {
+    title: 'The azygos system',
+    turn: 0,
+    spin: true,
+    groups: [
+      { label: 'Azygos v.', ko: '홀정맥', colour: 'sky', parts: AZYGOS },
+      { label: 'Hemiazygos v.', ko: '반홀정맥', colour: 'slate', parts: HEMIAZYGOS },
+      { label: 'Accessory hemiazygos v.', ko: '덧반홀정맥', colour: 'paleSky', parts: ACCESSORY_HEMIAZYGOS },
+      { label: 'Superior intercostal vv.', ko: '위늑간정맥', colour: 'gold', parts: SUPERIOR_INTERCOSTAL_VEINS },
+      { label: 'Subcostal vv.', ko: '갈비밑정맥', colour: 'sage', parts: SUBCOSTAL_VEINS },
+      { label: 'Ascending lumbar vv.', ko: '오름허리정맥', colour: 'rose', parts: ASCENDING_LUMBAR_VEINS },
+      { label: 'Superior vena cava', ko: '상대정맥', colour: 'paleRose', parts: SVC },
+    ],
+    soft: [...THORACIC_VERTEBRAE, ...LUMBAR_VERTEBRAE, ...IVC, ...HEART],
+    frame: [...AZYGOS, ...HEMIAZYGOS, ...ACCESSORY_HEMIAZYGOS, ...ASCENDING_LUMBAR_VEINS, ...SVC],
+  },
+
+  'oesophageal-constrictions': {
+    title: 'Four constrictions of the oesophagus',
+    turn: 50,
+    zoom: 0.8,
+    spin: true,
+    groups: [
+      { label: 'Oesophagus', ko: '식도', colour: 'sage', parts: ESOPHAGUS },
+      { label: '① Cricoid cartilage — 15 cm', ko: '윤상연골', colour: 'sky', parts: CRICOID },
+      { label: '② Aortic arch — 22.5 cm', ko: '대동맥궁', colour: 'rose', parts: AORTA.slice(1, 2) },
+      { label: '③ Left main bronchus — 27.5 cm', ko: '왼주기관지', colour: 'gold', parts: LEFT_MAIN_BRONCHUS },
+      { label: '④ Diaphragm — 40 cm', ko: '횡격막', colour: 'paleRose', parts: DIAPHRAGM },
+    ],
+    soft: [...TRACHEA, ...THYROID_CARTILAGE, ...AORTA.slice(0, 1), ...DESCENDING_THORACIC_AORTA, ...HEART],
+    frame: [...ESOPHAGUS, ...CRICOID],
+  },
+
+  'oesophagus-left-atrium': {
+    title: 'Oesophagus behind the left atrium',
+    turn: 90,
+    spin: false,
+    groups: [
+      { label: 'Oesophagus', ko: '식도', colour: 'sage', parts: ESOPHAGUS },
+      { label: 'Left atrium', ko: '좌심방', colour: 'rose', parts: LEFT_ATRIUM },
+      { label: 'Descending thoracic aorta', ko: '하행흉대동맥', colour: 'paleRose', parts: DESCENDING_THORACIC_AORTA },
+    ],
+    soft: [...HEART, ...THORACIC_VERTEBRAE, ...TRACHEA, ...MAIN_BRONCHI],
+    frame: [...LEFT_ATRIUM, ...ESOPHAGUS.slice(0, 1), ...HEART],
+  },
+
+  'pharyngo-oesophageal': {
+    title: 'Pharyngo-oesophageal junction, from behind',
+    turn: 180,
+    zoom: 0.75,
+    spin: false,
+    groups: [
+      { label: 'Inferior pharyngeal constrictor', ko: '하인두수축근', colour: 'rose', parts: INFERIOR_CONSTRICTOR },
+      { label: 'Middle pharyngeal constrictor', ko: '중인두수축근', colour: 'paleRose', parts: MIDDLE_CONSTRICTOR },
+      { label: 'Oesophagus', ko: '식도', colour: 'sage', parts: ESOPHAGUS },
+    ],
+    soft: [...THYROID_CARTILAGE, ...CRICOID, ...TRACHEA, ...HYOID],
+    frame: [...INFERIOR_CONSTRICTOR, ...MIDDLE_CONSTRICTOR, ...CRICOID],
   },
 }
 

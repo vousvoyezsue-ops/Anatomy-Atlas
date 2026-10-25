@@ -68,7 +68,7 @@ function Model({ anatomy, view, focus, idle, resetKey }) {
   })
 
   return (
-    <group rotation-x={deg(view.tilt)} scale={FRAME / framing.size}>
+    <group rotation-x={deg(view.tilt)} scale={(FRAME * (view.zoom ?? 1)) / framing.size}>
       <group ref={spin}>
         <group position={framing.centre.clone().multiplyScalar(-1)}>
           <primitive object={anatomy.root} />
