@@ -93,6 +93,14 @@ const LEFT_VAGUS = ['FMA18157']
 const RIGHT_VAGUS = ['FMA18151']
 const LEFT_PHRENIC = ['FMA65387', 'FMA6201'] // trunk and its pericardial branch
 const RECURRENT_LARYNGEAL = ['FMA80694', 'FMA80695']
+const INTERNAL_THORACIC_ARTERIES = ['FMA3969', 'FMA4068']
+const INTERNAL_THORACIC_VEIN = ['FMA4758'] // right only in the model
+const MUSCULOPHRENIC_ARTERIES = ['FMA10692', 'FMA4077']
+const SUPERIOR_EPIGASTRIC_ARTERIES = ['FMA3988', 'FMA4083']
+const SUBCLAVIAN_ARTERIES = ['FMA3953', 'FMA4694']
+const SUPERIOR_INTERCOSTAL_ARTERIES = ['FMA5042', 'FMA4088']
+const ANTERIOR_INTERCOSTAL_VEINS = ['FMA70839']
+const INTERCOSTAL_NERVES = ['FMA85332', 'FMA85334', 'FMA8922', 'FMA6115', 'FMA6752'] // left 1st & 2nd with their branches
 const LEFT_HILUM = ['FMA50873', 'FMA49913', 'FMA49916', 'FMA7396'] // left pulmonary a., pulmonary vv., main bronchus
 const LUMBAR_VERTEBRAE = ['FMA13072', 'FMA13073', 'FMA13074', 'FMA13075', 'FMA13076']
 
@@ -322,6 +330,52 @@ export const VIEWS = {
     soft: [...AORTA, ...BRACHIOCEPHALIC_TRUNK, ...RIGHT_BRANCHES, ...LEFT_CCA, ...LEFT_SUBCLAVIAN, ...TRACHEA, ...HEART],
     frame: [...LEFT_VAGUS, ...RIGHT_VAGUS, ...ESOPHAGUS],
     zoom: 1.15,
+  },
+
+  'internal-thoracic': {
+    title: 'Internal thoracic artery and its branches',
+    turn: 0,
+    spin: true,
+    groups: [
+      { label: 'Internal thoracic a.', ko: '속가슴동맥', colour: 'deepRose', parts: INTERNAL_THORACIC_ARTERIES },
+      { label: 'Musculophrenic a.', ko: '근육가로막동맥', colour: 'gold', parts: MUSCULOPHRENIC_ARTERIES },
+      { label: 'Superior epigastric a.', ko: '위배벽동맥', colour: 'sage', parts: SUPERIOR_EPIGASTRIC_ARTERIES },
+      { label: 'Subclavian a. (origin)', ko: '빗장밑동맥', colour: 'paleRose', parts: SUBCLAVIAN_ARTERIES },
+      { label: 'Internal thoracic v.', ko: '속가슴정맥', colour: 'sky', parts: INTERNAL_THORACIC_VEIN },
+    ],
+    soft: [...STERNUM, ...COSTAL_CARTILAGES, ...HEART, ...DIAPHRAGM],
+    frame: [...INTERNAL_THORACIC_ARTERIES, ...MUSCULOPHRENIC_ARTERIES, ...SUBCLAVIAN_ARTERIES],
+  },
+
+  'intercostal-vessels': {
+    title: 'Vessels and nerves of the intercostal spaces',
+    turn: 40,
+    spin: true,
+    groups: [
+      { label: 'Posterior intercostal aa. ← aorta', ko: '뒤늑간동맥', colour: 'deepRose', parts: POSTERIOR_INTERCOSTAL_ARTERIES },
+      { label: 'Anterior intercostal vv. → internal thoracic v.', ko: '앞늑간정맥', colour: 'deepSky', parts: ANTERIOR_INTERCOSTAL_VEINS },
+      { label: 'Internal thoracic a.', ko: '속가슴동맥', colour: 'paleRose', parts: INTERNAL_THORACIC_ARTERIES },
+      { label: 'Superior intercostal a. (spaces 1–2)', ko: '위늑간동맥', colour: 'gold', parts: SUPERIOR_INTERCOSTAL_ARTERIES },
+      { label: 'Intercostal nn. 1–2 (left)', ko: '늑간신경', colour: 'deepGold', parts: INTERCOSTAL_NERVES },
+    ],
+    soft: [...RIBS, ...COSTAL_CARTILAGES, ...STERNUM, ...THORACIC_VERTEBRAE, ...DESCENDING_THORACIC_AORTA],
+    frame: [...RIBS, ...STERNUM],
+    zoom: 1.1,
+  },
+
+  'mediastinal-nerves': {
+    title: 'Phrenic and vagus nerves in the mediastinum',
+    turn: 0,
+    spin: true,
+    groups: [
+      { label: 'Left phrenic n. — lateral', ko: '왼횡격신경 — 바깥쪽', colour: 'deepSage', parts: LEFT_PHRENIC },
+      { label: 'Left vagus n.', ko: '왼미주신경', colour: 'deepGold', parts: LEFT_VAGUS },
+      { label: 'Right vagus n.', ko: '오른미주신경', colour: 'deepRose', parts: RIGHT_VAGUS },
+      { label: 'Recurrent laryngeal nn.', ko: '되돌이후두신경', colour: 'deepSky', parts: RECURRENT_LARYNGEAL },
+    ],
+    soft: [...AORTA.slice(0, 2), ...BRACHIOCEPHALIC_TRUNK, ...RIGHT_BRANCHES, ...LEFT_CCA, ...LEFT_SUBCLAVIAN, ...VEINS, ...HEART, ...TRACHEA],
+    frame: [...LEFT_PHRENIC, ...LEFT_VAGUS, ...RIGHT_VAGUS, ...HEART],
+    zoom: 1.1,
   },
 }
 
