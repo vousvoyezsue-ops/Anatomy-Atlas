@@ -88,7 +88,8 @@ export function stage({ parts }, card) {
       mesh.material = soft[kind]
       mesh.renderOrder = 1
     } else {
-      mesh.visible = !card.isolated && !WALL_PARTS.has(id) && b.distanceToPoint(centre) < view * 0.4
+      // Parts used only by note figures (no kind) stay out of the quiz.
+      mesh.visible = !!kind && !card.isolated && !WALL_PARTS.has(id) && b.distanceToPoint(centre) < view * 0.4
       mesh.material = ghost
       mesh.renderOrder = 2
     }

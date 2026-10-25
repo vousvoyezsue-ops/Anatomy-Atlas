@@ -9,6 +9,16 @@ npm run dev
 
 `tab` reveals a letter · `enter` reveals the answer / moves on. Pick the syllabus questions to drill from the topic menu at the top.
 
+## Note figures
+
+`embed.html?v=<id>` shows one figure for the anatomy notes, to put in a note as an iframe:
+
+```html
+<iframe src="https://vousvoyezsue-ops.github.io/Anatomy-Atlas/embed.html?v=aortic-arch" loading="lazy"></iframe>
+```
+
+Each figure (which parts are highlighted, their colours and legend labels) is defined in `src/data/views.js`.
+
 ## Models
 
 `public/anatomy.glb` holds every part in its place in the body, so each answer is shown among faint neighbouring organs. It is generated from [BodyParts3D](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/) v3.0 STL files

@@ -1,7 +1,7 @@
 // Converts BodyParts3D STL files into one GLB scene, public/anatomy.glb.
 //   node scripts/build-models.mjs <path-to-BodyParts3D stl folder>
 // Every part keeps its place in the body (metres, Y-up) so a structure can be
-// shown among its neighbours. Each node is named by its FMA id.
+// shown among its neighbours. Includes the quiz parts and the note figures' parts. Each node is named by its FMA id.
 // Normals are computed at load time: stored normals would unweld the mesh.
 
 import fs from 'node:fs'
@@ -11,11 +11,13 @@ import { KHRMeshQuantization } from '@gltf-transform/extensions'
 import { weld, simplifyPrimitive, quantize } from '@gltf-transform/functions'
 import { MeshoptSimplifier } from 'meshoptimizer'
 import { STRUCTURES, PART_KIND } from '../src/data/structures.js'
+import { VIEW_PARTS } from '../src/data/views.js'
 
 const STL_DIR = process.argv[2]
 const OUT = new URL('../public/anatomy.glb', import.meta.url).pathname
 const QUIZ_TRIANGLES = 4000
 const CONTEXT_TRIANGLES = 1200
+const FIGURE_TRIANGLES = 3000
 
 if (!STL_DIR) throw new Error('usage: build-models.mjs <stl dir>')
 
@@ -50,7 +52,9 @@ const doc = new Document().setLogger(new Logger(Logger.Verbosity.WARN))
 const buffer = doc.createBuffer()
 const scene = doc.createScene()
 
-for (const id of Object.keys(PART_KIND)) {
+const ALL_PARTS = [...new Set([...Object.keys(PART_KIND), ...Object.keys(VIEW_PARTS)])]
+
+for (const id of ALL_PARTS) {
   const positions = toYUpMetres(readStl(path.join(STL_DIR, `${id}.stl`)))
   const attr = doc.createAccessor().setType('VEC3').setArray(positions).setBuffer(buffer)
   const prim = doc.createPrimitive().setAttribute('POSITION', attr)
@@ -59,14 +63,21 @@ for (const id of Object.keys(PART_KIND)) {
 
 await doc.transform(weld())
 
-// Quiz parts keep more detail than the faint surroundings.
+// Quiz and note-figure parts keep more detail than the faint surroundings.
+function budget(id) {
+  if (VIEW_PARTS[id]) return VIEW_PARTS[id]
+  if (quizParts.has(id)) return QUIZ_TRIANGLES
+  if (id in VIEW_PARTS) return FIGURE_TRIANGLES
+  return CONTEXT_TRIANGLES
+}
+
 for (const mesh of doc.getRoot().listMeshes()) {
   const prim = mesh.listPrimitives()[0]
-  const cap = quizParts.has(mesh.getName()) ? QUIZ_TRIANGLES : CONTEXT_TRIANGLES
+  const cap = budget(mesh.getName())
   const ratio = Math.min(1, cap / (prim.getIndices().getCount() / 3))
   simplifyPrimitive(prim, { simplifier: MeshoptSimplifier, ratio, error: 0.01 })
 }
 
 await doc.transform(quantize({ quantizePosition: 14 }))
 await new NodeIO().registerExtensions([KHRMeshQuantization]).write(OUT, doc)
-console.log(`${Object.keys(PART_KIND).length} parts → ${(fs.statSync(OUT).size / 1e6).toFixed(1)} MB`)
+console.log(`${ALL_PARTS.length} parts → ${(fs.statSync(OUT).size / 1e6).toFixed(1)} MB`)

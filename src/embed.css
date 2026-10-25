@@ -1,0 +1,153 @@
+/* Figure page, shown inside a note's iframe. Transparent, so the note's own
+   card background shows through; colours follow the notes' palette. */
+:root {
+  --ink: #1b1a16;
+  --ink-2: #525049;
+  --ink-3: #8b8981;
+  --line: #e6e3dc;
+  --panel: rgba(253, 252, 251, 0.78);
+  --font: 'Pretendard Variable', Pretendard, 'Noto Sans KR', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  background: transparent;
+}
+
+body {
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 12.5px;
+  letter-spacing: -0.1px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.figure {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.canvas {
+  cursor: grab;
+  touch-action: none;
+}
+
+.canvas:active {
+  cursor: grabbing;
+}
+
+.status {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  color: var(--ink-3);
+}
+
+.legend {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  display: grid;
+  gap: 1px;
+  max-width: calc(100% - 64px);
+  padding: 6px;
+  list-style: none;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.legend button {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  width: 100%;
+  padding: 3px 7px;
+  background: none;
+  border: 0;
+  border-radius: 6px;
+  color: var(--ink-2);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.15s, opacity 0.15s;
+}
+
+.legend button:hover,
+.legend button.on {
+  color: var(--ink);
+  background: rgba(27, 26, 22, 0.045);
+}
+
+.legend button.off {
+  opacity: 0.5;
+}
+
+.legend button:focus-visible,
+.reset:focus-visible {
+  outline: 2px solid var(--ink-3);
+  outline-offset: 1px;
+}
+
+.dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transform: translateY(-1px);
+}
+
+.ko {
+  color: var(--ink-3);
+  font-size: 11.5px;
+}
+
+.reset {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--ink-2);
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.reset:hover {
+  color: var(--ink);
+}
+
+.credit {
+  position: absolute;
+  right: 12px;
+  bottom: 8px;
+  color: var(--ink-3);
+  font-size: 9.5px;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+@media (max-width: 480px) {
+  .legend {
+    font-size: 11.5px;
+  }
+  .legend .ko {
+    display: none;
+  }
+  .credit {
+    display: none;
+  }
+}
