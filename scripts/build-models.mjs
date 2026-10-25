@@ -1,8 +1,12 @@
 // Builds public/anatomy.glb from BodyParts3D.
-//   node scripts/build-models.mjs <4.0 assets folder> <3.0 stl folder>
+//   node scripts/build-models.mjs <4.0 assets folder> <4.3 repo> <3.0 stl folder>
 // 4.0: the IS-A mesh set as packed by github.com/tamir-ichikawa/human-atlas
 //      (dist/assets: atlas.json + <system>.bin.gz, metres, Y-up).
-// 3.0: STL files from github.com/Kevin-Mattheus-Moerman/BodyParts3D (mm, Z-up).
+// 4.3: github.com/olivercase/body_parts_3d_api, OBJ files kept in Git LFS
+//      (mm, Z-up). Only the meshes needed are downloaded, into .cache/, and
+//      checked against their LFS hash. Used for what 4.0 lacks, e.g. nerves.
+// 3.0: STL files from github.com/Kevin-Mattheus-Moerman/BodyParts3D (mm, Z-up),
+//      for what neither has (the lung lobes, some abdominal wall muscles).
 // Each node is one part, named by its FMA id, at its place in the body (metres,
 // Y-up), so a structure can be shown among its neighbours. Includes the quiz
 // parts and the note figures' parts. See src/data/sources.js for how ids map.
@@ -11,6 +15,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import zlib from 'node:zlib'
+import crypto from 'node:crypto'
 import { Document, Logger, NodeIO } from '@gltf-transform/core'
 import { KHRMeshQuantization } from '@gltf-transform/extensions'
 import { weld, simplifyPrimitive, quantize } from '@gltf-transform/functions'
@@ -19,13 +24,14 @@ import { STRUCTURES, PART_KIND } from '../src/data/structures.js'
 import { VIEW_PARTS } from '../src/data/views.js'
 import { ALIASES } from '../src/data/sources.js'
 
-const [V4_DIR, V3_DIR] = process.argv.slice(2)
+const [V4_DIR, V43_DIR, V3_DIR] = process.argv.slice(2)
+const CACHE = new URL('../.cache/bp3d-4.3/', import.meta.url).pathname
 const OUT = new URL('../public/anatomy.glb', import.meta.url).pathname
 const QUIZ_TRIANGLES = 4000
 const CONTEXT_TRIANGLES = 1200
 const FIGURE_TRIANGLES = 3000
 
-if (!V4_DIR || !V3_DIR) throw new Error('usage: build-models.mjs <4.0 assets dir> <3.0 stl dir>')
+if (!V3_DIR) throw new Error('usage: build-models.mjs <4.0 assets dir> <4.3 repo> <3.0 stl dir>')
 
 // --- BodyParts3D 4.0 -------------------------------------------------------
 
@@ -49,6 +55,45 @@ function readV4(p) {
   return { positions, indices }
 }
 
+// --- BodyParts3D 4.3 -------------------------------------------------------
+
+// Mesh files are named FJ…_BP…_FMA<concept>_<name>.obj.
+const v43Files = {}
+for (const file of fs.readdirSync(path.join(V43_DIR, 'meshes'))) {
+  const concept = file.split('_')[2]
+  ;(v43Files[concept] ??= []).push(file)
+}
+
+async function fetchV43(file) {
+  const cached = path.join(CACHE, file)
+  if (!fs.existsSync(cached)) {
+    const pointer = fs.readFileSync(path.join(V43_DIR, 'meshes', file), 'utf8')
+    const oid = pointer.match(/sha256:([0-9a-f]{64})/)[1]
+    const url = `https://media.githubusercontent.com/media/olivercase/body_parts_3d_api/main/meshes/${encodeURIComponent(file)}`
+    const body = Buffer.from(await (await fetch(url)).arrayBuffer())
+    if (crypto.createHash('sha256').update(body).digest('hex') !== oid) throw new Error(`hash mismatch: ${file}`)
+    fs.mkdirSync(CACHE, { recursive: true })
+    fs.writeFileSync(cached, body)
+  }
+  return fs.readFileSync(cached, 'utf8')
+}
+
+// OBJ in mm, Z-up → metres, Y-up, same axes as 3.0 below: (x, z, -y).
+function parseObj(text) {
+  const v = []
+  const f = []
+  for (const line of text.split('\n')) {
+    if (line.startsWith('v ')) {
+      const [x, y, z] = line.slice(2).trim().split(/\s+/).map(Number)
+      v.push(x / 1000, z / 1000, -y / 1000)
+    } else if (line.startsWith('f ')) {
+      const idx = line.slice(2).trim().split(/\s+/).map((t) => parseInt(t, 10) - 1)
+      for (let k = 1; k < idx.length - 1; k++) f.push(idx[0], idx[k], idx[k + 1])
+    }
+  }
+  return { positions: Float32Array.from(v), indices: Uint32Array.from(f) }
+}
+
 // --- BodyParts3D 3.0 -------------------------------------------------------
 
 // Binary STL → unindexed triangles. BodyParts3D 3.0: x = left, y = posterior,
@@ -69,9 +114,15 @@ function readV3(id) {
 
 // --- One mesh per part -----------------------------------------------------
 
-function v4Meshes(id) {
+// Each concept from 4.0 if it has it, else from 4.3.
+async function newerMeshes(id) {
   const concepts = ALIASES[id] ?? [id.replace('nsn', '')]
-  return concepts.flatMap((c) => byConcept[c] ?? []).map(readV4)
+  const meshes = []
+  for (const c of concepts) {
+    if (byConcept[c]) meshes.push(...byConcept[c].map(readV4))
+    else for (const file of v43Files[c] ?? []) meshes.push(parseObj(await fetchV43(file)))
+  }
+  return meshes
 }
 
 function merge(meshes) {
@@ -97,7 +148,7 @@ const ALL_PARTS = [...new Set([...Object.keys(PART_KIND), ...Object.keys(VIEW_PA
 const fromV3 = []
 
 for (const id of ALL_PARTS) {
-  let meshes = v4Meshes(id)
+  let meshes = await newerMeshes(id)
   if (!meshes.length) {
     meshes = [readV3(id)]
     fromV3.push(id)

@@ -17,6 +17,11 @@ export const COLOURS = {
   slate: '#6f7f99',
   ivory: '#e8e1d3',
   cartilage: '#cdd6d3',
+  // Deeper tones for thin structures such as nerves, which vanish in pale ones.
+  deepGold: '#b08528',
+  deepSage: '#62803c',
+  deepSky: '#4f6f99',
+  deepRose: '#a8545e',
 }
 
 const RIBS = [
@@ -24,11 +29,9 @@ const RIBS = [
   'FMA7987', 'FMA8012', 'FMA8039', 'FMA8148', 'FMA8093', 'FMA8202', 'FMA8256', 'FMA8310', 'FMA8391', 'FMA8472', 'FMA8532', 'FMA8534',
 ]
 const FIRST_RIBS = ['FMA7857', 'FMA7987']
-// BP24/BP28 hold the lower (false-rib) cartilages; 1–7 are separate parts.
 const COSTAL_CARTILAGES = [
-  'BP24', 'BP28',
-  'FMA7875', 'FMA7886', 'FMA7913', 'FMA7976', 'FMA8070', 'FMA8194', 'FMA8248',
-  'FMA8005', 'FMA8031', 'FMA8058', 'FMA8167', 'FMA8112', 'FMA8221', 'FMA8275',
+  'FMA7875', 'FMA7886', 'FMA7913', 'FMA7976', 'FMA8070', 'FMA8194', 'FMA8248', 'FMA8302', 'FMA8383', 'FMA8464', // right 1–10
+  'FMA8005', 'FMA8031', 'FMA8058', 'FMA8167', 'FMA8112', 'FMA8221', 'FMA8275', 'FMA8329', 'FMA8410', 'FMA8491', // left 1–10
 ]
 const MANUBRIUM = ['FMA7486']
 const STERNAL_BODY = ['FMA7487']
@@ -86,6 +89,11 @@ const DIAPHRAGM = ['FMA13295']
 const INFERIOR_CONSTRICTOR = ['FMA46635', 'FMA46636']
 const MIDDLE_CONSTRICTOR = ['FMA46633', 'FMA46634']
 const HYOID = ['FMA52749']
+const LEFT_VAGUS = ['FMA18157']
+const RIGHT_VAGUS = ['FMA18151']
+const LEFT_PHRENIC = ['FMA65387', 'FMA6201'] // trunk and its pericardial branch
+const RECURRENT_LARYNGEAL = ['FMA80694', 'FMA80695']
+const LEFT_HILUM = ['FMA50873', 'FMA49913', 'FMA49916', 'FMA7396'] // left pulmonary a., pulmonary vv., main bronchus
 const LUMBAR_VERTEBRAE = ['FMA13072', 'FMA13073', 'FMA13074', 'FMA13075', 'FMA13076']
 
 export const VIEWS = {
@@ -203,6 +211,7 @@ export const VIEWS = {
       { label: 'D · Descending thoracic aorta', ko: '하행흉대동맥', colour: 'rose', parts: DESCENDING_THORACIC_AORTA },
       { label: 'A · Azygos & hemiazygos vv.', ko: '홀정맥 · 반홀정맥', colour: 'sky', parts: [...AZYGOS, ...HEMIAZYGOS, ...ACCESSORY_HEMIAZYGOS] },
       { label: 'E · Oesophagus', ko: '식도', colour: 'sage', parts: ESOPHAGUS },
+      { label: '+ Vagus nn. (not in DATES)', ko: '미주신경', colour: 'deepGold', parts: [...LEFT_VAGUS, ...RIGHT_VAGUS] },
     ],
     soft: [...HEART, ...TRACHEA, ...MAIN_BRONCHI, ...THORACIC_VERTEBRAE, ...AORTA.slice(0, 2)],
     frame: [...DESCENDING_THORACIC_AORTA, ...AZYGOS, ...HEMIAZYGOS, ...ESOPHAGUS, ...HEART],
@@ -283,6 +292,36 @@ export const VIEWS = {
     ],
     soft: [...THYROID_CARTILAGE, ...CRICOID, ...TRACHEA, ...HYOID],
     frame: [...INFERIOR_CONSTRICTOR, ...MIDDLE_CONSTRICTOR, ...CRICOID],
+  },
+
+  'vagus-phrenic': {
+    title: 'Vagus vs phrenic, from the left',
+    turn: 90,
+    spin: false,
+    groups: [
+      { label: 'Left phrenic n. — in front of the hilum', ko: '왼횡격신경 — 폐문 앞', colour: 'deepSage', parts: LEFT_PHRENIC },
+      { label: 'Left vagus n. — behind the hilum', ko: '왼미주신경 — 폐문 뒤', colour: 'deepGold', parts: LEFT_VAGUS },
+      { label: 'Left recurrent laryngeal n.', ko: '왼되돌이후두신경', colour: 'deepSky', parts: ['FMA80695'] },
+      { label: 'Left lung root', ko: '왼폐뿌리', colour: 'paleRose', parts: LEFT_HILUM },
+    ],
+    soft: [...HEART, ...AORTA, ...DIAPHRAGM, ...THORACIC_VERTEBRAE, ...TRACHEA],
+    frame: [...LEFT_HILUM, ...HEART],
+    zoom: 0.85,
+  },
+
+  'vagus-nerves': {
+    title: 'Both vagus nerves and their recurrent branches',
+    turn: 0,
+    spin: true,
+    groups: [
+      { label: 'Left vagus n.', ko: '왼미주신경', colour: 'deepGold', parts: LEFT_VAGUS },
+      { label: 'Right vagus n.', ko: '오른미주신경', colour: 'deepRose', parts: RIGHT_VAGUS },
+      { label: 'Recurrent laryngeal nn.', ko: '되돌이후두신경', colour: 'deepSky', parts: RECURRENT_LARYNGEAL },
+      { label: 'Oesophagus', ko: '식도', colour: 'sage', parts: ESOPHAGUS },
+    ],
+    soft: [...AORTA, ...BRACHIOCEPHALIC_TRUNK, ...RIGHT_BRANCHES, ...LEFT_CCA, ...LEFT_SUBCLAVIAN, ...TRACHEA, ...HEART],
+    frame: [...LEFT_VAGUS, ...RIGHT_VAGUS, ...ESOPHAGUS],
+    zoom: 1.15,
   },
 }
 

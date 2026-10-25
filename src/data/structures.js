@@ -103,6 +103,9 @@ export const STRUCTURES = [
   { id: 'hemiazygos-vein', name: 'Hemiazygos vein', aliases: ['hemiazygos', 'vena hemiazygos'], kind: 'vein', fma: ['FMA4944'], topics: ['1.19'] },
   { id: 'accessory-hemiazygos-vein', name: 'Accessory hemiazygos vein', aliases: ['accessory hemiazygos'], kind: 'vein', fma: ['FMA5011'], topics: ['1.19'] },
   { id: 'posterior-intercostal-arteries', name: 'Posterior intercostal arteries', aliases: ['posterior intercostal artery', 'intercostal arteries'], kind: 'artery', fma: ['FMA63822'], topics: ['1.11', '1.19'] },
+  { id: 'vagus-nerve', name: 'Vagus nerve', aliases: ['vagus', 'vagus nerves', 'cn x', 'tenth cranial nerve', 'nervus vagus'], kind: 'nerve', fma: ['FMA18151', 'FMA18157'], topics: ['1.19'] },
+  { id: 'recurrent-laryngeal-nerve', name: 'Recurrent laryngeal nerve', aliases: ['recurrent laryngeal nerves', 'recurrent laryngeal', 'inferior laryngeal nerve'], kind: 'nerve', fma: ['FMA80694', 'FMA80695'], topics: ['1.3', '1.19'] },
+  { id: 'phrenic-nerve', name: 'Phrenic nerve', aliases: ['left phrenic nerve', 'phrenic'], kind: 'nerve', fma: ['FMA65387', 'FMA6201'], topics: ['1.11', '2.5'] },
   { id: 'transversus-thoracis', name: 'Transversus thoracis', aliases: ['transverse thoracic muscle'], kind: 'muscle', wall: true, fma: ['FMA9761', 'FMA9762'], topics: ['1.11'] },
 
   // Splanchnology 2 — abdomen

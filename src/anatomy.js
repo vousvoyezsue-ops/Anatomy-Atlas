@@ -13,6 +13,7 @@ const TINT = {
   artery: '#bd7a72',
   vein: '#8392a6',
   valve: '#c79b7e',
+  nerve: '#b08528',
 }
 
 const solid = {}
