@@ -213,7 +213,7 @@ export default function App() {
       )}
 
       <footer className="credit">
-        3D models: BodyParts3D © DBCLS, CC BY-SA 2.1 JP (re-oriented, simplified, names modified)
+        3D models: BodyParts3D 4.0 &amp; 3.0 © DBCLS, CC BY-SA 2.1 JP (re-oriented, simplified, names modified)
       </footer>
     </main>
   )

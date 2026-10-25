@@ -29,6 +29,17 @@ for (const [kind, color] of Object.entries(TINT)) {
   })
 }
 
+// A backdrop of the same tissue as the answer (a cartilage among cartilages)
+// would hide it, so that backdrop goes neutral instead of tinted.
+const softNeutral = new THREE.MeshStandardMaterial({
+  color: '#c4bdb2',
+  roughness: 0.9,
+  transparent: true,
+  opacity: 0.22,
+  depthWrite: false,
+  side: THREE.DoubleSide,
+})
+
 // Surroundings share one soft neutral so the answer is the only colour.
 const ghost = new THREE.MeshStandardMaterial({
   color: '#b9b3aa',
@@ -69,6 +80,7 @@ export async function loadAnatomy(url) {
 export function stage({ parts }, card) {
   const target = new Set(card.fma)
   const backdrop = new Set(card.backdrop)
+  const targetKinds = new Set(card.fma.map((id) => parts[id].mesh.userData.kind))
   // Frame the backdrop too, so a single branch is seen on the whole heart.
   const box = new THREE.Box3()
   for (const id of [...target, ...backdrop]) box.union(parts[id].box)
@@ -85,7 +97,7 @@ export function stage({ parts }, card) {
       mesh.renderOrder = 0
     } else if (backdrop.has(id)) {
       mesh.visible = true
-      mesh.material = soft[kind]
+      mesh.material = targetKinds.has(kind) ? softNeutral : soft[kind]
       mesh.renderOrder = 1
     } else {
       // Parts used only by note figures (no kind) stay out of the quiz.

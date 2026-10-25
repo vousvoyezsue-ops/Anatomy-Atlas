@@ -151,7 +151,7 @@ export default function Figure({ view }) {
       <button className="reset" onClick={reset} aria-label="Reset view" title="처음 각도로">
         ↺
       </button>
-      <span className="credit">BodyParts3D © DBCLS · CC BY-SA 2.1 JP</span>
+      <span className="credit">BodyParts3D 4.0 & 3.0 © DBCLS · CC BY-SA 2.1 JP</span>
     </div>
   )
 }
