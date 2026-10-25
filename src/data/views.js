@@ -104,6 +104,31 @@ const INTERCOSTAL_NERVES = ['FMA85332', 'FMA85334', 'FMA8922', 'FMA6115', 'FMA67
 const LEFT_HILUM = ['FMA50873', 'FMA49913', 'FMA49916', 'FMA7396'] // left pulmonary a., pulmonary vv., main bronchus
 const LUMBAR_VERTEBRAE = ['FMA13072', 'FMA13073', 'FMA13074', 'FMA13075', 'FMA13076']
 
+// Topics 13–17 — the heart
+const RA_WALL = ['FMA9457']
+const LA_WALL = ['FMA9531']
+const VENTRICLE_WALL = ['FMA13884']
+const HEART_WALLS = [...RA_WALL, ...LA_WALL, ...VENTRICLE_WALL]
+const RA_CAVITY = ['FMA11359']
+const RV_CAVITY = ['FMA9291']
+const LA_CAVITY = ['FMA9465']
+const LV_CAVITY = ['FMA9466']
+const TRICUSPID = ['FMA7238', 'FMA7239', 'FMA7240']
+const MITRAL = ['FMA7242', 'FMA7243']
+const PULMONARY_VALVE = ['FMA7247', 'FMA7249', 'FMA7250']
+const AORTIC_VALVE = ['FMA7252', 'FMA7253', 'FMA7254']
+const RV_PAPILLARY = ['FMA7260', 'FMA7261', 'FMA7262'] // anterior, posterior, septal
+const LV_PAPILLARY = ['FMA7265', 'FMA7264'] // anterior (anterolateral), posterior
+const PULMONARY_TRUNK = ['FMA8612', 'FMA50872', 'FMA50873'] // trunk, right and left pulmonary aa.
+const PULMONARY_VEINS = ['FMA49911', 'FMA49913', 'FMA49914', 'FMA49916']
+const LCA = ['FMA3855', 'FMA74912', 'FMA3860', 'FMA3868', 'FMA3872', 'FMA3874', 'FMA3876', 'FMA3892', 'FMA3895']
+const RCA = ['FMA3802', 'FMA3807', 'FMA3815', 'FMA3818', 'FMA3837', 'FMA3840', 'FMA3847', 'FMA3848']
+const GREAT_CARDIAC_VEIN = ['FMA4707', 'FMA66403'] // with the anterior interventricular vein
+const SMALL_MIDDLE_CARDIAC_VEINS = ['FMA4713', 'FMA4714', 'FMA4716', 'FMA4712']
+const ANTERIOR_CARDIAC_VEIN = ['FMA76767']
+const CORONARY_SINUS = ['FMA4706']
+const without = (list, ...remove) => list.filter((id) => !remove.flat().includes(id))
+
 export const VIEWS = {
   'thoracic-cage': {
     title: 'Thoracic cage',
@@ -376,6 +401,148 @@ export const VIEWS = {
     soft: [...AORTA.slice(0, 2), ...BRACHIOCEPHALIC_TRUNK, ...RIGHT_BRANCHES, ...LEFT_CCA, ...LEFT_SUBCLAVIAN, ...VEINS, ...HEART, ...TRACHEA],
     frame: [...LEFT_PHRENIC, ...LEFT_VAGUS, ...RIGHT_VAGUS, ...HEART],
     zoom: 1.1,
+  },
+
+  'heart-surfaces': {
+    title: 'The heart and its great vessels',
+    turn: 90,
+    spin: true,
+    groups: [
+      { label: 'Ventricles', ko: '심실', colour: 'rose', parts: VENTRICLE_WALL },
+      { label: 'Right atrium', ko: '우심방', colour: 'paleSky', parts: RA_WALL },
+      { label: 'Left atrium', ko: '좌심방', colour: 'paleRose', parts: LA_WALL },
+      { label: 'Aorta', ko: '대동맥', colour: 'gold', parts: AORTA.slice(0, 2) },
+      { label: 'Pulmonary trunk & arteries', ko: '폐동맥', colour: 'slate', parts: PULMONARY_TRUNK },
+      { label: 'Venae cavae', ko: '대정맥', colour: 'sky', parts: [...SVC, ...IVC] },
+      { label: 'Pulmonary veins', ko: '폐정맥', colour: 'sage', parts: PULMONARY_VEINS },
+    ],
+    soft: DIAPHRAGM,
+    frame: [...HEART_WALLS, ...AORTA.slice(0, 2), ...PULMONARY_TRUNK],
+  },
+
+  'heart-chambers': {
+    title: 'Blood through the four chambers',
+    turn: 0,
+    spin: true,
+    groups: [
+      { label: '1 · Venae cavae', ko: '대정맥', colour: 'slate', parts: [...SVC, ...IVC] },
+      { label: '2 · Right atrium', ko: '우심방', colour: 'paleSky', parts: RA_CAVITY },
+      { label: '3 · Right ventricle', ko: '우심실', colour: 'sky', parts: RV_CAVITY },
+      { label: '4 · Pulmonary trunk', ko: '폐동맥줄기', colour: 'deepSky', parts: PULMONARY_TRUNK },
+      { label: '5 · Pulmonary veins', ko: '폐정맥', colour: 'deepRose', parts: PULMONARY_VEINS },
+      { label: '6 · Left atrium', ko: '좌심방', colour: 'paleRose', parts: LA_CAVITY },
+      { label: '7 · Left ventricle', ko: '좌심실', colour: 'rose', parts: LV_CAVITY },
+      { label: '8 · Aorta', ko: '대동맥', colour: 'gold', parts: AORTA.slice(0, 2) },
+    ],
+    soft: HEART_WALLS,
+    frame: [...HEART_WALLS, ...AORTA.slice(0, 2)],
+  },
+
+  'right-atrium': {
+    title: 'Right atrium: three in, one out',
+    turn: -60,
+    spin: true,
+    groups: [
+      { label: 'Right atrium', ko: '우심방', colour: 'paleSky', parts: RA_WALL },
+      { label: 'In · Superior vena cava', ko: '상대정맥', colour: 'sky', parts: SVC },
+      { label: 'In · Inferior vena cava', ko: '하대정맥', colour: 'slate', parts: IVC },
+      { label: 'In · Coronary sinus', ko: '관상정맥동', colour: 'gold', parts: CORONARY_SINUS },
+      { label: 'Out · Tricuspid valve', ko: '삼첨판', colour: 'rose', parts: TRICUSPID },
+    ],
+    soft: without(HEART_WALLS, RA_WALL),
+    frame: [...RA_WALL, ...SVC, ...TRICUSPID],
+  },
+
+  'left-atrium': {
+    title: 'Left atrium: the most posterior chamber',
+    turn: 160,
+    spin: true,
+    groups: [
+      { label: 'Left atrium', ko: '좌심방', colour: 'rose', parts: LA_WALL },
+      { label: 'In · Four pulmonary veins', ko: '폐정맥 네 개', colour: 'paleRose', parts: PULMONARY_VEINS },
+      { label: 'Out · Mitral valve', ko: '승모판', colour: 'gold', parts: MITRAL },
+      { label: 'Oesophagus — right behind it', ko: '식도', colour: 'sage', parts: ESOPHAGUS },
+    ],
+    soft: [...without(HEART_WALLS, LA_WALL), ...DESCENDING_THORACIC_AORTA],
+    frame: [...HEART_WALLS],
+  },
+
+  ventricles: {
+    title: 'The two ventricles and their four valves',
+    turn: 0,
+    spin: true,
+    groups: [
+      { label: 'Right ventricle', ko: '우심실', colour: 'sky', parts: RV_CAVITY },
+      { label: 'Left ventricle', ko: '좌심실', colour: 'rose', parts: LV_CAVITY },
+      { label: 'Tricuspid valve — RV inflow', ko: '삼첨판', colour: 'paleSky', parts: TRICUSPID },
+      { label: 'Pulmonary valve — RV outflow', ko: '폐동맥판', colour: 'slate', parts: PULMONARY_VALVE },
+      { label: 'Mitral valve — LV inflow', ko: '승모판', colour: 'paleRose', parts: MITRAL },
+      { label: 'Aortic valve — LV outflow', ko: '대동맥판', colour: 'gold', parts: AORTIC_VALVE },
+    ],
+    soft: HEART_WALLS,
+    frame: HEART_WALLS,
+  },
+
+  'papillary-muscles': {
+    title: 'Five papillary muscles',
+    turn: 0,
+    spin: true,
+    groups: [
+      { label: 'Right ventricle — anterior, posterior, septal', ko: '우심실 유두근 3', colour: 'sky', parts: RV_PAPILLARY },
+      { label: 'Left ventricle — anterior, posterior', ko: '좌심실 유두근 2', colour: 'rose', parts: LV_PAPILLARY },
+      { label: 'Tricuspid valve', ko: '삼첨판', colour: 'paleSky', parts: TRICUSPID },
+      { label: 'Mitral valve', ko: '승모판', colour: 'paleRose', parts: MITRAL },
+    ],
+    soft: HEART_WALLS,
+    frame: [...RV_PAPILLARY, ...LV_PAPILLARY, ...TRICUSPID, ...MITRAL],
+    zoom: 0.9,
+  },
+
+  'aortic-root': {
+    title: 'Aortic root and the coronary openings',
+    turn: 20,
+    spin: true,
+    groups: [
+      { label: 'Aortic valve — three cusps', ko: '대동맥판', colour: 'gold', parts: AORTIC_VALVE },
+      { label: 'Left coronary a. (trunk)', ko: '왼관상동맥', colour: 'rose', parts: ['FMA3855'] },
+      { label: 'Right coronary a. (trunk)', ko: '오른관상동맥', colour: 'deepRose', parts: ['FMA3802'] },
+      { label: 'Ascending aorta', ko: '상행대동맥', colour: 'paleRose', parts: ['FMA3736'] },
+    ],
+    soft: [...HEART_WALLS, ...PULMONARY_VALVE],
+    frame: [...AORTIC_VALVE, 'FMA3855', 'FMA3802', 'FMA3736'],
+    zoom: 0.9,
+  },
+
+  'coronary-vessels': {
+    title: 'Coronary arteries and cardiac veins',
+    turn: 0,
+    spin: true,
+    groups: [
+      { label: 'Left coronary a. and branches', ko: '왼관상동맥', colour: 'rose', parts: LCA },
+      { label: 'Right coronary a. and branches', ko: '오른관상동맥', colour: 'gold', parts: RCA },
+      { label: 'Great cardiac v.', ko: '큰심장정맥', colour: 'deepSky', parts: GREAT_CARDIAC_VEIN },
+      { label: 'Middle, small & posterior cardiac vv.', ko: '중간·작은·뒤 심장정맥', colour: 'paleSky', parts: SMALL_MIDDLE_CARDIAC_VEINS },
+      { label: 'Anterior cardiac v. — into the RA', ko: '앞심장정맥', colour: 'sage', parts: ANTERIOR_CARDIAC_VEIN },
+      { label: 'Coronary sinus', ko: '관상정맥동', colour: 'slate', parts: CORONARY_SINUS },
+    ],
+    soft: [...HEART_WALLS, ...AORTA.slice(0, 1), ...PULMONARY_TRUNK.slice(0, 1)],
+    frame: HEART_WALLS,
+  },
+
+  'valves-from-above': {
+    title: 'The four valves from above',
+    turn: 0,
+    tilt: 80,
+    spin: false,
+    groups: [
+      { label: 'Pulmonary valve', ko: '폐동맥판', colour: 'slate', parts: PULMONARY_VALVE },
+      { label: 'Aortic valve', ko: '대동맥판', colour: 'gold', parts: AORTIC_VALVE },
+      { label: 'Mitral valve', ko: '승모판', colour: 'rose', parts: MITRAL },
+      { label: 'Tricuspid valve', ko: '삼첨판', colour: 'sky', parts: TRICUSPID },
+    ],
+    soft: VENTRICLE_WALL,
+    frame: [...PULMONARY_VALVE, ...AORTIC_VALVE, ...MITRAL, ...TRICUSPID],
+    zoom: 0.9,
   },
 }
 
