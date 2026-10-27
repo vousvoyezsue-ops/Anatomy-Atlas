@@ -129,6 +129,57 @@ const ANTERIOR_CARDIAC_VEIN = ['FMA76767']
 const CORONARY_SINUS = ['FMA4706']
 const without = (list, ...remove) => list.filter((id) => !remove.flat().includes(id))
 
+// Topic 18 — the lungs
+const RUL = ['FMA7333']
+const RML = ['FMA7383']
+const RLL = ['FMA7337']
+const LUL = ['FMA7370']
+const LLL = ['FMA7371']
+const RIGHT_LOBES = [...RUL, ...RML, ...RLL]
+const LEFT_LOBES = [...LUL, ...LLL]
+const LUNG_LOBES = [...RIGHT_LOBES, ...LEFT_LOBES]
+const PULMONARY_ARTERIES = ['FMA50872', 'FMA50873']
+const SEGMENTAL_ARTERIES = [
+  'FMA13279', 'FMA68197', 'FMA68662', 'FMA68665', 'FMA68670', 'FMA68673', 'FMA68677', 'FMA68683', 'FMA68690', 'FMA68691',
+  'FMA68693', 'FMA68694', 'FMA68706', 'FMA68709', 'FMA68712', 'FMA68723', 'FMA68725', 'FMA68728', 'FMA68735', 'FMA68738',
+  'FMA68741', 'FMA8620', 'FMA8634', 'FMA8635', 'FMA8639', 'FMA8640', 'FMA8642', 'FMA8644', 'FMA8645', 'FMA8646', 'FMA8647',
+]
+const SEGMENTAL_VEINS = [
+  'FMA68880', 'FMA68921', 'FMA68926', 'FMA68928', 'FMA68944', 'FMA68945', 'FMA68982', 'FMA68983', 'FMA8662', 'FMA8663',
+  'FMA8667', 'FMA8668', 'FMA8669', 'FMA8670', 'FMA8673', 'FMA8678', 'FMA8681', 'FMA9422', 'FMA9425', 'FMA9428',
+  'FMA9437', 'FMA9438', 'FMA9450', 'FMA9451',
+]
+// Segmental bronchial trees, one per bronchopulmonary segment.
+const RIGHT_SEGMENTS = [
+  ['S1 · Apical', '첨구역', 'FMA68211'],
+  ['S2 · Posterior', '후구역', 'FMA68213'],
+  ['S3 · Anterior', '전구역', 'FMA68212'],
+  ['S4 · Lateral (middle lobe)', '외측구역', 'FMA68215'],
+  ['S5 · Medial (middle lobe)', '내측구역', 'FMA68214'],
+  ['S6 · Superior', '상구역', 'FMA68216'],
+  ['S7 · Medial basal', '내측폐저구역', 'FMA68218'],
+  ['S8 · Anterior basal', '전폐저구역', 'FMA68321'],
+  ['S9 · Lateral basal', '외측폐저구역', 'FMA68220'],
+  ['S10 · Posterior basal', '후폐저구역', 'FMA68221'],
+]
+const LEFT_SEGMENTS = [
+  ['S1 · Apical', '첨구역', 'FMA68223'],
+  ['S2 · Posterior', '후구역', 'FMA68225'],
+  ['S3 · Anterior', '전구역', 'FMA68222'],
+  ['S4 · Superior lingular', '상설구역', 'FMA68226'],
+  ['S5 · Inferior lingular', '하설구역', 'FMA68227'],
+  ['S6 · Superior', '상구역', 'FMA68228'],
+  ['S7 · Medial basal', '내측폐저구역', 'FMA68230'],
+  ['S8 · Anterior basal', '전폐저구역', 'FMA68231'],
+  ['S9 · Lateral basal', '외측폐저구역', 'FMA68232'],
+  ['S10 · Posterior basal', '후폐저구역', 'FMA68233'],
+]
+const SEGMENT_COLOURS = ['paleSky', 'sky', 'deepSky', 'sage', 'deepSage', 'gold', 'deepGold', 'paleRose', 'rose', 'deepRose']
+const segmentGroups = (list) =>
+  list.map(([label, ko, id], i) => ({ label, ko, colour: SEGMENT_COLOURS[i], parts: [id] }))
+const RIGHT_SEGMENT_TREES = RIGHT_SEGMENTS.map((s) => s[2])
+const LEFT_SEGMENT_TREES = LEFT_SEGMENTS.map((s) => s[2])
+
 export const VIEWS = {
   'thoracic-cage': {
     title: 'Thoracic cage',
@@ -543,6 +594,99 @@ export const VIEWS = {
     soft: VENTRICLE_WALL,
     frame: [...PULMONARY_VALVE, ...AORTIC_VALVE, ...MITRAL, ...TRICUSPID],
     zoom: 0.9,
+  },
+
+  'lung-lobes': {
+    title: 'Lobes of both lungs',
+    turn: 0,
+    spin: true,
+    groups: [
+      { label: 'Right upper lobe', ko: '우상엽', colour: 'paleSky', parts: RUL },
+      { label: 'Right middle lobe', ko: '우중엽', colour: 'sage', parts: RML },
+      { label: 'Right lower lobe', ko: '우하엽', colour: 'sky', parts: RLL },
+      { label: 'Left upper lobe — with the lingula', ko: '좌상엽 · 소설', colour: 'paleRose', parts: LUL },
+      { label: 'Left lower lobe', ko: '좌하엽', colour: 'rose', parts: LLL },
+    ],
+    soft: [...TRACHEA, ...MAIN_BRONCHI, ...HEART_WALLS],
+    frame: LUNG_LOBES,
+  },
+
+  'lung-impressions': {
+    title: 'What touches the mediastinal surfaces',
+    turn: 90,
+    spin: true,
+    groups: [
+      { label: 'Heart — cardiac impression', ko: '심장', colour: 'rose', parts: HEART_WALLS },
+      { label: 'Aorta — arch and descending', ko: '대동맥', colour: 'gold', parts: [...AORTA.slice(1, 2), ...DESCENDING_THORACIC_AORTA] },
+      { label: 'Oesophagus', ko: '식도', colour: 'sage', parts: ESOPHAGUS },
+      { label: 'Superior vena cava & azygos v.', ko: '상대정맥 · 홀정맥', colour: 'sky', parts: [...SVC, ...AZYGOS] },
+      { label: 'Trachea', ko: '기관', colour: 'cartilage', parts: TRACHEA },
+    ],
+    soft: LUNG_LOBES,
+    frame: LUNG_LOBES,
+  },
+
+  'pulmonary-root': {
+    title: 'What passes through the hilum',
+    turn: 90,
+    spin: true,
+    groups: [
+      { label: 'Main bronchus', ko: '주기관지', colour: 'sage', parts: MAIN_BRONCHI },
+      { label: 'Pulmonary artery', ko: '폐동맥', colour: 'deepSky', parts: PULMONARY_ARTERIES },
+      { label: 'Pulmonary veins', ko: '폐정맥', colour: 'deepRose', parts: PULMONARY_VEINS },
+      { label: 'Bronchial artery', ko: '기관지동맥', colour: 'gold', parts: BRONCHIAL_ARTERY },
+    ],
+    soft: [...TRACHEA, ...PULMONARY_TRUNK.slice(0, 1), ...HEART_WALLS],
+    frame: [...MAIN_BRONCHI, ...PULMONARY_ARTERIES, ...PULMONARY_VEINS],
+    zoom: 0.9,
+  },
+
+  'bronchial-tree': {
+    title: 'Bronchial tree, lobe by lobe',
+    turn: 0,
+    spin: true,
+    groups: [
+      { label: 'Trachea', ko: '기관', colour: 'cartilage', parts: TRACHEA },
+      { label: 'Main bronchi', ko: '주기관지', colour: 'slate', parts: MAIN_BRONCHI },
+      { label: 'Right upper lobe — 3 segments', ko: '우상엽', colour: 'paleSky', parts: RIGHT_SEGMENT_TREES.slice(0, 3) },
+      { label: 'Right middle lobe — 2', ko: '우중엽', colour: 'sage', parts: RIGHT_SEGMENT_TREES.slice(3, 5) },
+      { label: 'Right lower lobe — 5', ko: '우하엽', colour: 'sky', parts: RIGHT_SEGMENT_TREES.slice(5) },
+      { label: 'Left upper lobe — 5 incl. lingula', ko: '좌상엽', colour: 'paleRose', parts: LEFT_SEGMENT_TREES.slice(0, 5) },
+      { label: 'Left lower lobe — 5', ko: '좌하엽', colour: 'rose', parts: LEFT_SEGMENT_TREES.slice(5) },
+    ],
+    soft: LUNG_LOBES,
+    frame: LUNG_LOBES,
+  },
+
+  'segments-right': {
+    title: 'Bronchopulmonary segments, right lung',
+    turn: -90,
+    spin: true,
+    groups: segmentGroups(RIGHT_SEGMENTS),
+    soft: RIGHT_LOBES,
+    frame: RIGHT_LOBES,
+  },
+
+  'segments-left': {
+    title: 'Bronchopulmonary segments, left lung',
+    turn: 90,
+    spin: true,
+    groups: segmentGroups(LEFT_SEGMENTS),
+    soft: LEFT_LOBES,
+    frame: LEFT_LOBES,
+  },
+
+  'pulmonary-circulation': {
+    title: 'Two circulations in the lungs',
+    turn: 0,
+    spin: true,
+    groups: [
+      { label: 'Pulmonary arteries → segmental', ko: '폐동맥 (기능)', colour: 'deepSky', parts: [...PULMONARY_TRUNK, ...SEGMENTAL_ARTERIES] },
+      { label: 'Pulmonary veins ← segmental', ko: '폐정맥 (기능)', colour: 'deepRose', parts: [...PULMONARY_VEINS, ...SEGMENTAL_VEINS] },
+      { label: 'Bronchial artery ← thoracic aorta', ko: '기관지동맥 (영양)', colour: 'gold', parts: BRONCHIAL_ARTERY },
+    ],
+    soft: [...HEART_WALLS, ...DESCENDING_THORACIC_AORTA, ...AORTA.slice(0, 2), ...TRACHEA, ...MAIN_BRONCHI, ...LUNG_LOBES],
+    frame: LUNG_LOBES,
   },
 }
 
