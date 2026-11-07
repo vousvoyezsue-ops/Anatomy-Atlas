@@ -235,6 +235,19 @@ const CAUDATE_LOBE = ['FMA13365']
 const LIVER_WITHOUT_CAUDATE = ['FMA15739', 'FMA15741', 'FMA15742', 'FMA15743', 'FMA15744', 'FMA15745', 'FMA15746', 'FMA15747']
 const T8_T10_T12 = ['FMA9991', 'FMA10037', 'FMA10081']
 
+// Splanchnology 2, topics 7–9 — liver and spleen
+const RIGHT_LOBE = ['FMA15743', 'FMA15744', 'FMA15745', 'FMA15746'] // segments V–VIII
+const LEFT_LOBE = ['FMA15739', 'FMA15741'] // segments II–III, left of the falciform ligament
+const QUADRATE = ['FMA15742'] // segment IV
+const CAUDATE = ['FMA13365'] // segment I
+const RIGHT_HEPATIC_V = ['FMA14338', 'FMA15796', 'FMA15797', 'FMA15798']
+const MIDDLE_HEPATIC_V = ['FMA14340', 'FMA15793', 'FMA15800', 'FMA15801']
+const LEFT_HEPATIC_V = ['FMA14339', 'FMA15802', 'FMA15803', 'FMA15804']
+const RIGHT_KIDNEY = ['FMA7204']
+const RIGHT_ADRENAL = ['FMA15629']
+const RIGHT_FIFTH_RIB = ['FMA8066']
+const LEFT_RIBS_9_11 = ['FMA8391', 'FMA8472', 'FMA8532']
+
 export const VIEWS = {
   'thoracic-cage': {
     title: 'Thoracic cage',
@@ -878,6 +891,95 @@ export const VIEWS = {
     soft: [...LIVER_WITHOUT_CAUDATE, ...GALLBLADDER, ...STOMACH, ...PANCREAS],
     frame: [...PORTAL_V, ...CAUDATE_LOBE, ...BILE_DUCTS],
     zoom: 1,
+  },
+  'liver-skeletotopy': {
+    title: 'The liver behind the ribs',
+    turn: 0,
+    spin: false,
+    groups: [
+      { label: 'Right lobe', ko: '오른엽', colour: 'rose', parts: RIGHT_LOBE },
+      { label: 'Left lobe', ko: '왼엽', colour: 'paleRose', parts: LEFT_LOBE },
+      { label: 'Quadrate part (segment IV)', ko: '네모엽', colour: 'deepGold', parts: QUADRATE },
+      { label: 'Caudate lobe', ko: '꼬리엽', colour: 'deepRose', parts: CAUDATE },
+      { label: 'Gallbladder — fundus at the costal arch', ko: '쓸개', colour: 'sage', parts: GALLBLADDER },
+      { label: 'Right 5th rib — upper margin', ko: '오른 제5늑골', colour: 'gold', parts: RIGHT_FIFTH_RIB },
+    ],
+    soft: [...RIBS, ...COSTAL_CARTILAGES, ...STERNUM],
+    frame: [...LIVER_WITHOUT_CAUDATE, ...RIGHT_FIFTH_RIB],
+    zoom: 0.95,
+  },
+
+  'liver-visceral': {
+    title: 'Visceral surface of the liver',
+    turn: 180,
+    tilt: -50,
+    spin: false,
+    groups: [
+      { label: 'Right and left lobes', ko: '오른엽 · 왼엽', colour: 'paleRose', parts: [...RIGHT_LOBE, ...LEFT_LOBE] },
+      { label: 'Caudate lobe', ko: '꼬리엽', colour: 'deepRose', parts: CAUDATE },
+      { label: 'Segment IV — quadrate lobe is its lower part', ko: '네모엽', colour: 'deepGold', parts: QUADRATE },
+      { label: 'Gallbladder', ko: '쓸개', colour: 'sage', parts: GALLBLADDER },
+      { label: 'Portal v. — porta hepatis', ko: '간문맥', colour: 'sky', parts: PORTAL_V },
+      { label: 'Proper hepatic a.', ko: '고유간동맥', colour: 'rose', parts: PROPER_HEPATIC_A },
+      { label: 'Hepatic and cystic ducts', ko: '간관 · 쓸개관', colour: 'gold', parts: BILE_DUCTS },
+    ],
+    soft: [...IVC, 'FMA15747'],
+    frame: [...LIVER_WITHOUT_CAUDATE],
+    zoom: 1,
+  },
+
+  'hepatic-veins': {
+    title: 'Three hepatic veins into the IVC',
+    turn: 0,
+    tilt: 15,
+    spin: true,
+    groups: [
+      { label: 'Right hepatic v.', ko: '오른간정맥', colour: 'deepSky', parts: RIGHT_HEPATIC_V },
+      { label: 'Intermediate (middle) hepatic v.', ko: '중간간정맥', colour: 'sky', parts: MIDDLE_HEPATIC_V },
+      { label: 'Left hepatic v.', ko: '왼간정맥', colour: 'paleSky', parts: LEFT_HEPATIC_V },
+      { label: 'IVC', ko: '하대정맥', colour: 'slate', parts: IVC },
+      { label: 'Portal v. — in, at the porta', ko: '간문맥 · 들어감', colour: 'gold', parts: PORTAL_V },
+    ],
+    soft: [...LIVER_WITHOUT_CAUDATE, ...CAUDATE_LOBE],
+    frame: [...LIVER_WITHOUT_CAUDATE],
+    zoom: 1,
+  },
+
+  'liver-impressions': {
+    title: 'What presses on the visceral surface',
+    turn: 180,
+    tilt: -72,
+    spin: false,
+    groups: [
+      { label: 'Liver', ko: '간', colour: 'paleRose', parts: [...LIVER_WITHOUT_CAUDATE, ...CAUDATE_LOBE] },
+      { label: 'Oesophagus', ko: '식도', colour: 'deepSage', parts: ESOPHAGUS },
+      { label: 'Stomach — gastric impression', ko: '위', colour: 'gold', parts: STOMACH },
+      { label: 'Duodenum', ko: '샘창자', colour: 'sage', parts: DUODENUM },
+      { label: 'Right colic flexure', ko: '오른결장굽이', colour: 'deepGold', parts: ASCENDING_COLON },
+      { label: 'Right kidney', ko: '오른콩팥', colour: 'rose', parts: RIGHT_KIDNEY },
+      { label: 'Right suprarenal gland', ko: '오른부신', colour: 'deepRose', parts: RIGHT_ADRENAL },
+    ],
+    frame: [...LIVER_WITHOUT_CAUDATE, ...RIGHT_KIDNEY],
+    zoom: 1,
+  },
+
+  'spleen-relations': {
+    title: 'The spleen and its neighbours',
+    turn: 150,
+    spin: true,
+    groups: [
+      { label: 'Spleen', ko: '지라', colour: 'rose', parts: SPLEEN },
+      { label: 'Stomach — gastric surface', ko: '위', colour: 'gold', parts: STOMACH },
+      { label: 'Left kidney — renal surface', ko: '왼콩팥', colour: 'paleSky', parts: LEFT_KIDNEY },
+      { label: 'Tail of pancreas', ko: '이자꼬리', colour: 'deepGold', parts: PANCREAS },
+      { label: 'Left colic flexure — colic surface', ko: '왼결장굽이', colour: 'sage', parts: [...TRANSVERSE_COLON, ...DESCENDING_COLON] },
+      { label: 'Splenic a. — coiled', ko: '지라동맥', colour: 'deepSage', parts: SPLENIC_A },
+      { label: 'Splenic v.', ko: '지라정맥', colour: 'sky', parts: SPLENIC_V },
+      { label: 'Left ribs 9–11', ko: '왼 제9–11늑골', colour: 'ivory', parts: LEFT_RIBS_9_11 },
+    ],
+    soft: LEFT_ADRENAL,
+    frame: [...SPLEEN, ...LEFT_KIDNEY, ...PANCREAS],
+    zoom: 0.85,
   },
 }
 
