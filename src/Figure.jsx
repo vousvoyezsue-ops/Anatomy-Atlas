@@ -1,5 +1,5 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 import { loadAnatomy } from './anatomy.js'
@@ -78,6 +78,37 @@ function Model({ anatomy, view, focus, idle, resetKey }) {
   )
 }
 
+// Centres the model in the part of the frame the legend leaves free, and
+// applies the vertical shift from a right-button drag. Both are screen-space
+// shifts of the camera's view window, so rotation is untouched.
+function ViewWindow({ room, pan, resetKey }) {
+  const { camera, size } = useThree()
+  useLayoutEffect(() => {
+    const { width: W, height: H } = size
+    let dx = 0
+    let dy = 0
+    let zoom = 1
+    if (room && W && H) {
+      const pad = 10
+      const right = { w: W - room.right - pad, h: H } // beside the legend
+      const above = { w: W, h: room.top - pad } // above the legend
+      const fit = (r) => Math.min(r.w / W, r.h / H)
+      if (fit(right) >= fit(above)) {
+        dx = (W - right.w) / 2
+        zoom = fit(right)
+      } else {
+        dy = -(H - above.h) / 2
+        zoom = fit(above)
+      }
+      zoom = Math.min(1, Math.max(0.68, zoom + 0.12))
+    }
+    camera.setViewOffset(W, H, -dx, -(dy + pan), W, H)
+    camera.zoom = zoom
+    camera.updateProjectionMatrix()
+  }, [camera, size, room, pan, resetKey])
+  return null
+}
+
 export default function Figure({ view }) {
   const [anatomy, setAnatomy] = useState(null)
   const [failed, setFailed] = useState(false)
@@ -88,6 +119,38 @@ export default function Figure({ view }) {
   const idle = useRef(RESUME_AFTER + 1)
   const controls = useRef()
   const shell = useRef()
+  const legend = useRef()
+  const [room, setRoom] = useState(null)
+  const [pan, setPan] = useState(0)
+  const drag = useRef(null)
+
+  // Where the legend sits, so the model can be placed beside or above it.
+  useLayoutEffect(() => {
+    const measure = () => {
+      if (!shell.current || !legend.current) return
+      const s = shell.current.getBoundingClientRect()
+      const l = legend.current.getBoundingClientRect()
+      setRoom({ right: l.right - s.left, top: l.top - s.top })
+    }
+    measure()
+    const ro = new ResizeObserver(measure)
+    ro.observe(shell.current)
+    ro.observe(legend.current)
+    return () => ro.disconnect()
+  }, [view])
+
+  // Right-button drag: move the model up and down only, keeping its angle.
+  const onPointerDown = (e) => {
+    if (e.button !== 2) return
+    drag.current = { y: e.clientY, pan }
+    e.currentTarget.setPointerCapture(e.pointerId)
+  }
+  const onPointerMove = (e) => {
+    if (!drag.current) return
+    const h = shell.current.clientHeight / 2
+    setPan(Math.max(-h, Math.min(h, drag.current.pan + e.clientY - drag.current.y)))
+  }
+  const onPointerUp = () => (drag.current = null)
 
   useEffect(() => {
     loadAnatomy(MODEL_URL).then(setAnatomy, () => setFailed(true))
@@ -103,6 +166,7 @@ export default function Figure({ view }) {
   const reset = () => {
     controls.current?.reset()
     setLocked(null)
+    setPan(0)
     idle.current = RESUME_AFTER + 1
     setResetKey((k) => k + 1)
   }
@@ -110,7 +174,14 @@ export default function Figure({ view }) {
   const focus = hover ?? locked
 
   return (
-    <div className="figure" ref={shell}>
+    <div
+      className="figure"
+      ref={shell}
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+      onContextMenu={(e) => e.preventDefault()}
+    >
       {anatomy ? (
         <Canvas
           className="canvas"
@@ -125,13 +196,14 @@ export default function Figure({ view }) {
           <directionalLight position={[2.5, 3, 2]} intensity={1.5} />
           <directionalLight position={[-3, 1, -2]} intensity={0.5} />
           <Model anatomy={anatomy} view={view} focus={focus} idle={idle} resetKey={resetKey} />
+          <ViewWindow room={room} pan={pan} resetKey={resetKey} />
           <OrbitControls ref={controls} enablePan={false} minDistance={1.2} maxDistance={5} rotateSpeed={0.6} />
         </Canvas>
       ) : (
         <p className="status">{failed ? '모델을 불러오지 못했어요.' : '불러오는 중…'}</p>
       )}
 
-      <ul className="legend" onMouseLeave={() => setHover(null)}>
+      <ul className="legend" ref={legend} onMouseLeave={() => setHover(null)}>
         {view.groups.map((g, i) => (
           <li key={g.label}>
             <button
