@@ -93,7 +93,9 @@ function ViewWindow({ room, pan, resetKey }) {
       const right = { w: W - room.right - pad, h: H } // beside the legend
       const above = { w: W, h: room.top - pad } // above the legend
       const fit = (r) => Math.min(r.w / W, r.h / H)
-      if (fit(right) >= fit(above)) {
+      // Beside the legend unless the space above is clearly larger: models
+      // are usually taller than the frame they are given.
+      if (fit(right) + 0.1 >= fit(above)) {
         dx = (W - right.w) / 2
         zoom = fit(right)
       } else {
@@ -213,8 +215,10 @@ export default function Figure({ view }) {
               aria-pressed={locked === i}
             >
               <span className="dot" style={{ background: COLOURS[g.colour] }} />
-              {g.label}
-              {g.ko && <span className="ko">{g.ko}</span>}
+              <span className="label">
+                {g.label}
+                {g.ko && <span className="ko">{g.ko}</span>}
+              </span>
             </button>
           </li>
         ))}

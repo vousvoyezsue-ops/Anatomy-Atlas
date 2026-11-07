@@ -880,8 +880,8 @@ export const VIEWS = {
       { label: 'Gastro-omental (gastroepiploic) vv. — greater curvature', ko: '위그물막정맥', colour: 'slate', parts: GASTROEPIPLOIC_VV },
     ],
     soft: [...STOMACH, ...SPLEEN, ...PANCREAS, ...DUODENUM, ...ABDOMINAL_AORTA],
-    frame: [...STOMACH, ...CELIAC],
-    zoom: 1.1,
+    frame: [...STOMACH, ...DUODENUM],
+    zoom: 1.4,
   },
 
   'diaphragm-apertures': {

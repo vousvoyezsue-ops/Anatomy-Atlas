@@ -57,7 +57,7 @@ body {
   bottom: 10px;
   display: grid;
   gap: 1px;
-  max-width: calc(100% - 64px);
+  max-width: min(40%, 300px);
   padding: 6px;
   list-style: none;
   background: var(--panel);
@@ -69,8 +69,10 @@ body {
 
 .legend button {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
-  gap: 7px;
+  gap: 0 7px;
+  line-height: 1.35;
   width: 100%;
   padding: 3px 7px;
   background: none;
@@ -110,6 +112,17 @@ body {
 .ko {
   color: var(--ink-3);
   font-size: 11.5px;
+}
+
+/* A wrapped label keeps its text aligned past the colour dot. */
+.legend .label {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.legend .label .ko {
+  margin-left: 6px;
+  white-space: nowrap;
 }
 
 .reset {
