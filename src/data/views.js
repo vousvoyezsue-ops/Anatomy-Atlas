@@ -215,6 +215,26 @@ const TRANSVERSE_MESOCOLON = ['FMA14647']
 const MESOAPPENDIX = ['FMA16549']
 const POSTERIOR_PERITONEUM = ['FMA19757']
 
+// Splanchnology 2, topics 4–6 — stomach, diaphragm, hepatoduodenal ligament and lesser sac
+const LEFT_KIDNEY = ['FMA7205']
+const LEFT_ADRENAL = ['FMA15630']
+const CELIAC = ['FMA50737']
+const LEFT_GASTRIC_A = ['FMA14768']
+const RIGHT_GASTRIC_A = ['FMA14776']
+const SPLENIC_A = ['FMA14773']
+const COMMON_HEPATIC_A = ['FMA14771']
+const PROPER_HEPATIC_A = ['FMA14772']
+const GASTRODUODENAL_A = ['FMA76574']
+const PANCREATICODUODENAL_AA = ['FMA14782', 'FMA14784', 'FMA14805', 'FMA70479', 'FMA70480']
+const GASTROEPIPLOIC_VV = ['FMA15390', 'FMA15397']
+const GASTRIC_VV = ['FMA15399', 'FMA15400']
+const SPLENIC_V = ['FMA14331']
+const PORTAL_V = ['FMA50735']
+const BILE_DUCTS = ['FMA14668', 'FMA14539', 'FMA14669', 'FMA14670'] // common hepatic, cystic, right and left hepatic ducts
+const CAUDATE_LOBE = ['FMA13365']
+const LIVER_WITHOUT_CAUDATE = ['FMA15739', 'FMA15741', 'FMA15742', 'FMA15743', 'FMA15744', 'FMA15745', 'FMA15746', 'FMA15747']
+const T8_T10_T12 = ['FMA9991', 'FMA10037', 'FMA10081']
+
 export const VIEWS = {
   'thoracic-cage': {
     title: 'Thoracic cage',
@@ -789,6 +809,75 @@ export const VIEWS = {
     ],
     soft: [...DUODENUM, ...PANCREAS, ...ASCENDING_COLON, ...DESCENDING_COLON, ...POSTERIOR_PERITONEUM, ...LUMBAR_VERTEBRAE],
     frame: [...MESENTERY, ...TRANSVERSE_MESOCOLON, ...SMALL_INTESTINE],
+  },
+
+  'stomach-bed': {
+    title: 'The stomach bed',
+    turn: 0,
+    spin: true,
+    groups: [
+      { label: 'Pancreas', ko: '이자', colour: 'rose', parts: PANCREAS },
+      { label: 'Spleen', ko: '지라', colour: 'deepRose', parts: SPLEEN },
+      { label: 'Left kidney & suprarenal gland', ko: '왼콩팥 · 부신', colour: 'slate', parts: [...LEFT_KIDNEY, ...LEFT_ADRENAL] },
+      { label: 'Transverse colon & mesocolon', ko: '가로잘록창자 · 간막', colour: 'sage', parts: [...TRANSVERSE_COLON, ...TRANSVERSE_MESOCOLON] },
+      { label: 'Splenic artery', ko: '지라동맥', colour: 'gold', parts: SPLENIC_A },
+    ],
+    soft: [...STOMACH, ...LIVER, ...DUODENUM],
+    frame: [...STOMACH, ...PANCREAS, ...SPLEEN, ...LEFT_KIDNEY],
+    zoom: 0.9,
+  },
+
+  'stomach-arteries': {
+    title: 'Arteries of the stomach from the celiac trunk',
+    turn: 0,
+    spin: true,
+    groups: [
+      { label: 'Celiac trunk (T12)', ko: '복강동맥', colour: 'deepGold', parts: CELIAC },
+      { label: 'Left gastric a.', ko: '왼위동맥', colour: 'deepRose', parts: LEFT_GASTRIC_A },
+      { label: 'Splenic a.', ko: '지라동맥', colour: 'rose', parts: SPLENIC_A },
+      { label: 'Common & proper hepatic a.', ko: '온간 · 고유간동맥', colour: 'gold', parts: [...COMMON_HEPATIC_A, ...PROPER_HEPATIC_A] },
+      { label: 'Right gastric a.', ko: '오른위동맥', colour: 'sage', parts: RIGHT_GASTRIC_A },
+      { label: 'Gastroduodenal & pancreaticoduodenal aa.', ko: '위샘창자 · 이자샘창자동맥', colour: 'sky', parts: [...GASTRODUODENAL_A, ...PANCREATICODUODENAL_AA] },
+      { label: 'Gastro-omental (gastroepiploic) vv. — greater curvature', ko: '위그물막정맥', colour: 'slate', parts: GASTROEPIPLOIC_VV },
+    ],
+    soft: [...STOMACH, ...SPLEEN, ...PANCREAS, ...DUODENUM, ...ABDOMINAL_AORTA],
+    frame: [...STOMACH, ...CELIAC],
+    zoom: 1.1,
+  },
+
+  'diaphragm-apertures': {
+    title: 'Three apertures of the diaphragm',
+    turn: 20,
+    spin: true,
+    groups: [
+      { label: 'IVC — caval opening, T8', ko: '하대정맥 · T8', colour: 'sky', parts: IVC },
+      { label: 'Oesophagus — oesophageal hiatus, T10', ko: '식도 · T10', colour: 'sage', parts: ESOPHAGUS },
+      { label: 'Aorta — aortic hiatus, T12', ko: '대동맥 · T12', colour: 'gold', parts: [...DESCENDING_THORACIC_AORTA, ...ABDOMINAL_AORTA] },
+      { label: 'Vagal trunks — with the oesophagus', ko: '미주신경', colour: 'deepGold', parts: [...LEFT_VAGUS, ...RIGHT_VAGUS] },
+      { label: 'Left phrenic n. — pierces the muscle', ko: '왼횡격신경', colour: 'deepSage', parts: LEFT_PHRENIC },
+      { label: 'T8 · T10 · T12', ko: '흉추', colour: 'ivory', parts: T8_T10_T12 },
+    ],
+    // The diaphragm is faint so the three structures can be seen passing through it.
+    soft: [...DIAPHRAGM, ...THORACIC_VERTEBRAE, ...LUMBAR_VERTEBRAE, ...PSOAS],
+    frame: [...DIAPHRAGM, ...T8_T10_T12],
+    zoom: 0.9,
+  },
+
+  'epiploic-foramen': {
+    title: 'The epiploic foramen and the portal triad',
+    turn: -35,
+    spin: true,
+    groups: [
+      { label: 'Portal v. — behind', ko: '간문맥', colour: 'sky', parts: PORTAL_V },
+      { label: 'Proper (and common) hepatic a.', ko: '고유간동맥', colour: 'rose', parts: [...PROPER_HEPATIC_A, ...COMMON_HEPATIC_A] },
+      { label: 'Bile ducts — hepatic and cystic ducts', ko: '간관 · 쓸개관', colour: 'gold', parts: BILE_DUCTS },
+      { label: 'IVC — posterior border of the foramen', ko: '하대정맥 · 뒤', colour: 'slate', parts: IVC },
+      { label: 'Caudate lobe — superior border', ko: '꼬리엽 · 위', colour: 'paleRose', parts: CAUDATE_LOBE },
+      { label: 'Duodenum — inferior border', ko: '샘창자 · 아래', colour: 'sage', parts: DUODENUM },
+    ],
+    soft: [...LIVER_WITHOUT_CAUDATE, ...GALLBLADDER, ...STOMACH, ...PANCREAS],
+    frame: [...PORTAL_V, ...CAUDATE_LOBE, ...BILE_DUCTS],
+    zoom: 1,
   },
 }
 
