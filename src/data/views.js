@@ -257,6 +257,23 @@ const PANCREATIC_DUCT = ['FMA10419']
 const L1 = ['FMA13072']
 const L3 = ['FMA13074']
 
+// Splanchnology 2, topics 12–15 — unpaired arteries, lymph, portal vein
+const T12 = ['FMA10081']
+const IMA = ['FMA14750', 'FMA66359']
+const MIDDLE_COLIC_A = ['FMA14810']
+const RIGHT_COLIC_A = ['FMA14811']
+const ILEOCOLIC_A = ['FMA14815', 'FMA14819', 'FMA14820']
+const APPENDICULAR_A = ['FMA14818']
+const ILEAL_A = ['FMA14809']
+const INF_PANCREATICODUODENAL_A = ['FMA14805']
+const LEFT_COLIC_A = ['FMA14826', 'FMA14828', 'FMA14829']
+const SIGMOID_A = ['FMA14830']
+const SUP_RECTAL_A = ['FMA14832']
+const MARGINAL_A = ['FMA14831', 'FMA14824']
+const SMV_TRIBUTARIES = ['FMA15406', 'FMA15407', 'FMA15408', 'FMA15405', 'FMA15397', 'FMA15398']
+const IMV_TRIBUTARIES = ['FMA15394', 'FMA15395', 'FMA15393']
+const COLON = [...ASCENDING_COLON, ...TRANSVERSE_COLON, ...DESCENDING_COLON]
+
 export const VIEWS = {
   'thoracic-cage': {
     title: 'Thoracic cage',
@@ -1066,6 +1083,90 @@ export const VIEWS = {
     frame: [...ASCENDING_COLON, ...TRANSVERSE_COLON, ...DESCENDING_COLON, ...RECTUM],
     zoom: 0.95,
   },
+  'unpaired-branches': {
+    title: 'Three unpaired branches of the abdominal aorta',
+    turn: -70,
+    spin: false,
+    groups: [
+      { label: 'Celiac trunk — T12 · foregut', ko: '복강동맥 · T12', colour: 'rose', parts: CELIAC },
+      { label: 'Superior mesenteric a. — L1 · midgut', ko: '위창자간막동맥 · L1', colour: 'gold', parts: SMA },
+      { label: 'Inferior mesenteric a. — L3 · hindgut', ko: '아래창자간막동맥 · L3', colour: 'sky', parts: IMA },
+      { label: 'Abdominal aorta', ko: '배대동맥', colour: 'deepRose', parts: ABDOMINAL_AORTA },
+      { label: 'T12 · L1 · L3', ko: '척추', colour: 'ivory', parts: [...T12, ...L1, ...L3] },
+    ],
+    soft: [...LUMBAR_VERTEBRAE],
+    frame: [...ABDOMINAL_AORTA, ...SMA, ...IMA],
+    zoom: 0.95,
+  },
+
+  'celiac-trunk': {
+    title: 'Branches of the celiac trunk',
+    turn: 0,
+    tilt: 10,
+    spin: false,
+    groups: [
+      { label: 'Celiac trunk', ko: '복강동맥', colour: 'deepRose', parts: CELIAC },
+      { label: 'Left gastric a.', ko: '왼위동맥', colour: 'rose', parts: LEFT_GASTRIC_A },
+      { label: 'Common → proper hepatic a.', ko: '온간 · 고유간동맥', colour: 'gold', parts: [...COMMON_HEPATIC_A, ...PROPER_HEPATIC_A] },
+      { label: 'Right gastric a.', ko: '오른위동맥', colour: 'sage', parts: RIGHT_GASTRIC_A },
+      { label: 'Gastroduodenal → sup. pancreaticoduodenal aa.', ko: '위샘창자동맥', colour: 'sky', parts: [...GASTRODUODENAL_A, 'FMA14782', 'FMA14784'] },
+      { label: 'Splenic a.', ko: '지라동맥', colour: 'slate', parts: SPLENIC_A },
+    ],
+    soft: [...STOMACH, ...SPLEEN, ...PANCREAS, ...DUODENUM, ...GALLBLADDER, ...ABDOMINAL_AORTA],
+    frame: [...STOMACH, ...SPLEEN, ...DUODENUM],
+    zoom: 1.35,
+  },
+
+  'sma-branches': {
+    title: 'Branches of the superior mesenteric artery',
+    turn: 0,
+    spin: false,
+    groups: [
+      { label: 'Superior mesenteric a.', ko: '위창자간막동맥', colour: 'rose', parts: SMA },
+      { label: 'Inferior pancreaticoduodenal a.', ko: '아래이자샘창자동맥', colour: 'paleRose', parts: INF_PANCREATICODUODENAL_A },
+      { label: 'Middle colic a.', ko: '중간잘록창자동맥', colour: 'gold', parts: MIDDLE_COLIC_A },
+      { label: 'Right colic a.', ko: '오른잘록창자동맥', colour: 'sage', parts: RIGHT_COLIC_A },
+      { label: 'Ileocolic a.', ko: '돌잘록창자동맥', colour: 'sky', parts: [...ILEOCOLIC_A, ...ILEAL_A] },
+      { label: 'Appendicular a.', ko: '막창자꼬리동맥', colour: 'deepSky', parts: APPENDICULAR_A },
+    ],
+    soft: [...DUODENUM, ...PANCREAS, ...COLON, ...APPENDIX, ...ABDOMINAL_AORTA],
+    frame: [...SMA, ...MIDDLE_COLIC_A, ...ILEOCOLIC_A, ...COLON],
+    zoom: 1.15,
+  },
+
+  'ima-anastomoses': {
+    title: 'IMA branches and the colic anastomoses',
+    turn: 0,
+    spin: false,
+    groups: [
+      { label: 'Inferior mesenteric a.', ko: '아래창자간막동맥', colour: 'sky', parts: IMA },
+      { label: 'Left colic a.', ko: '왼잘록창자동맥', colour: 'sage', parts: LEFT_COLIC_A },
+      { label: 'Sigmoid aa.', ko: '구불잘록창자동맥', colour: 'deepSage', parts: SIGMOID_A },
+      { label: 'Superior rectal a.', ko: '위곧창자동맥', colour: 'deepSky', parts: SUP_RECTAL_A },
+      { label: 'Middle colic a. (from the SMA)', ko: '중간잘록창자동맥', colour: 'rose', parts: MIDDLE_COLIC_A },
+      { label: 'Marginal a. (Drummond) — along the colon', ko: '변연동맥', colour: 'gold', parts: MARGINAL_A },
+    ],
+    soft: [...COLON, ...RECTUM, ...ABDOMINAL_AORTA, ...SMA],
+    frame: [...COLON, ...RECTUM],
+    zoom: 1.1,
+  },
+
+  'portal-tributaries': {
+    title: 'Tributaries of the portal vein',
+    turn: 0,
+    spin: false,
+    groups: [
+      { label: 'Portal v.', ko: '간문맥', colour: 'deepSky', parts: PORTAL_V },
+      { label: 'Superior mesenteric v. and tributaries', ko: '위창자간막정맥', colour: 'sky', parts: [...SMV, ...SMV_TRIBUTARIES] },
+      { label: 'Splenic v. (+ left gastro-omental v.)', ko: '지라정맥', colour: 'sage', parts: [...SPLENIC_V, 'FMA15390'] },
+      { label: 'Inferior mesenteric v. and tributaries', ko: '아래창자간막정맥', colour: 'gold', parts: [...IMV, ...IMV_TRIBUTARIES] },
+      { label: 'Left and right gastric vv.', ko: '왼 · 오른위정맥', colour: 'rose', parts: GASTRIC_VV },
+    ],
+    soft: [...LIVER_WITHOUT_CAUDATE, ...CAUDATE_LOBE, ...STOMACH, ...SPLEEN, ...PANCREAS, ...COLON, ...RECTUM],
+    frame: [...PORTAL_V, ...SPLENIC_V, ...IMV, ...SMV_TRIBUTARIES],
+    zoom: 1,
+  },
+
 }
 
 // Parts the figures need, with a triangle budget for each.
