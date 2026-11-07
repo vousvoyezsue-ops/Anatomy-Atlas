@@ -180,6 +180,41 @@ const segmentGroups = (list) =>
 const RIGHT_SEGMENT_TREES = RIGHT_SEGMENTS.map((s) => s[2])
 const LEFT_SEGMENT_TREES = LEFT_SEGMENTS.map((s) => s[2])
 
+// Splanchnology 2, topics 1–3 — regions, abdominal wall, peritoneum
+const STOMACH = ['FMA7148']
+const SPLEEN = ['FMA7196']
+const GALLBLADDER = ['FMA7202']
+const PANCREAS = ['FMA7198']
+const DUODENUM = ['FMA7206']
+const JEJUNUM = ['FMA7207']
+const ILEUM = ['FMA7208']
+const SMALL_INTESTINE = [...JEJUNUM, ...ILEUM]
+const ASCENDING_COLON = ['FMA14545']
+const TRANSVERSE_COLON = ['FMA14546']
+const DESCENDING_COLON = ['FMA14547']
+const APPENDIX = ['FMA14542']
+const RECTUM = ['FMA14544']
+const LIVER = ['FMA7197']
+const KIDNEYS = ['FMA7204', 'FMA7205']
+const ADRENALS = ['FMA15629', 'FMA15630']
+const URETERS = ['FMA15571', 'FMA15572']
+const BLADDER = ['FMA15900']
+const PROSTATE = ['FMA9600']
+const HIP_BONES = ['FMA16586', 'FMA16587']
+const SACRUM = ['FMA16202']
+const RECTUS_ABDOMINIS = ['FMA13377', 'FMA13378']
+const EXTERNAL_OBLIQUE = ['FMA13336', 'FMA13337']
+const INTERNAL_OBLIQUE = ['FMA13892', 'FMA13893']
+const TRANSVERSUS_ABDOMINIS = ['FMA22344', 'FMA22345']
+const LINEA_ALBA = ['FMA11336']
+const INGUINAL_LIGAMENTS = ['FMA21964', 'FMA21965']
+const PSOAS = ['FMA22342', 'FMA22343']
+const ILIACUS = ['FMA22322', 'FMA22323']
+const MESENTERY = ['FMA14643']
+const TRANSVERSE_MESOCOLON = ['FMA14647']
+const MESOAPPENDIX = ['FMA16549']
+const POSTERIOR_PERITONEUM = ['FMA19757']
+
 export const VIEWS = {
   'thoracic-cage': {
     title: 'Thoracic cage',
@@ -687,6 +722,73 @@ export const VIEWS = {
     ],
     soft: [...HEART_WALLS, ...DESCENDING_THORACIC_AORTA, ...AORTA.slice(0, 2), ...TRACHEA, ...MAIN_BRONCHI, ...LUNG_LOBES],
     frame: LUNG_LOBES,
+  },
+
+  'abdominal-viscera': {
+    title: 'Abdominal viscera from the front',
+    turn: 0,
+    spin: false,
+    zoom: 0.9,
+    groups: [
+      { label: 'Liver & gallbladder', ko: '간 · 쓸개', colour: 'rose', parts: [...LIVER, ...GALLBLADDER] },
+      { label: 'Stomach', ko: '위', colour: 'gold', parts: STOMACH },
+      { label: 'Spleen', ko: '지라', colour: 'deepRose', parts: SPLEEN },
+      { label: 'Small intestine', ko: '소장', colour: 'paleRose', parts: [...DUODENUM, ...SMALL_INTESTINE] },
+      { label: 'Large intestine', ko: '대장', colour: 'sage', parts: [...ASCENDING_COLON, ...TRANSVERSE_COLON, ...DESCENDING_COLON, ...APPENDIX, ...RECTUM] },
+      { label: 'Kidneys', ko: '콩팥', colour: 'slate', parts: KIDNEYS },
+      { label: 'Urinary bladder', ko: '방광', colour: 'sky', parts: BLADDER },
+    ],
+    soft: [...HIP_BONES, ...SACRUM, ...LUMBAR_VERTEBRAE, ...RIBS, ...COSTAL_CARTILAGES],
+    frame: [...LIVER, ...STOMACH, ...SMALL_INTESTINE, ...BLADDER, ...HIP_BONES],
+  },
+
+  'abdominal-wall': {
+    title: 'Muscles of the abdominal wall',
+    turn: 0,
+    spin: true,
+    zoom: 0.85,
+    groups: [
+      { label: 'Rectus abdominis', ko: '배곧은근', colour: 'rose', parts: RECTUS_ABDOMINIS },
+      { label: 'External oblique (right side)', ko: '배바깥빗근 · 오른쪽', colour: 'gold', parts: ['FMA13336'] },
+      { label: 'Internal oblique (left side, outer layer removed)', ko: '배속빗근 · 왼쪽', colour: 'sage', parts: ['FMA13893'] },
+      { label: 'Transversus abdominis', ko: '배가로근', colour: 'sky', parts: TRANSVERSUS_ABDOMINIS },
+      { label: 'Linea alba', ko: '백색선', colour: 'cartilage', parts: LINEA_ALBA },
+      { label: 'Inguinal ligament', ko: '샅고랑인대', colour: 'deepGold', parts: INGUINAL_LIGAMENTS },
+      { label: 'Posterior wall — psoas major & iliacus', ko: '뒤벽 · 큰허리근 · 엉덩근', colour: 'slate', parts: [...PSOAS, ...ILIACUS] },
+    ],
+    soft: [...HIP_BONES, ...SACRUM, ...LUMBAR_VERTEBRAE, ...RIBS, ...COSTAL_CARTILAGES],
+    frame: [...RECTUS_ABDOMINIS, ...EXTERNAL_OBLIQUE, ...HIP_BONES],
+    // Like an atlas plate: the right side shows the outer layer, the left one layer deeper.
+  },
+
+  'peritoneal-relations': {
+    title: 'Intra-, retro- and infraperitoneal organs',
+    turn: 150,
+    spin: true,
+    groups: [
+      { label: 'Intraperitoneal', ko: '복막내', colour: 'rose', parts: [...LIVER, ...STOMACH, ...SPLEEN, ...GALLBLADDER, ...SMALL_INTESTINE, ...TRANSVERSE_COLON, ...APPENDIX] },
+      { label: 'Secondary retroperitoneal', ko: '이차 복막뒤', colour: 'gold', parts: [...DUODENUM, ...PANCREAS, ...ASCENDING_COLON, ...DESCENDING_COLON] },
+      { label: 'Primary retroperitoneal', ko: '일차 복막뒤', colour: 'sky', parts: [...KIDNEYS, ...ADRENALS, ...URETERS, ...ABDOMINAL_AORTA, ...IVC] },
+      { label: 'Infraperitoneal', ko: '복막아래', colour: 'sage', parts: [...BLADDER, ...PROSTATE, ...RECTUM] },
+      { label: 'Posterior parietal peritoneum', ko: '뒤 벽측 복막', colour: 'paleRose', parts: POSTERIOR_PERITONEUM },
+    ],
+    soft: [...HIP_BONES, ...SACRUM, ...LUMBAR_VERTEBRAE],
+    frame: [...LIVER, ...STOMACH, ...KIDNEYS, ...BLADDER, ...HIP_BONES],
+  },
+
+  mesenteries: {
+    title: 'Mesentery, transverse mesocolon and mesoappendix',
+    turn: 20,
+    spin: true,
+    groups: [
+      { label: 'Mesentery — small intestine', ko: '창자간막', colour: 'gold', parts: MESENTERY },
+      { label: 'Transverse mesocolon', ko: '가로잘록창자간막', colour: 'sky', parts: TRANSVERSE_MESOCOLON },
+      { label: 'Mesoappendix', ko: '막창자꼬리간막', colour: 'rose', parts: MESOAPPENDIX },
+      { label: 'Jejunum & ileum', ko: '빈창자 · 돌창자', colour: 'paleRose', parts: SMALL_INTESTINE },
+      { label: 'Transverse colon & appendix', ko: '가로잘록창자 · 막창자꼬리', colour: 'paleSky', parts: [...TRANSVERSE_COLON, ...APPENDIX] },
+    ],
+    soft: [...DUODENUM, ...PANCREAS, ...ASCENDING_COLON, ...DESCENDING_COLON, ...POSTERIOR_PERITONEUM, ...LUMBAR_VERTEBRAE],
+    frame: [...MESENTERY, ...TRANSVERSE_MESOCOLON, ...SMALL_INTESTINE],
   },
 }
 
