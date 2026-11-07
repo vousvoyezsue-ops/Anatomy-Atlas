@@ -248,6 +248,15 @@ const RIGHT_ADRENAL = ['FMA15629']
 const RIGHT_FIFTH_RIB = ['FMA8066']
 const LEFT_RIBS_9_11 = ['FMA8391', 'FMA8472', 'FMA8532']
 
+// Splanchnology 2, topics 10–11 — duodenum, pancreas and intestines
+const SMA = ['FMA14749', 'FMA66358']
+const SMV = ['FMA14332']
+const IMV = ['FMA15391']
+const LEFT_RENAL_V = ['FMA14336']
+const PANCREATIC_DUCT = ['FMA10419']
+const L1 = ['FMA13072']
+const L3 = ['FMA13074']
+
 export const VIEWS = {
   'thoracic-cage': {
     title: 'Thoracic cage',
@@ -980,6 +989,82 @@ export const VIEWS = {
     soft: LEFT_ADRENAL,
     frame: [...SPLEEN, ...LEFT_KIDNEY, ...PANCREAS],
     zoom: 0.85,
+  },
+  'pancreas-duodenum': {
+    title: 'Duodenum and pancreas',
+    turn: 0,
+    spin: false,
+    groups: [
+      { label: 'Duodenum — C around the head', ko: '샘창자', colour: 'sage', parts: DUODENUM },
+      { label: 'Pancreas — head, body, tail', ko: '이자', colour: 'gold', parts: PANCREAS },
+      { label: 'Superior mesenteric a.', ko: '위창자간막동맥', colour: 'rose', parts: SMA },
+      { label: 'Superior mesenteric v.', ko: '위창자간막정맥', colour: 'sky', parts: SMV },
+      { label: 'L1 · L3', ko: '제1 · 3허리뼈', colour: 'ivory', parts: [...L1, ...L3] },
+    ],
+    soft: [...SPLEEN, ...KIDNEYS, ...ABDOMINAL_AORTA, ...IVC],
+    frame: [...DUODENUM, ...PANCREAS],
+    zoom: 1,
+  },
+
+  'pancreatic-duct': {
+    title: 'Pancreatic duct and bile ducts',
+    turn: 0,
+    spin: true,
+    groups: [
+      { label: 'Main pancreatic duct (of Wirsung)', ko: '주이자관', colour: 'deepGold', parts: PANCREATIC_DUCT },
+      { label: 'Hepatic and cystic ducts', ko: '간관 · 쓸개관', colour: 'sage', parts: BILE_DUCTS },
+      { label: 'Gallbladder', ko: '쓸개', colour: 'deepSage', parts: GALLBLADDER },
+      { label: 'Duodenum', ko: '샘창자', colour: 'paleRose', parts: DUODENUM },
+    ],
+    soft: PANCREAS,
+    frame: [...PANCREAS, ...DUODENUM, ...GALLBLADDER],
+    zoom: 1,
+  },
+
+  'sma-angle': {
+    title: 'The duodenum between the aorta and the SMA',
+    turn: -90,
+    spin: false,
+    groups: [
+      { label: 'Abdominal aorta', ko: '배대동맥', colour: 'gold', parts: ABDOMINAL_AORTA },
+      { label: 'Superior mesenteric a.', ko: '위창자간막동맥', colour: 'rose', parts: SMA },
+      { label: 'Duodenum — 3rd part in the angle', ko: '샘창자 수평부', colour: 'sage', parts: DUODENUM },
+      { label: 'Left renal v. — also in the angle', ko: '왼콩팥정맥', colour: 'sky', parts: LEFT_RENAL_V },
+      { label: 'L3', ko: '제3허리뼈', colour: 'ivory', parts: L3 },
+    ],
+    soft: [...PANCREAS, ...LUMBAR_VERTEBRAE],
+    frame: [...DUODENUM, ...SMA, ...L3],
+    zoom: 1,
+  },
+
+  'small-intestine': {
+    title: 'Jejunum and ileum',
+    turn: 0,
+    spin: false,
+    groups: [
+      { label: 'Jejunum — upper left', ko: '빈창자', colour: 'sage', parts: JEJUNUM },
+      { label: 'Ileum — lower right', ko: '돌창자', colour: 'sky', parts: ILEUM },
+      { label: 'Duodenum', ko: '샘창자', colour: 'paleRose', parts: DUODENUM },
+    ],
+    soft: [...ASCENDING_COLON, ...TRANSVERSE_COLON, ...DESCENDING_COLON, ...RECTUM, ...APPENDIX, ...HIP_BONES],
+    frame: [...JEJUNUM, ...ILEUM, ...TRANSVERSE_COLON],
+    zoom: 0.95,
+  },
+
+  'large-intestine': {
+    title: 'The large intestine framing the small',
+    turn: 0,
+    spin: false,
+    groups: [
+      { label: 'Caecum & ascending colon — retroperitoneal', ko: '막창자 · 오름잘록창자', colour: 'rose', parts: ASCENDING_COLON },
+      { label: 'Vermiform appendix', ko: '막창자꼬리', colour: 'deepRose', parts: APPENDIX },
+      { label: 'Transverse colon — intraperitoneal', ko: '가로잘록창자', colour: 'gold', parts: TRANSVERSE_COLON },
+      { label: 'Descending & sigmoid colon', ko: '내림 · 구불잘록창자', colour: 'sage', parts: DESCENDING_COLON },
+      { label: 'Rectum', ko: '곧창자', colour: 'slate', parts: RECTUM },
+    ],
+    soft: [...SMALL_INTESTINE, ...HIP_BONES, ...SACRUM],
+    frame: [...ASCENDING_COLON, ...TRANSVERSE_COLON, ...DESCENDING_COLON, ...RECTUM],
+    zoom: 0.95,
   },
 }
 
