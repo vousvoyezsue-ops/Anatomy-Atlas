@@ -5,7 +5,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "models": "node scripts/build-models.mjs"
+    "sources": "bash scripts/fetch-sources.sh",
+    "models": "node scripts/build-models.mjs",
+    "fetch-model": "node scripts/fetch-model.mjs",
+    "parts": "node scripts/list-parts.mjs"
   },
   "repository": {
     "type": "git",

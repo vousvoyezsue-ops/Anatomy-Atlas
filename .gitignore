@@ -1,3 +1,6 @@
 node_modules
 dist
 .cache
+.sources
+# Built by `npm run models` (and in CI); get the published one with `npm run fetch-model`.
+public/anatomy.glb

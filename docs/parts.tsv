@@ -1,0 +1,2232 @@
+fma	name	system	source
+FMA3789	Abdominal aorta	vessels	4.0
+FMA45875	Abdominal part of left pectoralis major	other	4.0
+FMA45874	Abdominal part of right pectoralis major	other	4.0
+FMA37464	Abductor digiti minimi of left foot	muscles	4.0
+FMA37397	Abductor digiti minimi of left hand	muscles	4.0
+FMA37463	Abductor digiti minimi of right foot	muscles	4.0
+FMA37396	Abductor digiti minimi of right hand	muscles	4.0
+FMA5011	Accessory hemiazygos vein	vessels	4.0
+FMA68735	Accessory subsuperior branch of right posterior basal segmental artery	organs	4.0
+FMA23069	Acromial branch of left thoraco-acromial artery	vessels	4.0
+FMA23068	Acromial branch of right thoraco-acromial artery	vessels	4.0
+FMA34683	Acromial part of left deltoid	other	4.0
+FMA34682	Acromial part of right deltoid	other	4.0
+FMA13290	Anterior basal segmental vein		4.3
+FMA68691	Anterior branch of lateral segmental artery	organs	4.0
+FMA68683	Anterior branch of right anterior segmental artery	organs	4.0
+FMA76767	Anterior cardiac vein	vessels	4.0
+FMA14816	Anterior cecal artery	vessels	4.0
+FMA58082	Anterior chamber of left eyeball	bones	4.0
+FMA58081	Anterior chamber of right eyeball	other	4.0
+FMA61961	Anterior commissure	other	4.0
+FMA50169	Anterior communicating artery	vessels	4.0
+FMA7253	Anterior cusp of aortic valve	organs	4.0
+FMA8922	Anterior cutaneous branch of left first intercostal nerve		4.3
+FMA6115	Anterior cutaneous branch of left second intercostal nerve		4.3
+FMA70487	Anterior division of left renal artery	vessels	4.0
+FMA70486	Anterior division of right renal artery	vessels	4.0
+FMA49489	Anterior glandular branch of right superior thyroid artery		4.3
+FMA50544	Anterior inferior cerebellar artery	vessels	4.0
+FMA70479	Anterior inferior pancreaticoduodenal artery	vessels	4.0
+FMA15421	Anterior inferior segmental branch of right portal vein	organs	4.0
+FMA70443	Anterior inferior segmental hepatic artery	organs	4.0
+FMA15800	Anterior inferior segmental tributary of middle hepatic vein	organs	4.0
+FMA71868	Anterior inferior tributary of right hepatic biliary tree	organs	4.0
+FMA50774	Anterior intercavernous sinus		4.3
+FMA66403	Anterior interventricular vein	vessels	4.0
+FMA7242	Anterior leaflet of mitral valve	organs	4.0
+FMA7238	Anterior leaflet of tricuspid valve	organs	4.0
+FMA7260	Anterior papillary muscle of right ventricle	organs	4.0
+FMA68945	Anterior part of lateral segmental vein	organs	4.0
+FMA72801	Anterior part of left superior temporal gyrus	other	4.0
+FMA68665	Anterior part of right apical segmental artery	organs	4.0
+FMA68921	Anterior part of right apical segmental vein	organs	4.0
+FMA72800	Anterior part of right superior temporal gyrus	other	4.0
+FMA14782	Anterior superior pancreaticoduodenal artery	vessels	4.0
+FMA15420	Anterior superior segmental branch of right portal vein	organs	4.0
+FMA70442	Anterior superior segmental hepatic artery	organs	4.0
+FMA15798	Anterior superior segmental tributary of right hepatic vein	vessels	4.0
+FMA71867	Anterior superior tributary of right hepatic biliary tree	organs	4.0
+FMA50679	Anterior temporal branch of left lateral occipital artery	vessels	4.0
+FMA50678	Anterior temporal branch of right lateral occipital artery	vessels	4.0
+FMA51012	Anterior vein of right septum pellucidum		4.3
+FMA50378	Anterolateral central branch of left middle cerebral artery	vessels	4.0
+FMA50377	Anterolateral central branch of right middle cerebral artery	vessels	4.0
+FMA7265	Anterolateral head of lateral papillary muscle of left ventricle	organs	4.0
+FMA50349	Anteromedial frontal branch of right callosomarginal artery		4.3
+FMA51390	Anteromedian medullary vein		4.3
+FMA51346	Anteromedian pontine vein		4.3
+FMA68662	Apical part of right apical segmental artery	organs	4.0
+FMA8681	Apical part of right apical segmental vein	organs	4.0
+FMA68670	Apical part of right posterior segmental artery	organs	4.0
+FMA13281	Apicoposterior segmental artery		4.3
+FMA68224	Apicoposterior segmental bronchial tree		4.3
+FMA8666	Apicoposterior segmental vein		4.3
+FMA14818	Appendicular artery	vessels	4.0
+FMA14542	Appendix	organs	4.0
+FMA3768	Arch of aorta	vessels	4.0
+FMA77439	Artery of central sulcus	vessels	4.0
+FMA50484	Artery of left postcentral sulcus	vessels	4.0
+FMA50481	Artery of left precentral sulcus	vessels	4.0
+FMA50483	Artery of right postcentral sulcus	vessels	4.0
+FMA50480	Artery of right precentral sulcus	vessels	4.0
+FMA85529	Artery of right pterygoid canal		4.3
+FMA3736	Ascending aorta	vessels	4.0
+FMA14820	Ascending branch of inferior branch of ileocolic artery	vessels	4.0
+FMA14828	Ascending branch of left colic artery	other	4.0
+FMA14545	Ascending colon	organs	4.0
+FMA12858	Ascending lumbar vein	vessels	4.0
+FMA33583	Ascending part of left trapezius	other	4.0
+FMA33581	Ascending part of right trapezius	other	4.0
+FMA12519	Atlas	bones	4.0
+FMA12520	Axis	bones	4.0
+FMA4838	Azygos vein	vessels	4.0
+FMA68723	Basal branch of right anterior basal segmental artery	organs	4.0
+FMA50542	Basilar artery	vessels	4.0
+FMA50783	Basilar venous plexus		4.3
+FMA7487	Body of sternum	bones	4.0
+FMA236884	Bony part of left hip bone		4.3
+FMA3932	Brachiocephalic artery	vessels	4.0
+FMA73464	Brachium of left inferior colliculus	other	4.0
+FMA73462	Brachium of left superior colliculus	other	4.0
+FMA73463	Brachium of right inferior colliculus	other	4.0
+FMA73461	Brachium of right superior colliculus	other	4.0
+FMA50147	Branch of left anterior choroidal artery to posterior limb of left internal capsule	vessels	4.0
+FMA53073	Branch of left mandibular nerve to left otic ganglion		4.3
+FMA50477	Branch of left middle cerebral artery to left angular gyrus	vessels	4.0
+FMA50146	Branch of right anterior choroidal artery to posterior limb of right internal capsule	vessels	4.0
+FMA50131	Branch of right anterior choroidal artery to right lateral ventricle		4.3
+FMA50138	Branch of right anterior choroidal artery to right optic tract		4.3
+FMA53072	Branch of right mandibular nerve to right otic ganglion		4.3
+FMA50476	Branch of right middle cerebral artery to right angular gyrus	vessels	4.0
+FMA68109	Bronchial artery	vessels	4.0
+FMA14177	Bronchial branch of arch of aorta	other	4.0
+FMA53312	Buccal branch of left facial nerve		4.3
+FMA53311	Buccal branch of right facial nerve		4.3
+FMA52590	Cauda equina		4.3
+FMA14793	Caudal pancreatic artery	vessels	4.0
+FMA70455	Caudate lobe branch of left hepatic artery	organs	4.0
+FMA15425	Caudate lobe branch of left portal vein	organs	4.0
+FMA70447	Caudate lobe branch of right hepatic artery	organs	4.0
+FMA82706	Caudate lobe branch of right portal vein	organs	4.0
+FMA13365	Caudate lobe of liver	organs	4.0
+FMA71889	Caudate lobe tributary of left hepatic biliary tree	organs	4.0
+FMA49822	Cavernous branch of right internal carotid artery		4.3
+FMA9465	Cavity of left atrium	organs	4.0
+FMA9466	Cavity of left ventricle	organs	4.0
+FMA11359	Cavity of right atrium	organs	4.0
+FMA9291	Cavity of right ventricle	organs	4.0
+FMA50737	Celiac artery	vessels	4.0
+FMA14812	Celiac trunk	vessels	4.0
+FMA78497	Central canal of spinal cord	nerves	4.0
+FMA67944	Cerebellum	organs	4.0
+FMA78467	Cerebral aqueduct	organs	4.0
+FMA266056	Cerebral hemisphere segment of dura mater		4.3
+FMA53399	Cervical branch of left facial nerve		4.3
+FMA53398	Cervical branch of right facial nerve		4.3
+FMA49145	Check ligament of left lateral rectus	other	4.0
+FMA49148	Check ligament of left medial rectus	other	4.0
+FMA49144	Check ligament of right lateral rectus	other	4.0
+FMA49147	Check ligament of right medial rectus	other	4.0
+FMA50412	Chiasmatic branch of right posterior communicating artery		4.3
+FMA61934	Choroid plexus of cerebral hemisphere	other	4.0
+FMA242857	Choroid plexus of right lateral ventricle		4.3
+FMA3895	Circumflex branch of left coronary artery	organs	4.0
+FMA34681	Clavicular part of left deltoid	other	4.0
+FMA34691	Clavicular part of left pectoralis major	other	4.0
+FMA34680	Clavicular part of right deltoid	other	4.0
+FMA34690	Clavicular part of right pectoralis major	other	4.0
+FMA61970	Commissure of fornix of forebrain	other	4.0
+FMA14771	Common hepatic artery	vessels	4.0
+FMA14668	Common hepatic duct	organs	4.0
+FMA22923	Common palmar digital vein	other	4.0
+FMA52674	Communicating branch of left nasociliary nerve with left ciliary ganglion	nerves	4.0
+FMA52673	Communicating branch of right nasociliary nerve with right ciliary ganglion	nerves	4.0
+FMA3868	Conus branch of anterior interventricular branch of left coronary artery	organs	4.0
+FMA4706	Coronary sinus	organs	4.0
+FMA86464	Corpus callosum	other	4.0
+FMA19618	Corpus cavernosum of penis	other	4.0
+FMA19617	Corpus spongiosum of penis	other	4.0
+FMA9615	Cricoid cartilage	other	4.0
+FMA14539	Cystic duct	organs	4.0
+FMA21354	Deep dorsal vein of penis	vessels	4.0
+FMA23073	Deltoid branch of left thoraco-acromial artery	vessels	4.0
+FMA23072	Deltoid branch of right thoraco-acromial artery	vessels	4.0
+FMA49709	Dental branch of right inferior alveolar artery		4.3
+FMA49762	Dental branch of right posterior superior alveolar artery		4.3
+FMA3784	Descending aorta	vessels	4.0
+FMA14829	Descending branch of left colic artery	other	4.0
+FMA21423	Descending branch of left lateral circumflex femoral artery	vessels	4.0
+FMA21422	Descending branch of right lateral circumflex femoral artery	vessels	4.0
+FMA14547	Descending colon	organs	4.0
+FMA33587	Descending part of left trapezius	other	4.0
+FMA33586	Descending part of right trapezius	other	4.0
+FMA87217	Descending thoracic aorta	vessels	4.0
+FMA3860	Diagonal branch of anterior descending branch of left coronary artery	organs	4.0
+FMA13295	Diaphragm	muscles	4.0
+FMA14966	Distal part of ileum	organs	4.0
+FMA16983	Distal part of jejunum	organs	4.0
+FMA69517	Distal perforating artery	vessels	4.0
+FMA32651	Distal phalanx of left big toe	bones	4.0
+FMA32657	Distal phalanx of left fourth toe	bones	4.0
+FMA23953	Distal phalanx of left index finger	bones	4.0
+FMA23959	Distal phalanx of left little finger	bones	4.0
+FMA32659	Distal phalanx of left little toe	bones	4.0
+FMA23955	Distal phalanx of left middle finger	bones	4.0
+FMA23957	Distal phalanx of left ring finger	bones	4.0
+FMA32653	Distal phalanx of left second toe	bones	4.0
+FMA32655	Distal phalanx of left third toe	bones	4.0
+FMA23951	Distal phalanx of left thumb	bones	4.0
+FMA32650	Distal phalanx of right big toe	bones	4.0
+FMA32656	Distal phalanx of right fourth toe	bones	4.0
+FMA24460	Distal phalanx of right index finger	bones	4.0
+FMA24463	Distal phalanx of right little finger	bones	4.0
+FMA32658	Distal phalanx of right little toe	bones	4.0
+FMA24461	Distal phalanx of right middle finger	bones	4.0
+FMA24462	Distal phalanx of right ring finger	bones	4.0
+FMA32652	Distal phalanx of right second toe	bones	4.0
+FMA32654	Distal phalanx of right third toe	bones	4.0
+FMA24459	Distal phalanx of right thumb	bones	4.0
+FMA22773	Dorsal carpal branch of left radial artery	vessels	4.0
+FMA22772	Dorsal carpal branch of right radial artery	vessels	4.0
+FMA44660	Dorsal digital artery of foot	vessels	4.0
+FMA44986	Dorsal digital branch of left radial nerve to medial side of left index finger		4.3
+FMA51393	Dorsal medullary vein		4.3
+FMA22954	Dorsal metacarpal vein	other	4.0
+FMA14787	Dorsal pancreatic artery	vessels	4.0
+FMA44882	Dorsal venous arch of left foot	vessels	4.0
+FMA44881	Dorsal venous arch of right foot	vessels	4.0
+FMA62507	Dorsal venous network of left hand	other	4.0
+FMA62506	Dorsal venous network of right hand	other	4.0
+FMA7206	Duodenum	organs	4.0
+FMA9991	Eighth thoracic vertebra	bones	4.0
+FMA10059	Eleventh thoracic vertebra	bones	4.0
+FMA55130	Epiglottis	other	4.0
+FMA4149	Esophageal artery	vessels	4.0
+FMA7131	Esophagus	organs	4.0
+FMA52740	Ethmoid	bones	4.0
+FMA21930	External anal sphincter	muscles	4.0
+FMA52781	External ear	other	4.0
+FMA9756	External intercostal muscle	muscles	4.0
+FMA52991	External nasal branch of left infra-orbital nerve		4.3
+FMA52990	External nasal branch of right infra-orbital nerve		4.3
+FMA54237	Eyebrow	other	4.0
+FMA83967	Falx cerebri		4.3
+FMA12523	Fifth cervical vertebra	bones	4.0
+FMA13076	Fifth lumbar vertebra	bones	4.0
+FMA9922	Fifth thoracic vertebra	bones	4.0
+FMA3815	First anterior ventricular branch of right coronary artery	organs	4.0
+FMA44979	First dorsal digital branch of left radial nerve		4.3
+FMA44977	First dorsal digital branch of radial nerve		4.3
+FMA13072	First lumbar vertebra	bones	4.0
+FMA37718	First lumbrical of left foot	muscles	4.0
+FMA37717	First lumbrical of right foot	muscles	4.0
+FMA37746	First plantar interosseous of left foot	muscles	4.0
+FMA37745	First plantar interosseous of right foot	muscles	4.0
+FMA3837	First posterior ventricular branch of right coronary artery	organs	4.0
+FMA3872	First right anterior branch of anterior interventricular branch of left coronary artery	organs	4.0
+FMA3847	First septal branch of right posterior interventricular artery	vessels	4.0
+FMA9165	First thoracic vertebra	bones	4.0
+FMA37472	Flexor digiti minimi brevis of left foot	muscles	4.0
+FMA37399	Flexor digiti minimi brevis of left hand	muscles	4.0
+FMA37471	Flexor digiti minimi brevis of right foot	muscles	4.0
+FMA37398	Flexor digiti minimi brevis of right hand	muscles	4.0
+FMA40121	Flexor retinaculum of left wrist	other	4.0
+FMA40120	Flexor retinaculum of right wrist	other	4.0
+FMA12522	Fourth cervical vertebra	bones	4.0
+FMA13075	Fourth lumbar vertebra	bones	4.0
+FMA37484	Fourth lumbrical of left foot	muscles	4.0
+FMA37483	Fourth lumbrical of right foot	muscles	4.0
+FMA9248	Fourth thoracic vertebra	bones	4.0
+FMA78469	Fourth ventricle	organs	4.0
+FMA52734	Frontal bone	bones	4.0
+FMA49731	Frontal branch of right middle meningeal artery		4.3
+FMA49673	Frontal branch of right superficial temporal artery		4.3
+FMA7202	Gallbladder	organs	4.0
+FMA52733	Ganglionic branch of left maxillary nerve to left pterygopalatine ganglion		4.3
+FMA52732	Ganglionic branch of right maxillary nerve to right pterygopalatine ganglion		4.3
+FMA59764	Gingiva of lower jaw	organs	4.0
+FMA59763	Gingiva of upper jaw	organs	4.0
+FMA18247	Glans penis	other	4.0
+FMA4707	Great cardiac vein	organs	4.0
+FMA14792	Great pancreatic artery	vessels	4.0
+FMA62032	Habenula	organs	4.0
+FMA54241	Hair of head	other	4.0
+FMA4944	Hemiazygos vein	vessels	4.0
+FMA14772	Hepatic artery proper	organs	4.0
+FMA50735	Hepatic portal vein	vessels	4.0
+FMA15739	Hepatovenous segment II	organs	4.0
+FMA15741	Hepatovenous segment III	organs	4.0
+FMA15742	Hepatovenous segment IV	organs	4.0
+FMA15747	Hepatovenous segment IX	other	4.0
+FMA15743	Hepatovenous segment V	organs	4.0
+FMA15744	Hepatovenous segment VI	organs	4.0
+FMA15745	Hepatovenous segment VII	organs	4.0
+FMA15746	Hepatovenous segment VIII	organs	4.0
+FMA38618	Humeral head of left flexor carpi ulnaris	other	4.0
+FMA38561	Humeral head of left pronator teres	other	4.0
+FMA38617	Humeral head of right flexor carpi ulnaris	other	4.0
+FMA38560	Humeral head of right pronator teres	other	4.0
+FMA55227	Hyo-epiglottic ligament	other	4.0
+FMA52749	Hyoid bone	bones	4.0
+FMA50429	Hypothalamic branch of left posterior communicating artery	vessels	4.0
+FMA50428	Hypothalamic branch of right posterior communicating artery	vessels	4.0
+FMA62008	Hypothalamus	organs	4.0
+FMA14809	Ileal artery	vessels	4.0
+FMA14819	Ileal branch of inferior branch of ileocolic artery	vessels	4.0
+FMA15405	Ileal vein	vessels	4.0
+FMA11338	Ileocecal junction	organs	4.0
+FMA14815	Ileocolic artery	vessels	4.0
+FMA15408	Ileocolic vein	vessels	4.0
+FMA52577	Inferior branch of left oculomotor nerve	nerves	4.0
+FMA68694	Inferior branch of medial segmental artery	organs	4.0
+FMA52576	Inferior branch of right oculomotor nerve	nerves	4.0
+FMA50820	Inferior bulb of right internal jugular vein		4.3
+FMA50986	Inferior cerebral vein		4.3
+FMA8640	Inferior lingular artery	organs	4.0
+FMA68134	Inferior lingular bronchial artery		4.3
+FMA68227	Inferior lingular bronchial tree	organs	4.0
+FMA8669	Inferior lingular vein	organs	4.0
+FMA14750	Inferior mesenteric artery	vessels	4.0
+FMA15391	Inferior mesenteric vein	vessels	4.0
+FMA46288	Inferior oblique part of left longus colli	other	4.0
+FMA52988	Inferior palpebral branch of left infra-orbital nerve		4.3
+FMA52987	Inferior palpebral branch of right infra-orbital nerve		4.3
+FMA14790	Inferior pancreatic artery	vessels	4.0
+FMA14805	Inferior pancreaticoduodenal artery	vessels	4.0
+FMA68983	Inferior part of medial segmental vein	organs	4.0
+FMA68928	Inferior part of right anterior segmental vein	organs	4.0
+FMA68068	Inferior phrenic vein	vessels	4.0
+FMA55150	Inferior root of left ansa cervicalis		4.3
+FMA50768	Inferior sagittal sinus		4.3
+FMA86347	Inferior segmental branch of left renal artery	vessels	4.0
+FMA86346	Inferior segmental branch of right renal artery	vessels	4.0
+FMA65364	Inferior trunk of left brachial nerve plexus		4.3
+FMA51231	Inferior vein of vermis		4.3
+FMA10951	Inferior vena cava	vessels	4.0
+FMA9758	Innermost intercostal muscle	muscles	4.0
+FMA50370	Insular part of left middle cerebral artery	other	4.0
+FMA50369	Insular part of right middle cerebral artery	other	4.0
+FMA50352	Intermediomedial branch of left callosomarginal artery	vessels	4.0
+FMA50351	Intermediomedial branch of right callosomarginal artery	vessels	4.0
+FMA9757	Internal intercostal muscle	muscles	4.0
+FMA52687	Internal nasal branch of left anterior ethmoidal nerve		4.3
+FMA52993	Internal nasal branch of left infra-orbital nerve		4.3
+FMA52686	Internal nasal branch of right anterior ethmoidal nerve		4.3
+FMA52992	Internal nasal branch of right infra-orbital nerve		4.3
+FMA23708	Interosseous membrane of left forearm	other	4.0
+FMA35193	Interosseous membrane of left leg	other	4.0
+FMA23707	Interosseous membrane of right forearm	other	4.0
+FMA35192	Interosseous membrane of right leg	other	4.0
+FMA83740	Interpeduncular fossa	other	4.0
+FMA75351	Interventricular foramen	other	4.0
+FMA10446	Intervertebral disk	bones	4.0
+FMA25058	Intervertebral disk of axis	bones	4.0
+FMA13505	Intervertebral disk of eighth thoracic vertebra	bones	4.0
+FMA13508	Intervertebral disk of eleventh thoracic vertebra	bones	4.0
+FMA13898	Intervertebral disk of fifth cervical vertebra	bones	4.0
+FMA16037	Intervertebral disk of fifth lumbar vertebra	bones	4.0
+FMA13502	Intervertebral disk of fifth thoracic vertebra	bones	4.0
+FMA16033	Intervertebral disk of first lumbar vertebra	bones	4.0
+FMA10458	Intervertebral disk of first thoracic vertebra	bones	4.0
+FMA13897	Intervertebral disk of fourth cervical vertebra	bones	4.0
+FMA16036	Intervertebral disk of fourth lumbar vertebra	bones	4.0
+FMA13501	Intervertebral disk of fourth thoracic vertebra	bones	4.0
+FMA13506	Intervertebral disk of ninth thoracic vertebra	bones	4.0
+FMA16034	Intervertebral disk of second lumbar vertebra	bones	4.0
+FMA13495	Intervertebral disk of second thoracic vertebra	bones	4.0
+FMA13900	Intervertebral disk of seventh cervical vertebra	bones	4.0
+FMA13504	Intervertebral disk of seventh thoracic vertebra	bones	4.0
+FMA13899	Intervertebral disk of sixth cervical vertebra	bones	4.0
+FMA13503	Intervertebral disk of sixth thoracic vertebra	bones	4.0
+FMA13507	Intervertebral disk of tenth thoracic vertebra	bones	4.0
+FMA13896	Intervertebral disk of third cervical vertebra	bones	4.0
+FMA16035	Intervertebral disk of third lumbar vertebra	bones	4.0
+FMA13500	Intervertebral disk of third thoracic vertebra	bones	4.0
+FMA13509	Intervertebral disk of twelfth thoracic vertebra		4.3
+FMA49178	Isthmus of thyroid gland		4.3
+FMA61975	Lamina terminalis	other	4.0
+FMA13291	Lateral basal segmental vein		4.3
+FMA50569	Lateral branch of left pontine artery	vessels	4.0
+FMA50579	Lateral branch of left superior cerebellar artery	vessels	4.0
+FMA68725	Lateral branch of right anterior basal segmental artery	organs	4.0
+FMA68728	Lateral branch of right lateral basal segmental artery	organs	4.0
+FMA50568	Lateral branch of right pontine artery	vessels	4.0
+FMA50578	Lateral branch of right superior cerebellar artery	vessels	4.0
+FMA68712	Lateral branch of right superior segmental artery	organs	4.0
+FMA45239	Lateral cord of left brachial nerve plexus		4.3
+FMA6752	Lateral cutaneous branch of left first intercostal nerve		4.3
+FMA44984	Lateral dorsal digital branch of radial nerve to index finger		4.3
+FMA49495	Lateral glandular branch of right superior thyroid artery		4.3
+FMA45974	Lateral head of left flexor hallucis brevis	other	4.0
+FMA45961	Lateral head of left gastrocnemius	other	4.0
+FMA37698	Lateral head of left triceps brachii	other	4.0
+FMA45973	Lateral head of right flexor hallucis brevis	other	4.0
+FMA45960	Lateral head of right gastrocnemius	other	4.0
+FMA37697	Lateral head of right triceps brachii	other	4.0
+FMA15432	Lateral inferior segmental branch of left portal vein	organs	4.0
+FMA70453	Lateral inferior segmental hepatic artery	organs	4.0
+FMA15804	Lateral inferior segmental tributary of left hepatic vein	vessels	4.0
+FMA71888	Lateral inferior tributary of left hepatic biliary tree	organs	4.0
+FMA52685	Lateral internal nasal branch of left anterior ethmoidal nerve		4.3
+FMA52684	Lateral internal nasal branch of right anterior ethmoidal nerve		4.3
+FMA22850	Lateral lumbar intertransversarius	muscles	4.0
+FMA7264	Lateral papillary muscle of left ventricle	organs	4.0
+FMA23055	Lateral proper palmar digital artery of left little finger	vessels	4.0
+FMA22860	Lateral proper palmar digital artery of left middle finger	vessels	4.0
+FMA85116	Lateral proper palmar digital artery of left ring finger	vessels	4.0
+FMA23054	Lateral proper palmar digital artery of right little finger	vessels	4.0
+FMA22858	Lateral proper palmar digital artery of right middle finger	vessels	4.0
+FMA85115	Lateral proper palmar digital artery of right ring finger	vessels	4.0
+FMA65342	Lateral proper palmar digital branch of left median nerve to left index finger		4.3
+FMA44871	Lateral proper palmar digital branch of left median nerve to left ring finger		4.3
+FMA65338	Lateral proper palmar digital branch of left median nerve to left thumb		4.3
+FMA44867	Lateral proper palmar digital branch of median nerve to middle finger		4.3
+FMA68194	Lateral segmental artery		4.3
+FMA68215	Lateral segmental bronchial tree	organs	4.0
+FMA8664	Lateral segmental vein		4.3
+FMA15431	Lateral superior segmental branch of left portal vein	organs	4.0
+FMA70452	Lateral superior segmental hepatic artery	organs	4.0
+FMA15803	Lateral superior segmental tributary of left hepatic vein	vessels	4.0
+FMA71887	Lateral superior tributary of left hepatic biliary tree	organs	4.0
+FMA51016	Lateral vein of right lateral ventricle		4.3
+FMA68738	Laterobasal branch of right posterior basal segmental artery	organs	4.0
+FMA68591	Laterobasal part of right posterior basal segmental bronchial tree		4.3
+FMA50887	Left abducens nerve		4.3
+FMA37460	Left abductor hallucis	muscles	4.0
+FMA37387	Left abductor pollicis brevis	muscles	4.0
+FMA38517	Left abductor pollicis longus	muscles	4.0
+FMA22454	Left adductor brevis	muscles	4.0
+FMA22457	Left adductor longus	muscles	4.0
+FMA22460	Left adductor magnus	muscles	4.0
+FMA43887	Left adductor minimus	muscles	4.0
+FMA15630	Left adrenal gland	organs	4.0
+FMA72833	Left amygdala	other	4.0
+FMA37706	Left anconeus	muscles	4.0
+FMA72670	Left angular gyrus	organs	4.0
+FMA8645	Left anterior basal segmental artery	organs	4.0
+FMA68138	Left anterior basal segmental bronchial artery		4.3
+FMA68231	Left anterior basal segmental bronchial tree	organs	4.0
+FMA8678	Left anterior basal segmental vein	organs	4.0
+FMA50030	Left anterior cerebral artery	vessels	4.0
+FMA50089	Left anterior choroidal artery	vessels	4.0
+FMA22683	Left anterior circumflex humeral artery	vessels	4.0
+FMA77955	Left anterior circumflex humeral vein	vessels	4.0
+FMA7247	Left anterior cusp of pulmonary valve	organs	4.0
+FMA52677	Left anterior ethmoidal nerve	nerves	4.0
+FMA22813	Left anterior interosseous artery	vessels	4.0
+FMA65326	Left anterior interosseous nerve		4.3
+FMA73334	Left anterior nucleus of hypothalamus		4.3
+FMA256200	Left anterior orbital gyrus		4.3
+FMA50487	Left anterior parietal artery	vessels	4.0
+FMA13279	Left anterior segmental artery	organs	4.0
+FMA68131	Left anterior segmental bronchial artery		4.3
+FMA68222	Left anterior segmental bronchial tree	organs	4.0
+FMA8667	Left anterior segmental vein	organs	4.0
+FMA50533	Left anterior spinal artery	vessels	4.0
+FMA52942	Left anterior superior alveolar nerve		4.3
+FMA50384	Left anterior temporal artery	vessels	4.0
+FMA43897	Left anterior tibial artery	vessels	4.0
+FMA43908	Left anterior tibial recurrent artery	vessels	4.0
+FMA44337	Left anterior tibial vein	vessels	4.0
+FMA22802	Left anterior ulnar recurrent artery	vessels	4.0
+FMA8634	Left apical segmental artery	organs	4.0
+FMA68223	Left apical segmental bronchial tree	organs	4.0
+FMA9437	Left apical segmental vein	organs	4.0
+FMA69495	Left arcuate artery	vessels	4.0
+FMA73338	Left arcuate nucleus of hypothalamus		4.3
+FMA22907	Left arteria princeps pollicis	vessels	4.0
+FMA22778	Left arteria radialis indicis	vessels	4.0
+FMA46605	Left aryepiglotticus	other	4.0
+FMA55114	Left arytenoid cartilage	other	4.0
+FMA4950	Left ascending lumbar vein	vessels	4.0
+FMA22656	Left axillary artery	other	4.0
+FMA37074	Left axillary nerve		4.3
+FMA13331	Left axillary vein	vessels	4.0
+FMA22910	Left basilic vein	vessels	4.0
+FMA22692	Left brachial artery	other	4.0
+FMA37669	Left brachialis	muscles	4.0
+FMA4761	Left brachiocephalic vein	vessels	4.0
+FMA38487	Left brachioradialis	muscles	4.0
+FMA53068	Left buccal nerve		4.3
+FMA264844	Left calcaneal tendon	other	4.0
+FMA24498	Left calcaneus	bones	4.0
+FMA50348	Left callosomarginal artery	vessels	4.0
+FMA24447	Left capitate	bones	4.0
+FMA72827	Left caudate nucleus	other	4.0
+FMA13326	Left cephalic vein	vessels	4.0
+FMA242162	Left cerebral crus		4.3
+FMA81753	Left cervical rotator	muscles	4.0
+FMA58300	Left choroid	bones	4.0
+FMA53550	Left ciliary ganglion	nerves	4.0
+FMA72718	Left cingulate gyrus	organs	4.0
+FMA23181	Left circumflex scapular artery	vessels	4.0
+FMA77950	Left circumflex scapular vein	vessels	4.0
+FMA13323	Left clavicle	bones	4.0
+FMA46444	Left coccygeus	muscles	4.0
+FMA14826	Left colic artery	vessels	4.0
+FMA15394	Left colic vein	vessels	4.0
+FMA4058	Left common carotid artery	vessels	4.0
+FMA14766	Left common iliac artery	vessels	4.0
+FMA21388	Left common iliac vein	vessels	4.0
+FMA22808	Left common interosseous artery	vessels	4.0
+FMA49073	Left common tendinous ring	other	4.0
+FMA55252	Left conus elasticus	other	4.0
+FMA37666	Left coracobrachialis	muscles	4.0
+FMA58240	Left cornea	bones	4.0
+FMA55116	Left corniculate cartilage	other	4.0
+FMA58484	Left corona ciliaris	other	4.0
+FMA4086	Left costocervical trunk	vessels	4.0
+FMA24529	Left cuboid bone	bones	4.0
+FMA55118	Left cuneiform cartilage	other	4.0
+FMA72680	Left cuneus		4.3
+FMA22697	Left deep brachial artery	vessels	4.0
+FMA4134	Left deep cervical artery	vessels	4.0
+FMA20797	Left deep femoral artery		4.3
+FMA51043	Left deep femoral vein	vessels	4.0
+FMA22840	Left deep palmar arch	other	4.0
+FMA22913	Left deep palmar venous arch	other	4.0
+FMA69515	Left deep plantar artery	other	4.0
+FMA19236	Left deferent duct	other	4.0
+FMA22508	Left descending genicular artery	vessels	4.0
+FMA46293	Left digastric	muscles	4.0
+FMA20819	Left dorsal artery of penis	vessels	4.0
+FMA22822	Left dorsal carpal branch of ulnar artery	vessels	4.0
+FMA10552	Left dorsal scapular artery	vessels	4.0
+FMA43917	Left dorsalis pedis artery	vessels	4.0
+FMA73340	Left dorsomedial nucleus of hypothalamus		4.3
+FMA76903	Left duct of caudate lobe of liver	other	4.0
+FMA8329	Left eighth costal cartilage		4.3
+FMA8310	Left eighth rib	bones	4.0
+FMA8532	Left eleventh rib	bones	4.0
+FMA18257	Left epididymis	other	4.0
+FMA38499	Left extensor carpi radialis brevis	muscles	4.0
+FMA38496	Left extensor carpi radialis longus	muscles	4.0
+FMA38508	Left extensor carpi ulnaris	muscles	4.0
+FMA38505	Left extensor digiti minimi	muscles	4.0
+FMA38502	Left extensor digitorum	muscles	4.0
+FMA22549	Left extensor digitorum longus	muscles	4.0
+FMA51145	Left extensor hallucis brevis	muscles	4.0
+FMA22547	Left extensor hallucis longus	muscles	4.0
+FMA38526	Left extensor indicis	muscles	4.0
+FMA38520	Left extensor pollicis brevis	muscles	4.0
+FMA38523	Left extensor pollicis longus	muscles	4.0
+FMA18807	Left external iliac artery	vessels	4.0
+FMA18886	Left external iliac vein	vessels	4.0
+FMA52690	Left external nasal nerve		4.3
+FMA13337	Left external oblique	muscles	4.0
+FMA70250	Left femoral artery	vessels	4.0
+FMA21189	Left femoral vein	vessels	4.0
+FMA24475	Left femur	bones	4.0
+FMA24481	Left fibula	bones	4.0
+FMA44886	Left fibular vein	vessels	4.0
+FMA22555	Left fibularis brevis	muscles	4.0
+FMA22553	Left fibularis longus	muscles	4.0
+FMA22551	Left fibularis tertius	muscles	4.0
+FMA8112	Left fifth costal cartilage	bones	4.0
+FMA24473	Left fifth metacarpal bone	bones	4.0
+FMA24516	Left fifth metatarsal bone	bones	4.0
+FMA8093	Left fifth rib	bones	4.0
+FMA6442	Left first cervical nerve		4.3
+FMA85118	Left first common palmar digital artery	vessels	4.0
+FMA8005	Left first costal cartilage	bones	4.0
+FMA24465	Left first metacarpal bone	bones	4.0
+FMA24508	Left first metatarsal bone	bones	4.0
+FMA66243	Left first posterior intercostal artery	vessels	4.0
+FMA7987	Left first rib	bones	4.0
+FMA37466	Left flexor accessorius	muscles	4.0
+FMA38461	Left flexor carpi radialis	muscles	4.0
+FMA37462	Left flexor digitorum brevis	muscles	4.0
+FMA65017	Left flexor digitorum longus	muscles	4.0
+FMA38480	Left flexor digitorum profundus	muscles	4.0
+FMA38471	Left flexor digitorum superficialis	muscles	4.0
+FMA65015	Left flexor hallucis longus	muscles	4.0
+FMA37389	Left flexor pollicis brevis	muscles	4.0
+FMA38484	Left flexor pollicis longus	muscles	4.0
+FMA72925	Left fornix of forebrain	other	4.0
+FMA85124	Left fourth common palmar digital artery	vessels	4.0
+FMA8167	Left fourth costal cartilage	bones	4.0
+FMA24471	Left fourth metacarpal bone	bones	4.0
+FMA24514	Left fourth metatarsal bone	bones	4.0
+FMA8148	Left fourth rib	bones	4.0
+FMA52640	Left frontal nerve	nerves	4.0
+FMA72690	Left fusiform gyrus	organs	4.0
+FMA14768	Left gastric artery	vessels	4.0
+FMA15399	Left gastric vein	vessels	4.0
+FMA14796	Left gastro-epiploic artery	vessels	4.0
+FMA15390	Left gastroepiploic vein	vessels	4.0
+FMA22337	Left gemellus inferior	muscles	4.0
+FMA22335	Left gemellus superior	muscles	4.0
+FMA44888	Left genicular vein	vessels	4.0
+FMA46702	Left genioglossus	muscles	4.0
+FMA46327	Left geniohyoid	muscles	4.0
+FMA72831	Left globus pallidus	other	4.0
+FMA50894	Left glossopharyngeal nerve		4.3
+FMA22329	Left gluteus maximus	muscles	4.0
+FMA22331	Left gluteus medius	muscles	4.0
+FMA22333	Left gluteus minimus	muscles	4.0
+FMA43884	Left gracilis	muscles	4.0
+FMA21380	Left great saphenous vein	vessels	4.0
+FMA52804	Left greater palatine nerve		4.3
+FMA24449	Left hamate	bones	4.0
+FMA14670	Left hepatic duct	organs	4.0
+FMA14339	Left hepatic vein	organs	4.0
+FMA16587	Left hip bone	bones	4.0
+FMA72714	Left hippocampus	organs	4.0
+FMA23131	Left humerus	bones	4.0
+FMA46704	Left hyoglossus	muscles	4.0
+FMA22323	Left iliacus	muscles	4.0
+FMA45859	Left iliococcygeus	other	4.0
+FMA22745	Left iliocostalis cervicis	muscles	4.0
+FMA22741	Left iliocostalis lumborum	muscles	4.0
+FMA22743	Left iliocostalis thoracis	muscles	4.0
+FMA18904	Left iliolumbar vein	vessels	4.0
+FMA58777	Left iliotibial tract	other	4.0
+FMA73435	Left inferior colliculus	organs	4.0
+FMA20689	Left inferior epigastric artery	vessels	4.0
+FMA21164	Left inferior epigastric vein	vessels	4.0
+FMA72658	Left inferior frontal gyrus	organs	4.0
+FMA18913	Left inferior gluteal vein	vessels	4.0
+FMA43893	Left inferior lateral genicular artery	vessels	4.0
+FMA43891	Left inferior medial genicular artery	vessels	4.0
+FMA54738	Left inferior nasal concha	bones	4.0
+FMA49051	Left inferior oblique	muscles	4.0
+FMA55563	Left inferior parathyroid gland		4.3
+FMA46636	Left inferior pharyngeal constrictor	muscles	4.0
+FMA14747	Left inferior phrenic artery	vessels	4.0
+FMA49913	Left inferior pulmonary vein	vessels	4.0
+FMA49047	Left inferior rectus	muscles	4.0
+FMA69266	Left inferior suprarenal artery	vessels	4.0
+FMA72688	Left inferior temporal gyrus	organs	4.0
+FMA10680	Left inferior thyroid artery	vessels	4.0
+FMA22713	Left inferior ulnar collateral artery	vessels	4.0
+FMA32548	Left infraspinatus muscle	muscles	4.0
+FMA52699	Left infratrochlear nerve	nerves	4.0
+FMA21965	Left inguinal ligament		4.3
+FMA72978	Left insula	organs	4.0
+FMA24524	Left intermediate cuneiform bone	bones	4.0
+FMA72907	Left internal capsule	organs	4.0
+FMA4062	Left internal carotid artery	vessels	4.0
+FMA18810	Left internal iliac artery	vessels	4.0
+FMA18888	Left internal iliac vein	vessels	4.0
+FMA4762	Left internal jugular vein	vessels	4.0
+FMA18919	Left internal pudendal vein	vessels	4.0
+FMA4068	Left internal thoracic artery	vessels	4.0
+FMA22891	Left interspinalis thoracis	muscles	4.0
+FMA58237	Left iris	bones	4.0
+FMA7205	Left kidney	organs	4.0
+FMA53646	Left lacrimal bone	bones	4.0
+FMA59583	Left lacrimal canaliculus	other	4.0
+FMA59103	Left lacrimal gland	bones	4.0
+FMA59542	Left lacrimal lake	other	4.0
+FMA52630	Left lacrimal nerve	nerves	4.0
+FMA59546	Left lacrimal sac	other	4.0
+FMA8646	Left lateral basal segmental artery	organs	4.0
+FMA68139	Left lateral basal segmental bronchial artery		4.3
+FMA68232	Left lateral basal segmental bronchial tree	organs	4.0
+FMA9450	Left lateral basal segmental vein	organs	4.0
+FMA20802	Left lateral circumflex femoral artery	vessels	4.0
+FMA44922	Left lateral circumflex femoral vein	vessels	4.0
+FMA46581	Left lateral crico-arytenoid	muscles	4.0
+FMA24526	Left lateral cuneiform bone	bones	4.0
+FMA50444	Left lateral frontobasal artery	vessels	4.0
+FMA73304	Left lateral geniculate body	other	4.0
+FMA73360	Left lateral hypothalamic nucleus		4.3
+FMA59513	Left lateral nasal cartilage	other	4.0
+FMA50644	Left lateral occipital artery	vessels	4.0
+FMA72678	Left lateral occipital gyrus		4.3
+FMA72757	Left lateral orbital gyrus		4.3
+FMA43932	Left lateral plantar artery	vessels	4.0
+FMA52784	Left lateral posterior superior nasal nerve		4.3
+FMA73328	Left lateral preoptic nucleus		4.3
+FMA53110	Left lateral pterygoid nerve		4.3
+FMA49055	Left lateral rectus	muscles	4.0
+FMA18907	Left lateral sacral vein	vessels	4.0
+FMA22589	Left lateral superior genicular artery	vessels	4.0
+FMA69491	Left lateral tarsal artery	vessels	4.0
+FMA22676	Left lateral thoracic artery	vessels	4.0
+FMA71212	Left lateral thoracic vein	vessels	4.0
+FMA55141	Left lateral thyrohyoid ligament	other	4.0
+FMA78450	Left lateral ventricle	organs	4.0
+FMA58243	Left lens	bones	4.0
+FMA65389	Left lesser occipital nerve		4.3
+FMA49049	Left levator palpebrae superioris	muscles	4.0
+FMA32541	Left levator scapulae	muscles	4.0
+FMA46729	Left levator veli palatini	muscles	4.0
+FMA72682	Left lingual gyrus		4.3
+FMA71710	Left lobe branch of left hepatic artery	vessels	4.0
+FMA71195	Left lobe of thymus	other	4.0
+FMA13369	Left lobe of thyroid gland		4.3
+FMA82735	Left long ciliary nerve	nerves	4.0
+FMA44250	Left long plantar ligament	other	4.0
+FMA22756	Left longissimus capitis	muscles	4.0
+FMA22758	Left longissimus cervicis	muscles	4.0
+FMA22753	Left longissimus thoracis	muscles	4.0
+FMA46310	Left longus capitis	muscles	4.0
+FMA57143	Left lower central secondary incisor tooth	other	4.0
+FMA55704	Left lower first secondary molar tooth	other	4.0
+FMA55693	Left lower first secondary premolar tooth	other	4.0
+FMA57141	Left lower lateral secondary incisor tooth	other	4.0
+FMA55703	Left lower second secondary molar tooth	other	4.0
+FMA55692	Left lower second secondary premolar tooth	other	4.0
+FMA55687	Left lower secondary canine tooth	other	4.0
+FMA23090	Left lumbar rotator	muscles	4.0
+FMA24438	Left lunate	bones	4.0
+FMA7396	Left main bronchus	organs	4.0
+FMA59506	Left major alar cartilage	other	4.0
+FMA73390	Left mammillothalamic tract of hypothalamus		4.3
+FMA52998	Left mandibular nerve		4.3
+FMA4708	Left marginal vein	vessels	4.0
+FMA53105	Left masseteric nerve		4.3
+FMA53650	Left maxilla	bones	4.0
+FMA8644	Left medial basal segmental artery	organs	4.0
+FMA68137	Left medial basal segmental bronchial artery		4.3
+FMA68230	Left medial basal segmental bronchial tree	organs	4.0
+FMA22936	Left medial brachial vein	vessels	4.0
+FMA44919	Left medial circumflex femoral vein	vessels	4.0
+FMA24522	Left medial cuneiform bone	bones	4.0
+FMA50344	Left medial frontobasal artery	vessels	4.0
+FMA73310	Left medial geniculate body	other	4.0
+FMA50646	Left medial occipital artery	vessels	4.0
+FMA72759	Left medial orbital gyrus		4.3
+FMA65295	Left medial pectoral nerve		4.3
+FMA43930	Left medial plantar artery	vessels	4.0
+FMA52787	Left medial posterior superior nasal nerve		4.3
+FMA73326	Left medial preoptic nucleus		4.3
+FMA53058	Left medial pterygoid nerve		4.3
+FMA49057	Left medial rectus	muscles	4.0
+FMA22587	Left medial superior genicular artery	vessels	4.0
+FMA22969	Left median antebrachial vein	vessels	4.0
+FMA22965	Left median cubital vein	vessels	4.0
+FMA37068	Left median nerve		4.3
+FMA53252	Left mental nerve		4.3
+FMA72656	Left middle frontal gyrus	organs	4.0
+FMA22563	Left middle genicular artery	vessels	4.0
+FMA52730	Left middle meningeal nerve		4.3
+FMA46634	Left middle pharyngeal constrictor	muscles	4.0
+FMA52940	Left middle superior alveolar nerve		4.3
+FMA14756	Left middle suprarenal artery	vessels	4.0
+FMA72686	Left middle temporal gyrus	organs	4.0
+FMA37066	Left musculocutaneous nerve		4.3
+FMA4077	Left musculophrenic artery	vessels	4.0
+FMA4786	Left musculophrenic vein	vessels	4.0
+FMA46322	Left mylohyoid	muscles	4.0
+FMA53648	Left nasal bone	bones	4.0
+FMA52670	Left nasociliary nerve	nerves	4.0
+FMA59556	Left nasolacrimal duct	other	4.0
+FMA52799	Left nasopalatine nerve		4.3
+FMA8410	Left ninth costal cartilage		4.3
+FMA8391	Left ninth rib	bones	4.0
+FMA46585	Left oblique arytenoid	muscles	4.0
+FMA32537	Left obliquus capitis inferior	muscles	4.0
+FMA32535	Left obliquus capitis superior	muscles	4.0
+FMA22327	Left obturator externus	muscles	4.0
+FMA22325	Left obturator internus	muscles	4.0
+FMA18916	Left obturator vein	vessels	4.0
+FMA72976	Left occipital lobe	organs	4.0
+FMA52593	Left olfactory nerve		4.3
+FMA223162	Left olfactory tract		4.3
+FMA13349	Left omohyoid	muscles	4.0
+FMA49870	Left ophthalmic artery	vessels	4.0
+FMA52623	Left ophthalmic nerve	nerves	4.0
+FMA37391	Left opponens pollicis	muscles	4.0
+FMA50878	Left optic nerve	nerves	4.0
+FMA67936	Left optic tract	other	4.0
+FMA53656	Left palatine bone	bones	4.0
+FMA46672	Left palatopharyngeus	muscles	4.0
+FMA22865	Left palmar metacarpal artery	vessels	4.0
+FMA22921	Left palmar metacarpal vein	vessels	4.0
+FMA38464	Left palmaris longus	muscles	4.0
+FMA72706	Left parahippocampal gyrus	organs	4.0
+FMA73336	Left paraventricular nucleus of hypothalamus		4.3
+FMA52789	Left parietal bone	bones	4.0
+FMA24487	Left patella	bones	4.0
+FMA22451	Left pectineus	muscles	4.0
+FMA13376	Left pectoralis minor	muscles	4.0
+FMA50360	Left pericallosal artery	vessels	4.0
+FMA43923	Left peroneal artery		4.3
+FMA22341	Left piriformis	muscles	4.0
+FMA24442	Left pisiform	bones	4.0
+FMA43944	Left plantar arch	vessels	4.0
+FMA22561	Left plantaris	muscles	4.0
+FMA45740	Left platysma	muscles	4.0
+FMA50381	Left polar temporal artery	vessels	4.0
+FMA77381	Left popliteal artery	vessels	4.0
+FMA44329	Left popliteal vein	vessels	4.0
+FMA22592	Left popliteus	muscles	4.0
+FMA15415	Left portal vein	organs	4.0
+FMA72666	Left postcentral gyrus	organs	4.0
+FMA8647	Left posterior basal segmental artery	organs	4.0
+FMA68140	Left posterior basal segmental bronchial artery		4.3
+FMA68233	Left posterior basal segmental bronchial tree	organs	4.0
+FMA9451	Left posterior basal segmental vein	organs	4.0
+FMA22687	Left posterior circumflex humeral artery	vessels	4.0
+FMA50086	Left posterior communicating artery	vessels	4.0
+FMA46578	Left posterior crico-arytenoid	muscles	4.0
+FMA7254	Left posterior cusp of aortic valve	organs	4.0
+FMA52716	Left posterior ethmoidal nerve	nerves	4.0
+FMA50520	Left posterior inferior cerebellar artery	vessels	4.0
+FMA52825	Left posterior inferior nasal nerve		4.3
+FMA50673	Left posterior medial choroidal artery	vessels	4.0
+FMA73354	Left posterior nucleus of hypothalamus		4.3
+FMA80188	Left posterior orbital gyrus		4.3
+FMA50490	Left posterior parietal artery	vessels	4.0
+FMA8635	Left posterior segmental artery	organs	4.0
+FMA68225	Left posterior segmental bronchial tree	organs	4.0
+FMA9438	Left posterior segmental vein	organs	4.0
+FMA52937	Left posterior superior alveolar nerve		4.3
+FMA43899	Left posterior tibial artery	vessels	4.0
+FMA44339	Left posterior tibial vein	vessels	4.0
+FMA22805	Left posterior ulnar recurrent artery	vessels	4.0
+FMA72662	Left precentral gyrus	organs	4.0
+FMA72674	Left precuneus		4.3
+FMA50478	Left prefrontal artery	vessels	4.0
+FMA38455	Left pronator quadratus	muscles	4.0
+FMA22343	Left psoas major	muscles	4.0
+FMA55620	Left pterygomandibular raphe	other	4.0
+FMA45855	Left pubococcygeus	other	4.0
+FMA45857	Left puborectalis	other	4.0
+FMA50873	Left pulmonary artery	vessels	4.0
+FMA72829	Left putamen	other	4.0
+FMA22339	Left quadratus femoris	muscles	4.0
+FMA22734	Left radial artery	vessels	4.0
+FMA37071	Left radial nerve		4.3
+FMA22766	Left radial recurrent artery	vessels	4.0
+FMA22949	Left radial vein	vessels	4.0
+FMA23465	Left radius	bones	4.0
+FMA46314	Left rectus capitis anterior	muscles	4.0
+FMA46318	Left rectus capitis lateralis	muscles	4.0
+FMA32531	Left rectus capitis posterior major	muscles	4.0
+FMA32533	Left rectus capitis posterior minor	muscles	4.0
+FMA38929	Left rectus femoris	other	4.0
+FMA268669	Left recurrent interosseous artery	vessels	4.0
+FMA73492	Left red nucleus		4.3
+FMA14753	Left renal artery	vessels	4.0
+FMA14336	Left renal vein	vessels	4.0
+FMA13382	Left rhomboid major	muscles	4.0
+FMA13384	Left rhomboid minor	muscles	4.0
+FMA46670	Left salpingopharyngeus	muscles	4.0
+FMA22355	Left sartorius	muscles	4.0
+FMA13393	Left scalenus anterior	muscles	4.0
+FMA13391	Left scalenus medius	muscles	4.0
+FMA13389	Left scalenus posterior	muscles	4.0
+FMA24436	Left scaphoid	bones	4.0
+FMA13396	Left scapula	bones	4.0
+FMA58272	Left sclera	bones	4.0
+FMA85120	Left second common palmar digital artery	vessels	4.0
+FMA8031	Left second costal cartilage	bones	4.0
+FMA65908	Left second intercostobrachial nerve		4.3
+FMA24467	Left second metacarpal bone	bones	4.0
+FMA24510	Left second metatarsal bone	bones	4.0
+FMA4112	Left second posterior intercostal artery	vessels	4.0
+FMA8012	Left second rib	bones	4.0
+FMA22449	Left semimembranosus	muscles	4.0
+FMA19388	Left seminal vesicle	other	4.0
+FMA22877	Left semispinalis capitis	muscles	4.0
+FMA22875	Left semispinalis cervicis	muscles	4.0
+FMA22873	Left semispinalis thoracis	muscles	4.0
+FMA22359	Left semitendinosus	muscles	4.0
+FMA13399	Left serratus anterior	muscles	4.0
+FMA13406	Left serratus posterior inferior	muscles	4.0
+FMA13404	Left serratus posterior superior	muscles	4.0
+FMA8275	Left seventh costal cartilage	bones	4.0
+FMA8256	Left seventh rib	bones	4.0
+FMA8221	Left sixth costal cartilage	bones	4.0
+FMA8202	Left sixth rib	bones	4.0
+FMA44335	Left small saphenous vein	vessels	4.0
+FMA22559	Left soleus	muscles	4.0
+FMA22780	Left spinalis thoracis	muscles	4.0
+FMA50685	Left splenial artery	vessels	4.0
+FMA22729	Left splenius capitis	muscles	4.0
+FMA22727	Left splenius cervicis	muscles	4.0
+FMA13409	Left sternocleidomastoid	muscles	4.0
+FMA13347	Left sternohyoid	muscles	4.0
+FMA13351	Left sternothyroid	muscles	4.0
+FMA72660	Left straight gyrus		4.3
+FMA73414	Left stria medullaris of thalamus	other	4.0
+FMA72940	Left stria terminalis	other	4.0
+FMA45827	Left stylohyoid	muscles	4.0
+FMA72311	Left stylohyoid ligament	other	4.0
+FMA57086	Left stylomandibular ligament		4.3
+FMA46668	Left stylopharyngeus	muscles	4.0
+FMA4694	Left subclavian artery	vessels	4.0
+FMA4763	Left subclavian vein	vessels	4.0
+FMA13411	Left subclavius	muscles	4.0
+FMA4654	Left subcostal artery	vessels	4.0
+FMA4951	Left subcostal vein	vessels	4.0
+FMA59805	Left sublingual gland	other	4.0
+FMA59803	Left submandibular gland	organs	4.0
+FMA22679	Left subscapular artery	vessels	4.0
+FMA23115	Left subscapular vein	vessels	4.0
+FMA13415	Left subscapularis	muscles	4.0
+FMA73540	Left substantia nigra		4.3
+FMA73368	Left subthalamic nucleus		4.3
+FMA10683	Left superficial cervical artery	vessels	4.0
+FMA21386	Left superficial dorsal vein of penis	vessels	4.0
+FMA20736	Left superficial epigastric artery	vessels	4.0
+FMA44341	Left superficial epigastric vein	vessels	4.0
+FMA43938	Left superficial medial plantar artery	vessels	4.0
+FMA22837	Left superficial palmar arterial arch	other	4.0
+FMA22916	Left superficial palmar venous arch	other	4.0
+FMA50575	Left superior cerebellar artery	vessels	4.0
+FMA73423	Left superior colliculus	organs	4.0
+FMA4083	Left superior epigastric artery	vessels	4.0
+FMA4785	Left superior epigastric vein	vessels	4.0
+FMA72654	Left superior frontal gyrus	organs	4.0
+FMA18910	Left superior gluteal vein	vessels	4.0
+FMA4088	Left superior intercostal artery	vessels	4.0
+FMA4797	Left superior intercostal vein	vessels	4.0
+FMA49053	Left superior oblique	muscles	4.0
+FMA72676	Left superior occipital gyrus		4.3
+FMA55561	Left superior parathyroid gland		4.3
+FMA72672	Left superior parietal lobule	organs	4.0
+FMA46632	Left superior pharyngeal constrictor	muscles	4.0
+FMA49916	Left superior pulmonary vein	vessels	4.0
+FMA49045	Left superior rectus	muscles	4.0
+FMA8642	Left superior segmental artery	organs	4.0
+FMA68135	Left superior segmental bronchial artery		4.3
+FMA68228	Left superior segmental bronchial tree	organs	4.0
+FMA8675	Left superior segmental vein		4.3
+FMA65306	Left superior subscapular nerve		4.3
+FMA72684	Left superior temporal gyrus		4.3
+FMA22708	Left superior ulnar collateral artery	vessels	4.0
+FMA38514	Left supinator	muscles	4.0
+FMA52657	Left supra-orbital nerve	nerves	4.0
+FMA73330	Left suprachiasmatic nucleus		4.3
+FMA65416	Left supraclavicular nerve		4.3
+FMA72668	Left supramarginal gyrus	organs	4.0
+FMA73332	Left supraoptic nucleus		4.3
+FMA14349	Left suprarenal vein	vessels	4.0
+FMA10681	Left suprascapular artery	vessels	4.0
+FMA50860	Left suprascapular vein	vessels	4.0
+FMA32545	Left supraspinatus	muscles	4.0
+FMA52644	Left supratrochlear nerve	nerves	4.0
+FMA24483	Left talus	bones	4.0
+FMA52739	Left temporal bone	bones	4.0
+FMA22426	Left tensor fasciae latae	muscles	4.0
+FMA46732	Left tensor veli palatini	muscles	4.0
+FMA8491	Left tenth costal cartilage		4.3
+FMA8472	Left tenth rib	bones	4.0
+FMA32552	Left teres major	muscles	4.0
+FMA32554	Left teres minor	muscles	4.0
+FMA14760	Left testicular artery	vessels	4.0
+FMA14345	Left testicular vein	vessels	4.0
+FMA7212	Left testis	other	4.0
+FMA50671	Left thalamogeniculate artery	vessels	4.0
+FMA50665	Left thalamoperforating artery	vessels	4.0
+FMA258716	Left thalamus	other	4.0
+FMA85122	Left third common palmar digital artery	vessels	4.0
+FMA8058	Left third costal cartilage	bones	4.0
+FMA24469	Left third metacarpal bone	bones	4.0
+FMA24512	Left third metatarsal bone	bones	4.0
+FMA8039	Left third rib	bones	4.0
+FMA66322	Left thoracodorsal artery	vessels	4.0
+FMA65292	Left thoracodorsal nerve		4.3
+FMA71215	Left thoracodorsal vein	vessels	4.0
+FMA46590	Left thyro-arytenoid	muscles	4.0
+FMA46600	Left thyro-arytenoid proper		4.3
+FMA4084	Left thyrocervical trunk	vessels	4.0
+FMA13353	Left thyrohyoid	muscles	4.0
+FMA55134	Left thyrohyoid membrane	other	4.0
+FMA24478	Left tibia	bones	4.0
+FMA22545	Left tibialis anterior	muscles	4.0
+FMA65019	Left tibialis posterior	muscles	4.0
+FMA10682	Left transverse cervical artery	vessels	4.0
+FMA55173	Left transverse cervical nerve		4.3
+FMA9762	Left transversus thoracis	muscles	4.0
+FMA24444	Left trapezium	bones	4.0
+FMA24445	Left trapezoid	bones	4.0
+FMA24440	Left triquetral	bones	4.0
+FMA50882	Left trochlear nerve	nerves	4.0
+FMA8534	Left twelfth rib	bones	4.0
+FMA23468	Left ulna	bones	4.0
+FMA22798	Left ulnar artery	vessels	4.0
+FMA37321	Left ulnar nerve		4.3
+FMA22952	Left ulnar vein	vessels	4.0
+FMA55682	Left upper central secondary incisor tooth	other	4.0
+FMA55699	Left upper first secondary molar tooth	other	4.0
+FMA55690	Left upper first secondary premolar tooth	other	4.0
+FMA55683	Left upper lateral secondary incisor tooth	other	4.0
+FMA55700	Left upper second secondary molar tooth	other	4.0
+FMA55691	Left upper second secondary premolar tooth	other	4.0
+FMA55799	Left upper secondary canine tooth	other	4.0
+FMA15572	Left ureter	organs	4.0
+FMA38935	Left vastus intermedius	other	4.0
+FMA38931	Left vastus lateralis	other	4.0
+FMA38933	Left vastus medialis	other	4.0
+FMA73342	Left ventromedial nucleus of hypothalamus		4.3
+FMA4066	Left vertebral artery	vessels	4.0
+FMA50891	Left vestibulocochlear nerve		4.3
+FMA58829	Left vitreous body	bones	4.0
+FMA55246	Left vocal ligament	other	4.0
+FMA46593	Left vocalis	muscles	4.0
+FMA52893	Left zygomatic bone	bones	4.0
+FMA52969	Left zygomatic nerve		4.3
+FMA11336	Linea alba	other	4.0
+FMA59816	Lip	other	4.0
+FMA37687	Long head of left biceps brachii	other	4.0
+FMA45889	Long head of left biceps femoris	other	4.0
+FMA37700	Long head of left triceps brachii	other	4.0
+FMA37686	Long head of right biceps brachii	other	4.0
+FMA45888	Long head of right biceps femoris	other	4.0
+FMA37699	Long head of right triceps brachii	other	4.0
+FMA14735	Lumbar artery	vessels	4.0
+FMA15370	Lumbar vein	vessels	4.0
+FMA74877	Mammillary body	other	4.0
+FMA52748	Mandible	bones	4.0
+FMA7486	Manubrium	bones	4.0
+FMA14831	Marginal artery of colon	vessels	4.0
+FMA3818	Marginal branch of right coronary artery	organs	4.0
+FMA14824	Marginal colic artery	vessels	4.0
+FMA53367	Marginal mandibular branch of left facial nerve		4.3
+FMA53366	Marginal mandibular branch of right facial nerve		4.3
+FMA13289	Medial basal segmental vein		4.3
+FMA50567	Medial branch of left pontine artery	vessels	4.0
+FMA50582	Medial branch of left superior cerebellar artery	vessels	4.0
+FMA50566	Medial branch of right pontine artery	vessels	4.0
+FMA50581	Medial branch of right superior cerebellar artery	vessels	4.0
+FMA68706	Medial branch of right superior segmental artery	organs	4.0
+FMA45241	Medial cord of left brachial nerve plexus		4.3
+FMA44997	Medial dorsal digital branch of left radial nerve to left middle finger		4.3
+FMA45972	Medial head of left flexor hallucis brevis	other	4.0
+FMA45958	Medial head of left gastrocnemius	other	4.0
+FMA37696	Medial head of left triceps brachii	other	4.0
+FMA45971	Medial head of right flexor hallucis brevis	other	4.0
+FMA45957	Medial head of right gastrocnemius	other	4.0
+FMA37695	Medial head of right triceps brachii	other	4.0
+FMA15429	Medial inferior segmental branch of left portal vein	organs	4.0
+FMA70450	Medial inferior segmental hepatic artery	organs	4.0
+FMA15801	Medial inferior segmental tributary of middle hepatic vein	vessels	4.0
+FMA71886	Medial inferior tributary of left hepatic biliary tree	organs	4.0
+FMA22851	Medial lumbar intertransversarius	muscles	4.0
+FMA23051	Medial proper palmar digital artery of left index finger	vessels	4.0
+FMA23050	Medial proper palmar digital artery of right index finger	vessels	4.0
+FMA85112	Medial proper palmar digital artery of right middle finger	vessels	4.0
+FMA23052	Medial proper palmar digital artery of right ring finger	vessels	4.0
+FMA65344	Medial proper palmar digital branch of left median nerve to left index finger		4.3
+FMA65348	Medial proper palmar digital branch of left median nerve to left middle finger		4.3
+FMA65340	Medial proper palmar digital branch of left median nerve to left thumb		4.3
+FMA68193	Medial segmental artery		4.3
+FMA68214	Medial segmental bronchial tree	organs	4.0
+FMA8665	Medial segmental vein		4.3
+FMA15428	Medial superior segmental branch of left portal vein	organs	4.0
+FMA70449	Medial superior segmental hepatic artery	organs	4.0
+FMA15802	Medial superior segmental tributary of left hepatic vein	vessels	4.0
+FMA71885	Medial superior tributary of left hepatic biliary tree	organs	4.0
+FMA51018	Medial vein of right lateral ventricle		4.3
+FMA50174	Median commissural artery		4.3
+FMA55237	Median cricothyroid ligament	other	4.0
+FMA77168	Median sacral vein	vessels	4.0
+FMA55138	Median thyrohyoid ligament	other	4.0
+FMA68741	Mediobasal branch of right posterior basal segmental artery	organs	4.0
+FMA68594	Mediobasal part of right posterior basal segmental bronchial tree		4.3
+FMA62004	Medulla oblongata	organs	4.0
+FMA14643	Mesentery of small intestine	organs	4.0
+FMA16549	Mesoappendix	organs	4.0
+FMA61993	Midbrain	organs	4.0
+FMA4713	Middle cardiac vein	vessels	4.0
+FMA14810	Middle colic artery	vessels	4.0
+FMA15406	Middle colic vein	vessels	4.0
+FMA23125	Middle collateral branch of left deep brachial artery	vessels	4.0
+FMA23124	Middle collateral branch of right deep brachial artery	vessels	4.0
+FMA14340	Middle hepatic vein	vessels	4.0
+FMA14965	Middle part of ileum	organs	4.0
+FMA16982	Middle part of jejunum	organs	4.0
+FMA32647	Middle phalanx of left fourth toe	bones	4.0
+FMA23938	Middle phalanx of left index finger	bones	4.0
+FMA23944	Middle phalanx of left little finger	bones	4.0
+FMA230988	Middle phalanx of left little toe	bones	4.0
+FMA23940	Middle phalanx of left middle finger	bones	4.0
+FMA23942	Middle phalanx of left ring finger	bones	4.0
+FMA32643	Middle phalanx of left second toe	bones	4.0
+FMA32645	Middle phalanx of left third toe	bones	4.0
+FMA32646	Middle phalanx of right fourth toe	bones	4.0
+FMA24455	Middle phalanx of right index finger	bones	4.0
+FMA24458	Middle phalanx of right little finger	bones	4.0
+FMA230986	Middle phalanx of right little toe	bones	4.0
+FMA24456	Middle phalanx of right middle finger	bones	4.0
+FMA24457	Middle phalanx of right ring finger	bones	4.0
+FMA32642	Middle phalanx of right second toe	bones	4.0
+FMA32644	Middle phalanx of right third toe	bones	4.0
+FMA50681	Middle temporal branch of left lateral occipital artery	vessels	4.0
+FMA50468	Middle temporal branch of left middle cerebral artery	vessels	4.0
+FMA50680	Middle temporal branch of right lateral occipital artery	vessels	4.0
+FMA50467	Middle temporal branch of right middle cerebral artery	vessels	4.0
+FMA65366	Middle trunk of left brachial nerve plexus		4.3
+FMA49575	Nasal septal branch of right superior labial artery		4.3
+FMA24501	Navicular bone of left foot	bones	4.0
+FMA24500	Navicular bone of right foot	bones	4.0
+FMA52580	Nerve to left ciliary ganglion		4.3
+FMA52604	Nerve to left inferior oblique		4.3
+FMA52606	Nerve to left inferior rectus		4.3
+FMA52596	Nerve to left levator palpebrae superioris		4.3
+FMA52602	Nerve to left medial rectus		4.3
+FMA52584	Nerve to left superior rectus		4.3
+FMA53077	Nerve to left tensor veli palatini		4.3
+FMA52579	Nerve to right ciliary ganglion		4.3
+FMA52605	Nerve to right inferior rectus		4.3
+FMA52595	Nerve to right levator palpebrae superioris		4.3
+FMA52601	Nerve to right medial rectus		4.3
+FMA52583	Nerve to right superior rectus		4.3
+FMA53076	Nerve to right tensor veli palatini		4.3
+FMA242005	Neural tissue of spinal cord		4.3
+FMA10014	Ninth thoracic vertebra	bones	4.0
+FMA46019	Oblique head of left adductor hallucis	other	4.0
+FMA46122	Oblique head of left adductor pollicis	other	4.0
+FMA46018	Oblique head of right adductor hallucis	other	4.0
+FMA46121	Oblique head of right adductor pollicis	other	4.0
+FMA46614	Oblique part of left cricothyroid	other	4.0
+FMA46613	Oblique part of right cricothyroid	other	4.0
+FMA52735	Occipital bone	bones	4.0
+FMA53287	Occipital branch of left posterior auricular nerve		4.3
+FMA53286	Occipital branch of right posterior auricular nerve		4.3
+FMA50781	Occipital sinus		4.3
+FMA50692	Occipitotemporal branch of right medial occipital artery		4.3
+FMA86035	Opponens digiti minimi of left foot	muscles	4.0
+FMA37401	Opponens digiti minimi of left hand	muscles	4.0
+FMA86034	Opponens digiti minimi of right foot	muscles	4.0
+FMA37400	Opponens digiti minimi of right hand	muscles	4.0
+FMA62045	Optic chiasm	other	4.0
+FMA58608	Optic part of left retina	other	4.0
+FMA58607	Optic part of right retina	other	4.0
+FMA52774	Orbital branch of left maxillary nerve to left orbitalis		4.3
+FMA52773	Orbital branch of right maxillary nerve to right orbitalis		4.3
+FMA49729	Orbital branch of right middle meningeal artery		4.3
+FMA256194	Orbital gyrus	other	4.0
+FMA52709	Palpebral branch of right infratrochlear nerve		4.3
+FMA7198	Pancreas	organs	4.0
+FMA10419	Pancreatic duct	organs	4.0
+FMA63103	Pancreatic duct tree	organs	4.0
+FMA15398	Pancreaticoduodenal vein	vessels	4.0
+FMA50358	Paracentral branch of left callosomarginal artery	vessels	4.0
+FMA50357	Paracentral branch of right callosomarginal artery	vessels	4.0
+FMA27368	Parenchyma of apicoposterior bronchopulmonary segment		4.3
+FMA27376	Parenchyma of inferior lingular bronchopulmonary segment		4.3
+FMA27452	Parenchyma of lateral bronchopulmonary segment		4.3
+FMA27392	Parenchyma of left anterior basal bronchopulmonary segment		4.3
+FMA27374	Parenchyma of left anterior bronchopulmonary segment		4.3
+FMA27390	Parenchyma of left lateral basal bronchopulmonary segment		4.3
+FMA27394	Parenchyma of left posterior basal bronchopulmonary segment		4.3
+FMA27386	Parenchyma of left superior bronchopulmonary segment		4.3
+FMA27448	Parenchyma of medial bronchopulmonary segment		4.3
+FMA63120	Parenchyma of pancreas	organs	4.0
+FMA27391	Parenchyma of right anterior basal bronchopulmonary segment		4.3
+FMA27373	Parenchyma of right anterior bronchopulmonary segment		4.3
+FMA27369	Parenchyma of right apical bronchopulmonary segment		4.3
+FMA27389	Parenchyma of right lateral basal bronchopulmonary segment		4.3
+FMA27393	Parenchyma of right posterior basal bronchopulmonary segment		4.3
+FMA27371	Parenchyma of right posterior bronchopulmonary segment		4.3
+FMA27385	Parenchyma of right superior bronchopulmonary segment		4.3
+FMA27375	Parenchyma of superior lingular bronchopulmonary segment		4.3
+FMA50686	Parietal branch of right medial occipital artery		4.3
+FMA49727	Parietal branch of right middle meningeal artery		4.3
+FMA49671	Parietal branch of right superficial temporal artery		4.3
+FMA23064	Pectoral branch of left thoraco-acromial artery	vessels	4.0
+FMA23063	Pectoral branch of right thoraco-acromial artery	vessels	4.0
+FMA62394	Peduncle of midbrain	other	4.0
+FMA6201	Pericardial branch of phrenic nerve		4.3
+FMA4943	Pericardial vein		4.3
+FMA49765	Peridental branch of right posterior superior alveolar artery		4.3
+FMA84354	Periventricular nucleus		4.3
+FMA52891	Perpendicular plate of ethmoid		4.3
+FMA77524	Pharyngeal nerve		4.3
+FMA55077	Pharyngeal raphe	other	4.0
+FMA50822	Pharyngeal venous plexus		4.3
+FMA62033	Pineal body	organs	4.0
+FMA13889	Pituitary gland	organs	4.0
+FMA43956	Plantar metatarsal artery	vessels	4.0
+FMA44504	Plantar metatarsal vein	vessels	4.0
+FMA44884	Plantar venous arch of left foot	vessels	4.0
+FMA44883	Plantar venous arch of right foot	vessels	4.0
+FMA67943	Pons	organs	4.0
+FMA50798	Portal vein of hypophysis		4.3
+FMA50642	Postcommunicating part of left posterior cerebral artery	other	4.0
+FMA50641	Postcommunicating part of right posterior cerebral artery	other	4.0
+FMA13292	Posterior basal segmental vein		4.3
+FMA68690	Posterior branch of lateral segmental artery	organs	4.0
+FMA68677	Posterior branch of right anterior segmental artery	organs	4.0
+FMA14817	Posterior cecal artery	vessels	4.0
+FMA62072	Posterior commissure	other	4.0
+FMA45243	Posterior cord of left brachial nerve plexus		4.3
+FMA7250	Posterior cusp of pulmonary valve	organs	4.0
+FMA70490	Posterior division of left renal artery	vessels	4.0
+FMA70489	Posterior division of right renal artery	vessels	4.0
+FMA49492	Posterior glandular branch of right superior thyroid artery		4.3
+FMA70480	Posterior inferior pancreaticoduodenal artery	vessels	4.0
+FMA15424	Posterior inferior segmental branch of right portal vein	organs	4.0
+FMA70446	Posterior inferior segmental hepatic artery	organs	4.0
+FMA15797	Posterior inferior segmental tributary of right hepatic vein	vessels	4.0
+FMA71870	Posterior inferior tributary of right hepatic biliary tree	organs	4.0
+FMA50775	Posterior intercavernous sinus		4.3
+FMA63822	Posterior intercostal arteries	other	4.0
+FMA3840	Posterior interventricular branch of right coronary artery	organs	4.0
+FMA7243	Posterior leaflet of mitral valve	organs	4.0
+FMA7239	Posterior leaflet of tricuspid valve	organs	4.0
+FMA7266	Posterior papillary muscle of left ventricle		4.3
+FMA7261	Posterior papillary muscle of right ventricle	organs	4.0
+FMA19757	Posterior part of abdominal peritoneum		4.3
+FMA68944	Posterior part of lateral segmental vein	organs	4.0
+FMA72805	Posterior part of left superior temporal gyrus	other	4.0
+FMA68673	Posterior part of right posterior segmental artery	organs	4.0
+FMA72804	Posterior part of right superior temporal gyrus	other	4.0
+FMA86349	Posterior segmental branch of left renal artery	vessels	4.0
+FMA86348	Posterior segmental branch of right renal artery	vessels	4.0
+FMA14784	Posterior superior pancreaticoduodenal artery	vessels	4.0
+FMA15423	Posterior superior segmental branch of right portal vein	organs	4.0
+FMA70445	Posterior superior segmental hepatic artery	organs	4.0
+FMA15796	Posterior superior segmental tributary of right hepatic vein	vessels	4.0
+FMA71869	Posterior superior tributary of right hepatic biliary tree	organs	4.0
+FMA50471	Posterior temporal branch of left middle cerebral artery	vessels	4.0
+FMA50470	Posterior temporal branch of right middle cerebral artery	vessels	4.0
+FMA4712	Posterior vein of left ventricle	vessels	4.0
+FMA51020	Posterior vein of right septum pellucidum		4.3
+FMA50668	Posterolateral central branch of right posterior cerebral artery		4.3
+FMA50354	Posteromedial branch of left callosomarginal artery	vessels	4.0
+FMA50353	Posteromedial branch of right callosomarginal artery	vessels	4.0
+FMA50661	Posteromedial central branch of left posterior cerebral artery	vessels	4.0
+FMA50660	Posteromedial central branch of right posterior cerebral artery	vessels	4.0
+FMA51394	Posteromedian medullary vein		4.3
+FMA71904	Pre-hepatic portal vein	vessels	4.0
+FMA51234	Precentral cerebellar vein		4.3
+FMA50640	Precommunicating part of left posterior cerebral artery	vessels	4.0
+FMA50639	Precommunicating part of right posterior cerebral artery	vessels	4.0
+FMA50362	Precuneal branch of left pericallosal artery	vessels	4.0
+FMA50361	Precuneal branch of right pericallosal artery	vessels	4.0
+FMA85097	Proper palmar digital vein of left index finger	other	4.0
+FMA85103	Proper palmar digital vein of left little finger	other	4.0
+FMA85099	Proper palmar digital vein of left middle finger	other	4.0
+FMA85101	Proper palmar digital vein of left ring finger	other	4.0
+FMA85096	Proper palmar digital vein of right index finger	other	4.0
+FMA85102	Proper palmar digital vein of right little finger	other	4.0
+FMA85098	Proper palmar digital vein of right middle finger	other	4.0
+FMA85100	Proper palmar digital vein of right ring finger	other	4.0
+FMA9600	Prostate	organs	4.0
+FMA14964	Proximal part of ileum	organs	4.0
+FMA16981	Proximal part of jejunum	organs	4.0
+FMA43254	Proximal phalanx of left big toe	bones	4.0
+FMA32639	Proximal phalanx of left fourth toe	bones	4.0
+FMA71915	Proximal phalanx of left index finger	bones	4.0
+FMA66791	Proximal phalanx of left little finger	bones	4.0
+FMA32641	Proximal phalanx of left little toe	bones	4.0
+FMA71908	Proximal phalanx of left middle finger	bones	4.0
+FMA71916	Proximal phalanx of left ring finger	bones	4.0
+FMA32635	Proximal phalanx of left second toe	bones	4.0
+FMA32637	Proximal phalanx of left third toe	bones	4.0
+FMA65470	Proximal phalanx of left thumb	bones	4.0
+FMA43253	Proximal phalanx of right big toe	bones	4.0
+FMA32638	Proximal phalanx of right fourth toe	bones	4.0
+FMA24451	Proximal phalanx of right index finger	bones	4.0
+FMA24454	Proximal phalanx of right little finger	bones	4.0
+FMA32640	Proximal phalanx of right little toe	bones	4.0
+FMA24452	Proximal phalanx of right middle finger	bones	4.0
+FMA24453	Proximal phalanx of right ring finger	bones	4.0
+FMA32634	Proximal phalanx of right second toe	bones	4.0
+FMA32636	Proximal phalanx of right third toe	bones	4.0
+FMA24450	Proximal phalanx of right thumb	bones	4.0
+FMA54319	Pubic hair	other	4.0
+FMA8615	Pulmonary arterial trunk		4.3
+FMA8612	Pulmonary trunk	vessels	4.0
+FMA23127	Radial collateral branch of left deep brachial artery	vessels	4.0
+FMA23126	Radial collateral branch of right deep brachial artery	vessels	4.0
+FMA14544	Rectum	organs	4.0
+FMA50886	Right abducens nerve		4.3
+FMA37459	Right abductor hallucis	muscles	4.0
+FMA37386	Right abductor pollicis brevis	muscles	4.0
+FMA38516	Right abductor pollicis longus	muscles	4.0
+FMA22452	Right adductor brevis	muscles	4.0
+FMA22456	Right adductor longus	muscles	4.0
+FMA22459	Right adductor magnus	muscles	4.0
+FMA43886	Right adductor minimus	muscles	4.0
+FMA15629	Right adrenal gland	organs	4.0
+FMA72832	Right amygdala	other	4.0
+FMA37705	Right anconeus	muscles	4.0
+FMA49584	Right angular artery		4.3
+FMA72669	Right angular gyrus	organs	4.0
+FMA50895	Right angular vein		4.3
+FMA8630	Right anterior basal segmental artery		4.3
+FMA68321	Right anterior basal segmental bronchial tree	organs	4.0
+FMA8673	Right anterior basal segmental vein	organs	4.0
+FMA50029	Right anterior cerebral artery	vessels	4.0
+FMA51307	Right anterior cerebral vein		4.3
+FMA50088	Right anterior choroidal artery	vessels	4.0
+FMA22682	Right anterior circumflex humeral artery	vessels	4.0
+FMA77954	Right anterior circumflex humeral vein	vessels	4.0
+FMA7249	Right anterior cusp of pulmonary valve	organs	4.0
+FMA52676	Right anterior ethmoidal nerve	nerves	4.0
+FMA22812	Right anterior interosseous artery	vessels	4.0
+FMA13319	Right anterior jugular vein		4.3
+FMA73333	Right anterior nucleus of hypothalamus		4.3
+FMA256198	Right anterior orbital gyrus		4.3
+FMA50486	Right anterior parietal artery	vessels	4.0
+FMA8620	Right anterior segmental artery	organs	4.0
+FMA68212	Right anterior segmental bronchial tree	organs	4.0
+FMA8662	Right anterior segmental vein	organs	4.0
+FMA50532	Right anterior spinal artery	vessels	4.0
+FMA52941	Right anterior superior alveolar nerve		4.3
+FMA50383	Right anterior temporal artery	vessels	4.0
+FMA43896	Right anterior tibial artery	vessels	4.0
+FMA43907	Right anterior tibial recurrent artery	vessels	4.0
+FMA44336	Right anterior tibial vein	vessels	4.0
+FMA49693	Right anterior tympanic artery		4.3
+FMA22801	Right anterior ulnar recurrent artery	vessels	4.0
+FMA14297	Right anterior vertebral vein		4.3
+FMA51637	Right anterolateral medullary vein		4.3
+FMA51635	Right anterolateral pontine vein		4.3
+FMA8617	Right apical segmental artery		4.3
+FMA68211	Right apical segmental bronchial tree	organs	4.0
+FMA8661	Right apical segmental vein		4.3
+FMA69494	Right arcuate artery	vessels	4.0
+FMA73337	Right arcuate nucleus of hypothalamus		4.3
+FMA22905	Right arteria princeps pollicis	vessels	4.0
+FMA22777	Right arteria radialis indicis	vessels	4.0
+FMA46604	Right aryepiglotticus	other	4.0
+FMA55113	Right arytenoid cartilage	other	4.0
+FMA4843	Right ascending lumbar vein	vessels	4.0
+FMA49498	Right ascending pharyngeal artery		4.3
+FMA22655	Right axillary artery	other	4.0
+FMA13330	Right axillary vein	vessels	4.0
+FMA50991	Right basal vein		4.3
+FMA22909	Right basilic vein	vessels	4.0
+FMA22691	Right brachial artery	other	4.0
+FMA37668	Right brachialis	muscles	4.0
+FMA4751	Right brachiocephalic vein	vessels	4.0
+FMA38486	Right brachioradialis	muscles	4.0
+FMA53067	Right buccal nerve		4.3
+FMA258847	Right calcaneal tendon	other	4.0
+FMA24497	Right calcaneus	bones	4.0
+FMA50690	Right calcarine artery		4.3
+FMA50347	Right callosomarginal artery	vessels	4.0
+FMA24446	Right capitate	bones	4.0
+FMA50099	Right carotid sinus		4.3
+FMA72826	Right caudate nucleus	other	4.0
+FMA51402	Right cavernous sinus		4.3
+FMA49880	Right central retinal artery		4.3
+FMA51884	Right central retinal vein		4.3
+FMA13325	Right cephalic vein	vessels	4.0
+FMA242160	Right cerebral crus		4.3
+FMA81752	Right cervical rotator	muscles	4.0
+FMA58299	Right choroid	bones	4.0
+FMA53549	Right ciliary ganglion	nerves	4.0
+FMA72717	Right cingulate gyrus	organs	4.0
+FMA23180	Right circumflex scapular artery	vessels	4.0
+FMA77949	Right circumflex scapular vein	vessels	4.0
+FMA13322	Right clavicle	bones	4.0
+FMA46443	Right coccygeus	muscles	4.0
+FMA14811	Right colic artery	vessels	4.0
+FMA15407	Right colic vein	vessels	4.0
+FMA50666	Right collicular artery		4.3
+FMA3941	Right common carotid artery	vessels	4.0
+FMA14765	Right common iliac artery	vessels	4.0
+FMA21387	Right common iliac vein	vessels	4.0
+FMA22807	Right common interosseous artery	vessels	4.0
+FMA49072	Right common tendinous ring	other	4.0
+FMA3807	Right conus artery	organs	4.0
+FMA55251	Right conus elasticus	other	4.0
+FMA37665	Right coracobrachialis	muscles	4.0
+FMA58239	Right cornea	bones	4.0
+FMA55115	Right corniculate cartilage	other	4.0
+FMA58483	Right corona ciliaris	other	4.0
+FMA5039	Right costocervical trunk	vessels	4.0
+FMA49484	Right cricothyroid artery		4.3
+FMA24528	Right cuboid bone	bones	4.0
+FMA55117	Right cuneiform cartilage	other	4.0
+FMA72679	Right cuneus		4.3
+FMA49690	Right deep auricular artery		4.3
+FMA22696	Right deep brachial artery	vessels	4.0
+FMA10660	Right deep cervical artery	vessels	4.0
+FMA4760	Right deep cervical vein		4.3
+FMA20796	Right deep femoral artery		4.3
+FMA51042	Right deep femoral vein	vessels	4.0
+FMA50831	Right deep lingual vein		4.3
+FMA51311	Right deep middle cerebral vein		4.3
+FMA22839	Right deep palmar arch	other	4.0
+FMA22912	Right deep palmar venous arch	other	4.0
+FMA69514	Right deep plantar artery	other	4.0
+FMA19235	Right deferent duct	other	4.0
+FMA22507	Right descending genicular artery	vessels	4.0
+FMA46292	Right digastric	muscles	4.0
+FMA50341	Right distal medial striate artery		4.3
+FMA20818	Right dorsal artery of penis	vessels	4.0
+FMA22821	Right dorsal carpal branch of ulnar artery	vessels	4.0
+FMA50001	Right dorsal nasal artery		4.3
+FMA4057	Right dorsal scapular artery	vessels	4.0
+FMA43916	Right dorsalis pedis artery	vessels	4.0
+FMA73339	Right dorsomedial nucleus of hypothalamus		4.3
+FMA8302	Right eighth costal cartilage		4.3
+FMA8283	Right eighth rib	bones	4.0
+FMA8531	Right eleventh rib	bones	4.0
+FMA18256	Right epididymis	other	4.0
+FMA38498	Right extensor carpi radialis brevis	muscles	4.0
+FMA38495	Right extensor carpi radialis longus	muscles	4.0
+FMA38507	Right extensor carpi ulnaris	muscles	4.0
+FMA38504	Right extensor digiti minimi	muscles	4.0
+FMA38501	Right extensor digitorum	muscles	4.0
+FMA22548	Right extensor digitorum longus	muscles	4.0
+FMA51144	Right extensor hallucis brevis	muscles	4.0
+FMA22546	Right extensor hallucis longus	muscles	4.0
+FMA38525	Right extensor indicis	muscles	4.0
+FMA38519	Right extensor pollicis brevis	muscles	4.0
+FMA38522	Right extensor pollicis longus	muscles	4.0
+FMA18806	Right external iliac artery	vessels	4.0
+FMA18885	Right external iliac vein	vessels	4.0
+FMA13111	Right external jugular vein		4.3
+FMA52689	Right external nasal nerve		4.3
+FMA50911	Right external nasal vein		4.3
+FMA13336	Right external oblique	muscles	4.0
+FMA50876	Right facial vein		4.3
+FMA70249	Right femoral artery	vessels	4.0
+FMA21188	Right femoral vein	vessels	4.0
+FMA24474	Right femur	bones	4.0
+FMA24480	Right fibula	bones	4.0
+FMA44885	Right fibular vein	vessels	4.0
+FMA22554	Right fibularis brevis	muscles	4.0
+FMA22552	Right fibularis longus	muscles	4.0
+FMA22550	Right fibularis tertius	muscles	4.0
+FMA8070	Right fifth costal cartilage	bones	4.0
+FMA24472	Right fifth metacarpal bone	bones	4.0
+FMA24515	Right fifth metatarsal bone	bones	4.0
+FMA8066	Right fifth rib	bones	4.0
+FMA22856	Right first common palmar digital artery	vessels	4.0
+FMA7875	Right first costal cartilage	bones	4.0
+FMA24464	Right first metacarpal bone	bones	4.0
+FMA24507	Right first metatarsal bone	bones	4.0
+FMA66242	Right first posterior intercostal artery	vessels	4.0
+FMA7857	Right first rib	bones	4.0
+FMA37465	Right flexor accessorius	muscles	4.0
+FMA38460	Right flexor carpi radialis	muscles	4.0
+FMA37461	Right flexor digitorum brevis	muscles	4.0
+FMA65016	Right flexor digitorum longus	muscles	4.0
+FMA38479	Right flexor digitorum profundus	muscles	4.0
+FMA38470	Right flexor digitorum superficialis	muscles	4.0
+FMA65014	Right flexor hallucis longus	muscles	4.0
+FMA37388	Right flexor pollicis brevis	muscles	4.0
+FMA38482	Right flexor pollicis longus	muscles	4.0
+FMA72924	Right fornix of forebrain	other	4.0
+FMA85123	Right fourth common palmar digital artery	vessels	4.0
+FMA7976	Right fourth costal cartilage	bones	4.0
+FMA24470	Right fourth metacarpal bone	bones	4.0
+FMA24513	Right fourth metatarsal bone	bones	4.0
+FMA7957	Right fourth rib	bones	4.0
+FMA52639	Right frontal nerve	nerves	4.0
+FMA72689	Right fusiform gyrus	organs	4.0
+FMA14776	Right gastric artery	vessels	4.0
+FMA15400	Right gastric vein	vessels	4.0
+FMA14781	Right gastro-epiploic artery	vessels	4.0
+FMA15397	Right gastroepiploic vein	vessels	4.0
+FMA22336	Right gemellus inferior	muscles	4.0
+FMA22334	Right gemellus superior	muscles	4.0
+FMA44887	Right genicular vein	vessels	4.0
+FMA46698	Right genioglossus	muscles	4.0
+FMA46326	Right geniohyoid	muscles	4.0
+FMA72830	Right globus pallidus	other	4.0
+FMA22328	Right gluteus maximus	muscles	4.0
+FMA22330	Right gluteus medius	muscles	4.0
+FMA22332	Right gluteus minimus	muscles	4.0
+FMA43883	Right gracilis	muscles	4.0
+FMA50994	Right great cerebral vein		4.3
+FMA21379	Right great saphenous vein	vessels	4.0
+FMA52803	Right greater palatine nerve		4.3
+FMA266041	Right half of tentorium cerebelli		4.3
+FMA24448	Right hamate	bones	4.0
+FMA14669	Right hepatic duct	organs	4.0
+FMA14338	Right hepatic vein	organs	4.0
+FMA16586	Right hip bone	bones	4.0
+FMA72713	Right hippocampus	organs	4.0
+FMA23130	Right humerus	bones	4.0
+FMA46703	Right hyoglossus	muscles	4.0
+FMA22322	Right iliacus	muscles	4.0
+FMA45858	Right iliococcygeus	other	4.0
+FMA22744	Right iliocostalis cervicis	muscles	4.0
+FMA22740	Right iliocostalis lumborum	muscles	4.0
+FMA22742	Right iliocostalis thoracis	muscles	4.0
+FMA18903	Right iliolumbar vein	vessels	4.0
+FMA58776	Right iliotibial tract	other	4.0
+FMA49696	Right inferior alveolar artery		4.3
+FMA51242	Right inferior anastomotic vein		4.3
+FMA51001	Right inferior choroid vein		4.3
+FMA73434	Right inferior colliculus	organs	4.0
+FMA20688	Right inferior epigastric artery	vessels	4.0
+FMA21163	Right inferior epigastric vein	vessels	4.0
+FMA72657	Right inferior frontal gyrus	organs	4.0
+FMA18912	Right inferior gluteal vein	vessels	4.0
+FMA49568	Right inferior labial artery		4.3
+FMA52542	Right inferior labial vein		4.3
+FMA43892	Right inferior lateral genicular artery	vessels	4.0
+FMA43890	Right inferior medial genicular artery	vessels	4.0
+FMA54737	Right inferior nasal concha	bones	4.0
+FMA49050	Right inferior oblique	muscles	4.0
+FMA51250	Right inferior ophthalmic vein		4.3
+FMA50021	Right inferior palpebral arch		4.3
+FMA55562	Right inferior parathyroid gland		4.3
+FMA51291	Right inferior petrosal sinus		4.3
+FMA46635	Right inferior pharyngeal constrictor	muscles	4.0
+FMA14746	Right inferior phrenic artery	vessels	4.0
+FMA49911	Right inferior pulmonary vein	vessels	4.0
+FMA49046	Right inferior rectus	muscles	4.0
+FMA69265	Right inferior suprarenal artery	vessels	4.0
+FMA72687	Right inferior temporal gyrus	organs	4.0
+FMA10697	Right inferior thyroid artery	vessels	4.0
+FMA4757	Right inferior thyroid vein		4.3
+FMA49508	Right inferior tympanic artery		4.3
+FMA22712	Right inferior ulnar collateral artery	vessels	4.0
+FMA49475	Right infrahyoid artery		4.3
+FMA32547	Right infraspinatus muscle	muscles	4.0
+FMA52698	Right infratrochlear nerve	nerves	4.0
+FMA21964	Right inguinal ligament		4.3
+FMA72977	Right insula	organs	4.0
+FMA24523	Right intermediate cuneiform bone	bones	4.0
+FMA258850	Right intermediate tendon	other	4.0
+FMA72906	Right internal capsule	organs	4.0
+FMA3949	Right internal carotid artery	vessels	4.0
+FMA51004	Right internal cerebral vein		4.3
+FMA18809	Right internal iliac artery	vessels	4.0
+FMA18887	Right internal iliac vein	vessels	4.0
+FMA4754	Right internal jugular vein	vessels	4.0
+FMA50818	Right internal jugular vein proper		4.3
+FMA18918	Right internal pudendal vein	vessels	4.0
+FMA3969	Right internal thoracic artery	vessels	4.0
+FMA4758	Right internal thoracic vein	vessels	4.0
+FMA51378	Right interpeduncular vein		4.3
+FMA22890	Right interspinalis thoracis	muscles	4.0
+FMA58236	Right iris	bones	4.0
+FMA50856	Right jugular venous arch		4.3
+FMA7204	Right kidney	organs	4.0
+FMA49928	Right lacrimal artery		4.3
+FMA53645	Right lacrimal bone	bones	4.0
+FMA59582	Right lacrimal canaliculus	other	4.0
+FMA59102	Right lacrimal gland	bones	4.0
+FMA59541	Right lacrimal lake	other	4.0
+FMA52629	Right lacrimal nerve	nerves	4.0
+FMA59545	Right lacrimal sac	other	4.0
+FMA51902	Right lacrimal vein		4.3
+FMA8631	Right lateral basal segmental artery		4.3
+FMA68220	Right lateral basal segmental bronchial tree	organs	4.0
+FMA9425	Right lateral basal segmental vein	organs	4.0
+FMA20801	Right lateral circumflex femoral artery	vessels	4.0
+FMA44920	Right lateral circumflex femoral vein	vessels	4.0
+FMA46580	Right lateral crico-arytenoid	muscles	4.0
+FMA24525	Right lateral cuneiform bone	bones	4.0
+FMA50443	Right lateral frontobasal artery	vessels	4.0
+FMA73303	Right lateral geniculate body	other	4.0
+FMA73359	Right lateral hypothalamic nucleus		4.3
+FMA49581	Right lateral nasal artery		4.3
+FMA59512	Right lateral nasal cartilage	other	4.0
+FMA50643	Right lateral occipital artery	vessels	4.0
+FMA72677	Right lateral occipital gyrus		4.3
+FMA72756	Right lateral orbital gyrus		4.3
+FMA49941	Right lateral palpebral artery		4.3
+FMA43931	Right lateral plantar artery	vessels	4.0
+FMA52785	Right lateral posterior superior nasal nerve		4.3
+FMA73327	Right lateral preoptic nucleus		4.3
+FMA53109	Right lateral pterygoid nerve		4.3
+FMA49054	Right lateral rectus	muscles	4.0
+FMA18906	Right lateral sacral vein	vessels	4.0
+FMA22588	Right lateral superior genicular artery	vessels	4.0
+FMA69490	Right lateral tarsal artery	vessels	4.0
+FMA22675	Right lateral thoracic artery	vessels	4.0
+FMA71211	Right lateral thoracic vein	vessels	4.0
+FMA55140	Right lateral thyrohyoid ligament	other	4.0
+FMA78449	Right lateral ventricle	organs	4.0
+FMA58242	Right lens	bones	4.0
+FMA49802	Right lesser palatine artery		4.3
+FMA49048	Right levator palpebrae superioris	muscles	4.0
+FMA32540	Right levator scapulae	muscles	4.0
+FMA46728	Right levator veli palatini	muscles	4.0
+FMA72681	Right lingual gyrus		4.3
+FMA52565	Right lingual vein		4.3
+FMA71708	Right lobe branch of right hepatic artery	vessels	4.0
+FMA71194	Right lobe of thymus	other	4.0
+FMA13368	Right lobe of thyroid gland		4.3
+FMA82734	Right long ciliary nerve	nerves	4.0
+FMA44249	Right long plantar ligament	other	4.0
+FMA49957	Right long posterior ciliary artery		4.3
+FMA22754	Right longissimus capitis	muscles	4.0
+FMA22757	Right longissimus cervicis	muscles	4.0
+FMA22751	Right longissimus thoracis	muscles	4.0
+FMA46309	Right longus capitis	muscles	4.0
+FMA57142	Right lower central secondary incisor tooth	other	4.0
+FMA55705	Right lower first secondary molar tooth	other	4.0
+FMA55694	Right lower first secondary premolar tooth	other	4.0
+FMA57140	Right lower lateral secondary incisor tooth	other	4.0
+FMA55706	Right lower second secondary molar tooth	other	4.0
+FMA55695	Right lower second secondary premolar tooth	other	4.0
+FMA55686	Right lower secondary canine tooth	other	4.0
+FMA23089	Right lumbar rotator	muscles	4.0
+FMA24437	Right lunate	bones	4.0
+FMA7395	Right main bronchus		4.3
+FMA68418	Right main bronchus proper	organs	4.0
+FMA59505	Right major alar cartilage	other	4.0
+FMA50449	Right mammillary artery		4.3
+FMA73389	Right mammillothalamic tract of hypothalamus		4.3
+FMA52997	Right mandibular nerve		4.3
+FMA52210	Right marginal sinus		4.3
+FMA4716	Right marginal vein	organs	4.0
+FMA53104	Right masseteric nerve		4.3
+FMA52005	Right mastoid emissary vein		4.3
+FMA53649	Right maxilla	bones	4.0
+FMA68218	Right medial basal segmental bronchial tree	organs	4.0
+FMA9422	Right medial basal segmental vein	organs	4.0
+FMA22935	Right medial brachial vein	vessels	4.0
+FMA44918	Right medial circumflex femoral vein	vessels	4.0
+FMA24521	Right medial cuneiform bone	bones	4.0
+FMA50343	Right medial frontobasal artery	vessels	4.0
+FMA73309	Right medial geniculate body	other	4.0
+FMA50645	Right medial occipital artery	vessels	4.0
+FMA72758	Right medial orbital gyrus		4.3
+FMA50013	Right medial palpebral artery		4.3
+FMA43929	Right medial plantar artery	vessels	4.0
+FMA52786	Right medial posterior superior nasal nerve		4.3
+FMA73325	Right medial preoptic nucleus		4.3
+FMA53057	Right medial pterygoid nerve		4.3
+FMA49056	Right medial rectus	muscles	4.0
+FMA22586	Right medial superior genicular artery	vessels	4.0
+FMA22968	Right median antebrachial vein	vessels	4.0
+FMA22964	Right median cubital vein	vessels	4.0
+FMA49705	Right mental artery		4.3
+FMA53251	Right mental nerve		4.3
+FMA72655	Right middle frontal gyrus	organs	4.0
+FMA22562	Right middle genicular artery	vessels	4.0
+FMA52729	Right middle meningeal nerve		4.3
+FMA46633	Right middle pharyngeal constrictor	muscles	4.0
+FMA52939	Right middle superior alveolar nerve		4.3
+FMA14755	Right middle suprarenal artery	vessels	4.0
+FMA72685	Right middle temporal gyrus	organs	4.0
+FMA50936	Right middle temporal vein		4.3
+FMA50824	Right middle thyroid vein		4.3
+FMA10692	Right musculophrenic artery	vessels	4.0
+FMA4772	Right musculophrenic vein	vessels	4.0
+FMA46321	Right mylohyoid	muscles	4.0
+FMA49703	Right mylohyoid artery		4.3
+FMA53647	Right nasal bone	bones	4.0
+FMA52669	Right nasociliary nerve	nerves	4.0
+FMA51882	Right nasofrontal vein		4.3
+FMA59555	Right nasolacrimal duct	other	4.0
+FMA52798	Right nasopalatine nerve		4.3
+FMA8383	Right ninth costal cartilage		4.3
+FMA8364	Right ninth rib	bones	4.0
+FMA46584	Right oblique arytenoid	muscles	4.0
+FMA32536	Right obliquus capitis inferior	muscles	4.0
+FMA32534	Right obliquus capitis superior	muscles	4.0
+FMA22326	Right obturator externus	muscles	4.0
+FMA22324	Right obturator internus	muscles	4.0
+FMA18915	Right obturator vein	vessels	4.0
+FMA52113	Right occipital diploic vein		4.3
+FMA72975	Right occipital lobe	organs	4.0
+FMA52592	Right olfactory nerve		4.3
+FMA223163	Right olfactory tract		4.3
+FMA13348	Right omohyoid	muscles	4.0
+FMA49869	Right ophthalmic artery	vessels	4.0
+FMA52622	Right ophthalmic nerve	nerves	4.0
+FMA37390	Right opponens pollicis	muscles	4.0
+FMA50875	Right optic nerve	nerves	4.0
+FMA62382	Right optic tract	other	4.0
+FMA53655	Right palatine bone	bones	4.0
+FMA46671	Right palatopharyngeus	muscles	4.0
+FMA22864	Right palmar metacarpal artery	vessels	4.0
+FMA22920	Right palmar metacarpal vein	vessels	4.0
+FMA38463	Right palmaris longus	muscles	4.0
+FMA72705	Right parahippocampal gyrus	organs	4.0
+FMA73335	Right paraventricular nucleus of hypothalamus		4.3
+FMA52788	Right parietal bone	bones	4.0
+FMA52003	Right parietal emissary vein		4.3
+FMA24486	Right patella	bones	4.0
+FMA22450	Right pectineus	muscles	4.0
+FMA13375	Right pectoralis minor	muscles	4.0
+FMA50359	Right pericallosal artery	vessels	4.0
+FMA43922	Right peroneal artery		4.3
+FMA50846	Right pharyngeal vein		4.3
+FMA22340	Right piriformis	muscles	4.0
+FMA24441	Right pisiform	bones	4.0
+FMA43943	Right plantar arch	vessels	4.0
+FMA22560	Right plantaris	muscles	4.0
+FMA45739	Right platysma	muscles	4.0
+FMA50380	Right polar temporal artery	vessels	4.0
+FMA77380	Right popliteal artery	vessels	4.0
+FMA44328	Right popliteal vein	vessels	4.0
+FMA22591	Right popliteus	muscles	4.0
+FMA15414	Right portal vein	organs	4.0
+FMA72665	Right postcentral gyrus	organs	4.0
+FMA49625	Right posterior auricular artery		4.3
+FMA50852	Right posterior auricular vein		4.3
+FMA8632	Right posterior basal segmental artery		4.3
+FMA68221	Right posterior basal segmental bronchial tree	organs	4.0
+FMA9428	Right posterior basal segmental vein	organs	4.0
+FMA22685	Right posterior circumflex humeral artery	vessels	4.0
+FMA50085	Right posterior communicating artery	vessels	4.0
+FMA46577	Right posterior crico-arytenoid	muscles	4.0
+FMA7252	Right posterior cusp of aortic valve	organs	4.0
+FMA52715	Right posterior ethmoidal nerve	nerves	4.0
+FMA50519	Right posterior inferior cerebellar artery	vessels	4.0
+FMA52824	Right posterior inferior nasal nerve		4.3
+FMA50672	Right posterior medial choroidal artery	vessels	4.0
+FMA49504	Right posterior meningeal artery		4.3
+FMA73353	Right posterior nucleus of hypothalamus		4.3
+FMA80187	Right posterior orbital gyrus		4.3
+FMA50489	Right posterior parietal artery	vessels	4.0
+FMA8619	Right posterior segmental artery		4.3
+FMA68213	Right posterior segmental bronchial tree	organs	4.0
+FMA8663	Right posterior segmental vein	organs	4.0
+FMA49758	Right posterior superior alveolar artery		4.3
+FMA52936	Right posterior superior alveolar nerve		4.3
+FMA43898	Right posterior tibial artery	vessels	4.0
+FMA44338	Right posterior tibial vein	vessels	4.0
+FMA22804	Right posterior ulnar recurrent artery	vessels	4.0
+FMA72661	Right precentral gyrus	organs	4.0
+FMA72673	Right precuneus		4.3
+FMA50445	Right prefrontal artery	vessels	4.0
+FMA38454	Right pronator quadratus	muscles	4.0
+FMA50315	Right proximal medial striate artery		4.3
+FMA22342	Right psoas major	muscles	4.0
+FMA51123	Right pterygoid plexus		4.3
+FMA55619	Right pterygomandibular raphe	other	4.0
+FMA45854	Right pubococcygeus	other	4.0
+FMA45856	Right puborectalis	other	4.0
+FMA50872	Right pulmonary artery	vessels	4.0
+FMA72828	Right putamen	other	4.0
+FMA22338	Right quadratus femoris	muscles	4.0
+FMA22733	Right radial artery	vessels	4.0
+FMA22764	Right radial recurrent artery	vessels	4.0
+FMA22948	Right radial vein	vessels	4.0
+FMA23464	Right radius	bones	4.0
+FMA46313	Right rectus capitis anterior	muscles	4.0
+FMA46317	Right rectus capitis lateralis	muscles	4.0
+FMA32530	Right rectus capitis posterior major	muscles	4.0
+FMA32532	Right rectus capitis posterior minor	muscles	4.0
+FMA38928	Right rectus femoris	other	4.0
+FMA268667	Right recurrent interosseous artery	vessels	4.0
+FMA73491	Right red nucleus		4.3
+FMA14752	Right renal artery	vessels	4.0
+FMA14335	Right renal vein	vessels	4.0
+FMA50929	Right retromandibular vein		4.3
+FMA13381	Right rhomboid major	muscles	4.0
+FMA13383	Right rhomboid minor	muscles	4.0
+FMA46669	Right salpingopharyngeus	muscles	4.0
+FMA22354	Right sartorius	muscles	4.0
+FMA13392	Right scalenus anterior	muscles	4.0
+FMA13390	Right scalenus medius	muscles	4.0
+FMA13388	Right scalenus posterior	muscles	4.0
+FMA24435	Right scaphoid	bones	4.0
+FMA13395	Right scapula	bones	4.0
+FMA58271	Right sclera	bones	4.0
+FMA85119	Right second common palmar digital artery	vessels	4.0
+FMA7886	Right second costal cartilage	bones	4.0
+FMA24466	Right second metacarpal bone	bones	4.0
+FMA24509	Right second metatarsal bone	bones	4.0
+FMA5041	Right second posterior intercostal artery	vessels	4.0
+FMA7882	Right second rib	bones	4.0
+FMA22448	Right semimembranosus	muscles	4.0
+FMA19387	Right seminal vesicle	other	4.0
+FMA22876	Right semispinalis capitis	muscles	4.0
+FMA22874	Right semispinalis cervicis	muscles	4.0
+FMA22872	Right semispinalis thoracis	muscles	4.0
+FMA22358	Right semitendinosus	muscles	4.0
+FMA13398	Right serratus anterior	muscles	4.0
+FMA13405	Right serratus posterior inferior	muscles	4.0
+FMA13403	Right serratus posterior superior	muscles	4.0
+FMA8248	Right seventh costal cartilage	bones	4.0
+FMA8229	Right seventh rib	bones	4.0
+FMA51293	Right sigmoid sinus		4.3
+FMA8194	Right sixth costal cartilage	bones	4.0
+FMA8175	Right sixth rib	bones	4.0
+FMA44334	Right small saphenous vein	vessels	4.0
+FMA22558	Right soleus	muscles	4.0
+FMA51404	Right sphenoparietal sinus		4.3
+FMA22779	Right spinalis thoracis	muscles	4.0
+FMA50684	Right splenial artery	vessels	4.0
+FMA22728	Right splenius capitis	muscles	4.0
+FMA22726	Right splenius cervicis	muscles	4.0
+FMA13408	Right sternocleidomastoid	muscles	4.0
+FMA50814	Right sternocleidomastoid vein		4.3
+FMA13346	Right sternohyoid	muscles	4.0
+FMA13350	Right sternothyroid	muscles	4.0
+FMA72659	Right straight gyrus		4.3
+FMA73413	Right stria medullaris of thalamus	other	4.0
+FMA72939	Right stria terminalis		4.3
+FMA45826	Right stylohyoid	muscles	4.0
+FMA72309	Right stylohyoid ligament	other	4.0
+FMA57084	Right stylomandibular ligament		4.3
+FMA49629	Right stylomastoid artery		4.3
+FMA46667	Right stylopharyngeus	muscles	4.0
+FMA3953	Right subclavian artery	vessels	4.0
+FMA4755	Right subclavian vein	vessels	4.0
+FMA13412	Right subclavius	muscles	4.0
+FMA4634	Right subcostal artery	vessels	4.0
+FMA4844	Right subcostal vein	vessels	4.0
+FMA49544	Right sublingual artery		4.3
+FMA59804	Right sublingual gland	other	4.0
+FMA50837	Right sublingual vein		4.3
+FMA59802	Right submandibular gland	organs	4.0
+FMA49562	Right submental artery		4.3
+FMA50926	Right submental vein		4.3
+FMA22678	Right subscapular artery	vessels	4.0
+FMA23114	Right subscapular vein	vessels	4.0
+FMA13414	Right subscapularis	muscles	4.0
+FMA73539	Right substantia nigra		4.3
+FMA73367	Right subthalamic nucleus		4.3
+FMA10700	Right superficial cervical artery	vessels	4.0
+FMA21385	Right superficial dorsal vein of penis	vessels	4.0
+FMA20735	Right superficial epigastric artery	vessels	4.0
+FMA44340	Right superficial epigastric vein	vessels	4.0
+FMA43937	Right superficial medial plantar artery	vessels	4.0
+FMA50984	Right superficial middle cerebral vein		4.3
+FMA22835	Right superficial palmar arterial arch	other	4.0
+FMA22915	Right superficial palmar venous arch	other	4.0
+FMA50933	Right superficial temporal vein		4.3
+FMA51240	Right superior anastomotic vein		4.3
+FMA50574	Right superior cerebellar artery	vessels	4.0
+FMA52452	Right superior cerebellar vein		4.3
+FMA51330	Right superior choroid vein		4.3
+FMA73422	Right superior colliculus	organs	4.0
+FMA3988	Right superior epigastric artery	vessels	4.0
+FMA4771	Right superior epigastric vein	vessels	4.0
+FMA72653	Right superior frontal gyrus	organs	4.0
+FMA18909	Right superior gluteal vein	vessels	4.0
+FMA49850	Right superior hypophyseal artery		4.3
+FMA5042	Right superior intercostal artery	vessels	4.0
+FMA4877	Right superior intercostal vein	vessels	4.0
+FMA49571	Right superior labial artery		4.3
+FMA52539	Right superior labial vein		4.3
+FMA49481	Right superior laryngeal artery		4.3
+FMA50812	Right superior laryngeal vein		4.3
+FMA49052	Right superior oblique	muscles	4.0
+FMA72675	Right superior occipital gyrus		4.3
+FMA51248	Right superior ophthalmic vein		4.3
+FMA50023	Right superior palpebral arch		4.3
+FMA50908	Right superior palpebral vein		4.3
+FMA55560	Right superior parathyroid gland		4.3
+FMA72671	Right superior parietal lobule	organs	4.0
+FMA51289	Right superior petrosal sinus		4.3
+FMA46631	Right superior pharyngeal constrictor	muscles	4.0
+FMA49914	Right superior pulmonary vein	vessels	4.0
+FMA49044	Right superior rectus	muscles	4.0
+FMA8627	Right superior segmental artery		4.3
+FMA68216	Right superior segmental bronchial tree	organs	4.0
+FMA8670	Right superior segmental vein	organs	4.0
+FMA72683	Right superior temporal gyrus		4.3
+FMA50999	Right superior thalamostriate vein		4.3
+FMA50808	Right superior thyroid vein		4.3
+FMA22707	Right superior ulnar collateral artery	vessels	4.0
+FMA38513	Right supinator	muscles	4.0
+FMA49974	Right supra-orbital artery		4.3
+FMA52656	Right supra-orbital nerve	nerves	4.0
+FMA50905	Right supra-orbital vein		4.3
+FMA73329	Right suprachiasmatic nucleus		4.3
+FMA72667	Right supramarginal gyrus	organs	4.0
+FMA73331	Right supraoptic nucleus		4.3
+FMA14343	Right suprarenal vein	vessels	4.0
+FMA10698	Right suprascapular artery	vessels	4.0
+FMA50859	Right suprascapular vein	vessels	4.0
+FMA32544	Right supraspinatus	muscles	4.0
+FMA50026	Right supratrochlear artery		4.3
+FMA52643	Right supratrochlear nerve	nerves	4.0
+FMA50900	Right supratrochlear vein		4.3
+FMA24482	Right talus	bones	4.0
+FMA52738	Right temporal bone	bones	4.0
+FMA22425	Right tensor fasciae latae	muscles	4.0
+FMA46731	Right tensor veli palatini	muscles	4.0
+FMA8464	Right tenth costal cartilage		4.3
+FMA8445	Right tenth rib	bones	4.0
+FMA32551	Right teres major	muscles	4.0
+FMA32553	Right teres minor	muscles	4.0
+FMA14759	Right testicular artery	vessels	4.0
+FMA14341	Right testicular vein	vessels	4.0
+FMA7211	Right testis	other	4.0
+FMA50670	Right thalamogeniculate artery	vessels	4.0
+FMA50664	Right thalamoperforating artery	vessels	4.0
+FMA50425	Right thalamotuberal artery		4.3
+FMA258714	Right thalamus	other	4.0
+FMA85121	Right third common palmar digital artery	vessels	4.0
+FMA7913	Right third costal cartilage	bones	4.0
+FMA24468	Right third metacarpal bone	bones	4.0
+FMA24511	Right third metatarsal bone	bones	4.0
+FMA7909	Right third rib	bones	4.0
+FMA66321	Right thoracodorsal artery	vessels	4.0
+FMA71214	Right thoracodorsal vein	vessels	4.0
+FMA46589	Right thyro-arytenoid	muscles	4.0
+FMA46599	Right thyro-arytenoid proper		4.3
+FMA3992	Right thyrocervical trunk	vessels	4.0
+FMA13352	Right thyrohyoid	muscles	4.0
+FMA55133	Right thyrohyoid membrane	other	4.0
+FMA24477	Right tibia	bones	4.0
+FMA22544	Right tibialis anterior	muscles	4.0
+FMA65018	Right tibialis posterior	muscles	4.0
+FMA10699	Right transverse cervical artery	vessels	4.0
+FMA50861	Right transverse cervical vein		4.3
+FMA51400	Right transverse medullary vein		4.3
+FMA51355	Right transverse pontine vein		4.3
+FMA50764	Right transverse sinus		4.3
+FMA9761	Right transversus thoracis	muscles	4.0
+FMA24443	Right trapezium	bones	4.0
+FMA23725	Right trapezoid	bones	4.0
+FMA24439	Right triquetral	bones	4.0
+FMA50881	Right trochlear nerve	nerves	4.0
+FMA8533	Right twelfth rib	bones	4.0
+FMA23467	Right ulna	bones	4.0
+FMA22797	Right ulnar artery	vessels	4.0
+FMA22951	Right ulnar vein	vessels	4.0
+FMA55681	Right upper central secondary incisor tooth	other	4.0
+FMA55698	Right upper first secondary molar tooth	other	4.0
+FMA55689	Right upper first secondary premolar tooth	other	4.0
+FMA55680	Right upper lateral secondary incisor tooth	other	4.0
+FMA68197	Right upper lobar artery	organs	4.0
+FMA55697	Right upper second secondary molar tooth	other	4.0
+FMA55688	Right upper second secondary premolar tooth	other	4.0
+FMA55798	Right upper secondary canine tooth	other	4.0
+FMA15571	Right ureter	organs	4.0
+FMA38934	Right vastus intermedius	other	4.0
+FMA38930	Right vastus lateralis	other	4.0
+FMA38932	Right vastus medialis	other	4.0
+FMA73341	Right ventromedial nucleus of hypothalamus		4.3
+FMA3958	Right vertebral artery	vessels	4.0
+FMA4756	Right vertebral vein		4.3
+FMA50890	Right vestibulocochlear nerve		4.3
+FMA58828	Right vitreous body	bones	4.0
+FMA55245	Right vocal ligament	other	4.0
+FMA46592	Right vocalis	muscles	4.0
+FMA52892	Right zygomatic bone	bones	4.0
+FMA52968	Right zygomatic nerve		4.3
+FMA16202	Sacrum	bones	4.0
+FMA13073	Second lumbar vertebra	bones	4.0
+FMA37720	Second lumbrical of left foot	muscles	4.0
+FMA37719	Second lumbrical of right foot	muscles	4.0
+FMA37744	Second plantar interosseous of left foot	muscles	4.0
+FMA37743	Second plantar interosseous of right foot	muscles	4.0
+FMA3874	Second right anterior branch of anterior interventricular branch of left coronary artery	organs	4.0
+FMA3848	Second septal branch of right posterior interventricular artery	vessels	4.0
+FMA9187	Second thoracic vertebra	bones	4.0
+FMA3892	Septal branch of anterior interventricular artery	vessels	4.0
+FMA7240	Septal leaflet of tricuspid valve	organs	4.0
+FMA59503	Septal nasal cartilage	other	4.0
+FMA7262	Septal papillary muscle of right ventricle	organs	4.0
+FMA61842	Septum of telencephalon	other	4.0
+FMA45098	Sesamoid bone of left foot	bones	4.0
+FMA45097	Sesamoid bone of right foot	bones	4.0
+FMA71442	Set of anterior cervical intertransversarii	other	4.0
+FMA70839	Set of anterior intercostal veins	other	4.0
+FMA71693	Set of branches of cavernous part of internal carotid artery to nerves		4.3
+FMA71562	Set of calcaneal branches of posterior tibial artery	other	4.0
+FMA70821	Set of common plantar digital arteries	other	4.0
+FMA70801	Set of dorsal digital arteries	other	4.0
+FMA70917	Set of dorsal digital veins	other	4.0
+FMA42405	Set of dorsal interossei of left hand	other	4.0
+FMA42404	Set of dorsal interossei of right hand	other	4.0
+FMA70800	Set of dorsal metacarpal arteries	other	4.0
+FMA70847	Set of inferior palpebral veins		4.3
+FMA71578	Set of inferior veins of cerebellar hemisphere		4.3
+FMA71309	Set of interspinales cervicis	other	4.0
+FMA71307	Set of interspinales lumborum	other	4.0
+FMA71571	Set of lateral direct veins of lateral ventricle		4.3
+FMA74078	Set of left levatores costarum breves	other	4.0
+FMA74076	Set of left levatores costarum longi	other	4.0
+FMA42399	Set of lumbricals of left hand	other	4.0
+FMA42398	Set of lumbricals of right hand	other	4.0
+FMA71537	Set of oesophageal branches of thoracic aorta	other	4.0
+FMA42403	Set of palmar interossei of left hand	other	4.0
+FMA42402	Set of palmar interossei of right hand	other	4.0
+FMA70815	Set of perforating arteries	other	4.0
+FMA70922	Set of perforating veins	other	4.0
+FMA75533	Set of phrenico-abdominal branches of phrenic nerve		4.3
+FMA71564	Set of plantar digital arteries proper	other	4.0
+FMA70919	Set of plantar digital veins	other	4.0
+FMA71443	Set of posterior cervical intertransversarii	other	4.0
+FMA71502	Set of posterior temporal branches of lateral occipital artery	other	4.0
+FMA74077	Set of right levatores costarum breves	other	4.0
+FMA74075	Set of right levatores costarum longi	other	4.0
+FMA12525	Seventh cervical vertebra	bones	4.0
+FMA9968	Seventh thoracic vertebra	bones	4.0
+FMA7041	Short ciliary nerve	nerves	4.0
+FMA37685	Short head of left biceps brachii	other	4.0
+FMA45892	Short head of left biceps femoris	other	4.0
+FMA37684	Short head of right biceps brachii	other	4.0
+FMA45891	Short head of right biceps femoris	other	4.0
+FMA14830	Sigmoid artery	vessels	4.0
+FMA15395	Sigmoid vein	vessels	4.0
+FMA50784	Sinus confluence		4.3
+FMA12524	Sixth cervical vertebra	bones	4.0
+FMA9945	Sixth thoracic vertebra	bones	4.0
+FMA7163	Skin	other	4.0
+FMA74803	Skin of umbilicus		4.3
+FMA4714	Small cardiac vein	organs	4.0
+FMA52736	Sphenoid bone	bones	4.0
+FMA50367	Sphenoid part of left middle cerebral artery	other	4.0
+FMA50366	Sphenoid part of right middle cerebral artery	vessels	4.0
+FMA34685	Spinal part of left deltoid	other	4.0
+FMA34684	Spinal part of right deltoid	other	4.0
+FMA77179	Spinalis	muscles	4.0
+FMA7196	Spleen	other	4.0
+FMA14773	Splenic artery	vessels	4.0
+FMA14331	Splenic vein	vessels	4.0
+FMA79980	Sternocostal part of left pectoralis major	other	4.0
+FMA79979	Sternocostal part of right pectoralis major	other	4.0
+FMA7148	Stomach	organs	4.0
+FMA46612	Straight part of left cricothyroid	other	4.0
+FMA46611	Straight part of right cricothyroid	other	4.0
+FMA50769	Straight sinus		4.3
+FMA61974	Stria terminalis	other	4.0
+FMA21384	Superficial dorsal vein of penis	vessels	4.0
+FMA65199	Superficial head of left flexor pollicis brevis	other	4.0
+FMA65198	Superficial head of right flexor pollicis brevis	other	4.0
+FMA52575	Superior branch of left oculomotor nerve	nerves	4.0
+FMA68693	Superior branch of medial segmental artery	organs	4.0
+FMA52574	Superior branch of right oculomotor nerve	nerves	4.0
+FMA68709	Superior branch of right superior segmental artery	organs	4.0
+FMA50816	Superior bulb of right internal jugular vein		4.3
+FMA50978	Superior cerebral vein		4.3
+FMA52995	Superior labial branch of left infra-orbital nerve		4.3
+FMA52994	Superior labial branch of right infra-orbital nerve		4.3
+FMA8639	Superior lingular artery	organs	4.0
+FMA68133	Superior lingular bronchial artery		4.3
+FMA68226	Superior lingular bronchial tree	organs	4.0
+FMA8668	Superior lingular vein	organs	4.0
+FMA14749	Superior mesenteric artery	vessels	4.0
+FMA14332	Superior mesenteric vein	vessels	4.0
+FMA46284	Superior oblique part of left longus colli	other	4.0
+FMA68982	Superior part of medial segmental vein	organs	4.0
+FMA68926	Superior part of right anterior segmental vein	organs	4.0
+FMA78121	Superior phrenic vein	vessels	4.0
+FMA14832	Superior rectal artery	vessels	4.0
+FMA15393	Superior rectal vein	vessels	4.0
+FMA55148	Superior root of left ansa cervicalis		4.3
+FMA50767	Superior sagittal sinus		4.3
+FMA86341	Superior segmental branch of left renal artery	vessels	4.0
+FMA86340	Superior segmental branch of right renal artery	vessels	4.0
+FMA65362	Superior trunk of left brachial nerve plexus		4.3
+FMA51230	Superior vein of vermis		4.3
+FMA4720	Superior vena cava	vessels	4.0
+FMA50697	Superior vermian branch of medial branch of left superior cerebellar artery	vessels	4.0
+FMA50696	Superior vermian branch of medial branch of right superior cerebellar artery	vessels	4.0
+FMA58840	Suspensory ligament of left lens	bones	4.0
+FMA58839	Suspensory ligament of right lens	bones	4.0
+FMA15044	Taenia libera	organs	4.0
+FMA15042	Taenia mesocolica	organs	4.0
+FMA15043	Taenia omentalis	organs	4.0
+FMA59090	Tarsal plate of left lower eyelid	other	4.0
+FMA59092	Tarsal plate of left upper eyelid	other	4.0
+FMA59089	Tarsal plate of right lower eyelid	other	4.0
+FMA59091	Tarsal plate of right upper eyelid	other	4.0
+FMA50474	Temporo-occipital branch of left middle cerebral artery	vessels	4.0
+FMA50473	Temporo-occipital branch of right middle cerebral artery	vessels	4.0
+FMA46442	Tendinous arch of levator ani	other	4.0
+FMA54159	Tendon of right levator palpebrae superioris	other	4.0
+FMA10037	Tenth thoracic vertebra	bones	4.0
+FMA83966	Tentorium cerebelli	other	4.0
+FMA12521	Third cervical vertebra	bones	4.0
+FMA13074	Third lumbar vertebra	bones	4.0
+FMA37486	Third lumbrical of left foot	muscles	4.0
+FMA37485	Third lumbrical of right foot	muscles	4.0
+FMA49535	Third part of right lingual artery		4.3
+FMA37742	Third plantar interosseous of left foot	muscles	4.0
+FMA37741	Third plantar interosseous of right foot	muscles	4.0
+FMA3876	Third right anterior branch of anterior interventricular branch of left coronary artery	organs	4.0
+FMA9209	Third thoracic vertebra	bones	4.0
+FMA78454	Third ventricle	organs	4.0
+FMA23083	Thoracic rotator	muscles	4.0
+FMA4747	Thymic vein		4.3
+FMA55230	Thyro-epiglottic ligament	other	4.0
+FMA55099	Thyroid cartilage	other	4.0
+FMA54640	Tongue	organs	4.0
+FMA7394	Trachea	organs	4.0
+FMA46582	Transverse arytenoid	muscles	4.0
+FMA14546	Transverse colon	organs	4.0
+FMA46021	Transverse head of left adductor hallucis	other	4.0
+FMA46124	Transverse head of left adductor pollicis	other	4.0
+FMA46020	Transverse head of right adductor hallucis	other	4.0
+FMA46123	Transverse head of right adductor pollicis	other	4.0
+FMA14647	Transverse mesocolon	organs	4.0
+FMA33585	Transverse part of left trapezius	other	4.0
+FMA33584	Transverse part of right trapezius	other	4.0
+FMA15793	Tributary of middle hepatic vein	vessels	4.0
+FMA44499	Tributary of plantar venous arch	vessels	4.0
+FMA49068	Trochlea of left superior oblique	other	4.0
+FMA49067	Trochlea of right superior oblique	other	4.0
+FMA74912	Trunk of anterior interventricular branch of left coronary artery	organs	4.0
+FMA76156	Trunk of artery of left precentral sulcus		4.3
+FMA76647	Trunk of basilar artery		4.3
+FMA69316	Trunk of brachiocephalic artery		4.3
+FMA80553	Trunk of branch of left mandibular nerve to tensor tympani		4.3
+FMA80552	Trunk of branch of right mandibular nerve to tensor tympani		4.3
+FMA74923	Trunk of circumflex branch of left coronary artery		4.3
+FMA75908	Trunk of clivus branch of right internal carotid artery		4.3
+FMA76536	Trunk of common hepatic artery		4.3
+FMA76574	Trunk of gastroduodenal artery	vessels	4.0
+FMA76548	Trunk of hepatic artery proper		4.3
+FMA66499	Trunk of ileocolic artery		4.3
+FMA75857	Trunk of inferior branch of ileocolic artery		4.3
+FMA66359	Trunk of inferior mesenteric artery		4.3
+FMA76129	Trunk of inferior terminal branch of left middle cerebral artery	other	4.0
+FMA76128	Trunk of inferior terminal branch of right middle cerebral artery	other	4.0
+FMA81015	Trunk of left accessory nerve		4.3
+FMA66425	Trunk of left anterior tibial artery		4.3
+FMA80541	Trunk of left auriculotemporal nerve		4.3
+FMA69326	Trunk of left common carotid artery		4.3
+FMA69384	Trunk of left common iliac artery		4.3
+FMA76470	Trunk of left common interosseous artery		4.3
+FMA3855	Trunk of left coronary artery	organs	4.0
+FMA7015	Trunk of left eighth cervical nerve		4.3
+FMA65422	Trunk of left facial nerve		4.3
+FMA20732	Trunk of left femoral artery		4.3
+FMA24105	Trunk of left fifth cervical nerve		4.3
+FMA85332	Trunk of left first intercostal nerve		4.3
+FMA7023	Trunk of left first thoracic nerve		4.3
+FMA7007	Trunk of left fourth cervical nerve		4.3
+FMA65396	Trunk of left great auricular nerve		4.3
+FMA70457	Trunk of left hepatic artery	organs	4.0
+FMA80483	Trunk of left hypoglossal nerve		4.3
+FMA80519	Trunk of left inferior alveolar nerve		4.3
+FMA50306	Trunk of left inferior pulmonary vein		4.3
+FMA75867	Trunk of left internal carotid artery		4.3
+FMA70187	Trunk of left internal iliac artery		4.3
+FMA76304	Trunk of left internal thoracic artery		4.3
+FMA86135	Trunk of left lateral occipital artery		4.3
+FMA69567	Trunk of left lateral plantar artery		4.3
+FMA80512	Trunk of left lingual nerve		4.3
+FMA79667	Trunk of left long thoracic nerve		4.3
+FMA80595	Trunk of left maxillary nerve		4.3
+FMA86137	Trunk of left medial occipital artery		4.3
+FMA69757	Trunk of left medial plantar artery		4.3
+FMA80524	Trunk of left mylohyoid nerve		4.3
+FMA65426	Trunk of left oculomotor nerve		4.3
+FMA65387	Trunk of left phrenic nerve		4.3
+FMA82697	Trunk of left portal vein	organs	4.0
+FMA80806	Trunk of left posterior auricular nerve		4.3
+FMA66427	Trunk of left posterior tibial artery		4.3
+FMA8614	Trunk of left pulmonary artery		4.3
+FMA66626	Trunk of left radial artery		4.3
+FMA80695	Trunk of left recurrent laryngeal nerve		4.3
+FMA66364	Trunk of left renal artery	vessels	4.0
+FMA7003	Trunk of left second cervical nerve		4.3
+FMA85334	Trunk of left second intercostal nerve		4.3
+FMA7025	Trunk of left second thoracic nerve		4.3
+FMA7013	Trunk of left seventh cervical nerve		4.3
+FMA7011	Trunk of left sixth cervical nerve		4.3
+FMA69319	Trunk of left subclavian artery		4.3
+FMA79671	Trunk of left subclavian nerve		4.3
+FMA66551	Trunk of left subscapular artery		4.3
+FMA50305	Trunk of left superior pulmonary vein		4.3
+FMA7005	Trunk of left third cervical nerve		4.3
+FMA66564	Trunk of left thoraco-acromial artery	vessels	4.0
+FMA81009	Trunk of left transverse cervical artery		4.3
+FMA65424	Trunk of left trigeminal nerve		4.3
+FMA66624	Trunk of left ulnar artery		4.3
+FMA18157	Trunk of left vagus nerve		4.3
+FMA76262	Trunk of left vertebral artery		4.3
+FMA86079	Trunk of medial branch of right superior cerebellar artery		4.3
+FMA75886	Trunk of meningeal branch of cavernous part of right internal carotid artery		4.3
+FMA76135	Trunk of middle temporal branch of left middle cerebral artery		4.3
+FMA69715	Trunk of plantar metatarsal artery		4.3
+FMA79588	Trunk of posterior septal branch of right sphenopalatine artery		4.3
+FMA75971	Trunk of recurrent meningeal branch of right lacrimal artery		4.3
+FMA81014	Trunk of right accessory nerve		4.3
+FMA76062	Trunk of right anterior cerebral artery		4.3
+FMA76254	Trunk of right anterior choroidal artery		4.3
+FMA79529	Trunk of right anterior deep temporal artery		4.3
+FMA66424	Trunk of right anterior tibial artery		4.3
+FMA68880	Trunk of right apical segmental vein	organs	4.0
+FMA66509	Trunk of right ascending cervical artery		4.3
+FMA80540	Trunk of right auriculotemporal nerve		4.3
+FMA66647	Trunk of right brachiocephalic vein		4.3
+FMA79538	Trunk of right buccal artery		4.3
+FMA76079	Trunk of right callosomarginal artery		4.3
+FMA31529	Trunk of right common basal vein		4.3
+FMA69325	Trunk of right common carotid artery		4.3
+FMA69383	Trunk of right common iliac artery		4.3
+FMA3802	Trunk of right coronary artery	organs	4.0
+FMA79568	Trunk of right descending palatine artery		4.3
+FMA66531	Trunk of right external carotid artery		4.3
+FMA66450	Trunk of right facial artery		4.3
+FMA65421	Trunk of right facial nerve		4.3
+FMA20731	Trunk of right femoral artery		4.3
+FMA79572	Trunk of right greater palatine artery		4.3
+FMA70456	Trunk of right hepatic artery	organs	4.0
+FMA80482	Trunk of right hypoglossal nerve		4.3
+FMA80518	Trunk of right inferior alveolar nerve		4.3
+FMA31525	Trunk of right inferior basal vein		4.3
+FMA75898	Trunk of right inferior hypophyseal artery		4.3
+FMA50303	Trunk of right inferior pulmonary vein		4.3
+FMA79551	Trunk of right infra-orbital artery		4.3
+FMA75866	Trunk of right internal carotid artery		4.3
+FMA76303	Trunk of right internal thoracic artery		4.3
+FMA76149	Trunk of right lateral frontobasal artery		4.3
+FMA86134	Trunk of right lateral occipital artery		4.3
+FMA69566	Trunk of right lateral plantar artery		4.3
+FMA66447	Trunk of right lingual artery		4.3
+FMA80511	Trunk of right lingual nerve		4.3
+FMA8626	Trunk of right lower lobar artery		4.3
+FMA79525	Trunk of right masseteric artery		4.3
+FMA66456	Trunk of right maxillary artery		4.3
+FMA80594	Trunk of right maxillary nerve		4.3
+FMA77908	Trunk of right maxillary vein		4.3
+FMA86136	Trunk of right medial occipital artery		4.3
+FMA69756	Trunk of right medial plantar artery		4.3
+FMA61991	Trunk of right middle cerebral artery		4.3
+FMA79494	Trunk of right middle meningeal artery		4.3
+FMA79455	Trunk of right middle temporal artery		4.3
+FMA80523	Trunk of right mylohyoid nerve		4.3
+FMA66453	Trunk of right occipital artery		4.3
+FMA65425	Trunk of right oculomotor nerve		4.3
+FMA70525	Trunk of right ophthalmic artery		4.3
+FMA76076	Trunk of right polar frontal artery		4.3
+FMA76113	Trunk of right polar temporal artery		4.3
+FMA82695	Trunk of right portal vein	organs	4.0
+FMA80805	Trunk of right posterior auricular nerve		4.3
+FMA79532	Trunk of right posterior deep temporal artery		4.3
+FMA86070	Trunk of right posterior inferior cerebellar artery		4.3
+FMA79585	Trunk of right posterior lateral nasal artery		4.3
+FMA66426	Trunk of right posterior tibial artery		4.3
+FMA79522	Trunk of right pterygomeningeal artery		4.3
+FMA8613	Trunk of right pulmonary artery		4.3
+FMA80694	Trunk of right recurrent laryngeal nerve		4.3
+FMA66363	Trunk of right renal artery	vessels	4.0
+FMA79581	Trunk of right sphenopalatine artery		4.3
+FMA69318	Trunk of right subclavian artery		4.3
+FMA66650	Trunk of right subclavian vein		4.3
+FMA66550	Trunk of right subscapular artery		4.3
+FMA79429	Trunk of right superficial temporal artery		4.3
+FMA31528	Trunk of right superior basal vein		4.3
+FMA86076	Trunk of right superior cerebellar artery		4.3
+FMA50302	Trunk of right superior pulmonary vein		4.3
+FMA66472	Trunk of right superior thyroid artery		4.3
+FMA79516	Trunk of right superior tympanic artery		4.3
+FMA66563	Trunk of right thoraco-acromial artery	vessels	4.0
+FMA65423	Trunk of right trigeminal nerve		4.3
+FMA76193	Trunk of right uncal artery		4.3
+FMA8616	Trunk of right upper lobar artery		4.3
+FMA18151	Trunk of right vagus nerve		4.3
+FMA76261	Trunk of right vertebral artery		4.3
+FMA76098	Trunk of rightpericallosal artery		4.3
+FMA75856	Trunk of superior branch of ileocolic artery		4.3
+FMA66358	Trunk of superior mesenteric artery	vessels	4.0
+FMA66504	Trunk of superior rectal artery		4.3
+FMA80828	Trunk of temporal branch of left facial nerve		4.3
+FMA80827	Trunk of temporal branch of right facial nerve		4.3
+FMA75911	Trunk of tentorial basal branch of right internal carotid artery		4.3
+FMA75914	Trunk of tentorial marginal branch of right internal carotid artery		4.3
+FMA80847	Trunk of zygomatic branch of left facial nerve		4.3
+FMA80846	Trunk of zygomatic branch of right facial nerve		4.3
+FMA69391	Trunk proper of left external iliac artery		4.3
+FMA69390	Trunk proper of right external iliac artery		4.3
+FMA82595	Trunk proper of right subclavian artery		4.3
+FMA62327	Tuber cinereum	organs	4.0
+FMA10081	Twelfth thoracic vertebra	bones	4.0
+FMA38620	Ulnar head of left flexor carpi ulnaris	other	4.0
+FMA38563	Ulnar head of left pronator teres	other	4.0
+FMA38619	Ulnar head of right flexor carpi ulnaris	other	4.0
+FMA38562	Ulnar head of right pronator teres	other	4.0
+FMA70493	Ureteric segment of left renal artery	vessels	4.0
+FMA70492	Ureteric segment of right renal artery	vessels	4.0
+FMA19667	Urethra	organs	4.0
+FMA15900	Urinary bladder	organs	4.0
+FMA46733	Uvular muscle	muscles	4.0
+FMA51014	Vein of right caudate nucleus		4.3
+FMA46286	Vertical intermediate part of left longus colli	other	4.0
+FMA9710	Vomer	bones	4.0
+FMA9531	Wall of left atrium	organs	4.0
+FMA9457	Wall of right atrium	organs	4.0
+FMA13884	Wall of ventricle	other	4.0
+FMA260794	White matter of left cerebral hemisphere	organs	4.0
+FMA261085	White matter of left temporal lobe		4.3
+FMA260791	White matter of right cerebral hemisphere	organs	4.0
+FMA261083	White matter of right temporal lobe		4.3
+FMA7488	Xiphoid process	bones	4.0
+	名称未記載（原典）	other	4.0

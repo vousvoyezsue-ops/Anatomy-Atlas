@@ -1,5 +1,6 @@
 // Builds public/anatomy.glb from BodyParts3D.
-//   node scripts/build-models.mjs <4.0 assets folder> <4.3 repo> <3.0 stl folder>
+//   npm run models            (after `npm run sources`, which fetches 4.0 and 4.3)
+//   node scripts/build-models.mjs [4.0 assets folder] [4.3 repo] [3.0 stl folder]
 // 4.0: the IS-A mesh set as packed by github.com/tamir-ichikawa/human-atlas
 //      (dist/assets: atlas.json + <system>.bin.gz, metres, Y-up).
 // 4.3: github.com/olivercase/body_parts_3d_api, OBJ files kept in Git LFS
@@ -7,6 +8,8 @@
 //      checked against their LFS hash. Used for what 4.0 lacks, e.g. nerves.
 // 3.0: STL files from github.com/Kevin-Mattheus-Moerman/BodyParts3D (mm, Z-up),
 //      for what neither has (the lung lobes, some abdominal wall muscles).
+//      Read from the folder if one is given, else downloaded one by one (at a
+//      pinned commit) into .cache/: the whole repository is over 1 GB.
 // Each node is one part, named by its FMA id, at its place in the body (metres,
 // Y-up), so a structure can be shown among its neighbours. Includes the quiz
 // parts and the note figures' parts. See src/data/sources.js for how ids map.
@@ -24,14 +27,20 @@ import { STRUCTURES, PART_KIND } from '../src/data/structures.js'
 import { VIEW_PARTS } from '../src/data/views.js'
 import { ALIASES } from '../src/data/sources.js'
 
-const [V4_DIR, V43_DIR, V3_DIR] = process.argv.slice(2)
+const ROOT = new URL('../', import.meta.url).pathname
+const [V4_DIR = path.join(ROOT, '.sources/human-atlas/dist/assets'), V43_DIR = path.join(ROOT, '.sources/body_parts_3d_api'), V3_DIR] =
+  process.argv.slice(2)
 const CACHE = new URL('../.cache/bp3d-4.3/', import.meta.url).pathname
+const V3_CACHE = new URL('../.cache/bp3d-3.0/', import.meta.url).pathname
+const V3_URL = 'https://raw.githubusercontent.com/Kevin-Mattheus-Moerman/BodyParts3D/f0eeb6e843380cfe6b83797cf8c3e1af74de5e61/assets/BodyParts3D_data/stl/'
 const OUT = new URL('../public/anatomy.glb', import.meta.url).pathname
 const QUIZ_TRIANGLES = 4000
 const CONTEXT_TRIANGLES = 1200
 const FIGURE_TRIANGLES = 3000
 
-if (!V3_DIR) throw new Error('usage: build-models.mjs <4.0 assets dir> <4.3 repo> <3.0 stl dir>')
+if (!fs.existsSync(path.join(V4_DIR, 'atlas.json')) || !fs.existsSync(path.join(V43_DIR, 'meshes'))) {
+  throw new Error('BodyParts3D sources not found: run `npm run sources` first, or pass their folders')
+}
 
 // --- BodyParts3D 4.0 -------------------------------------------------------
 
@@ -96,11 +105,24 @@ function parseObj(text) {
 
 // --- BodyParts3D 3.0 -------------------------------------------------------
 
+async function stlFile(id) {
+  const local = V3_DIR && path.join(V3_DIR, `${id}.stl`)
+  if (local && fs.existsSync(local)) return fs.readFileSync(local)
+  const cached = path.join(V3_CACHE, `${id}.stl`)
+  if (!fs.existsSync(cached)) {
+    const res = await fetch(V3_URL + `${id}.stl`)
+    if (!res.ok) throw new Error(`no mesh for ${id}: not in BodyParts3D 4.0, 4.3 or 3.0 — check the FMA id`)
+    fs.mkdirSync(V3_CACHE, { recursive: true })
+    fs.writeFileSync(cached, Buffer.from(await res.arrayBuffer()))
+  }
+  return fs.readFileSync(cached)
+}
+
 // Binary STL → unindexed triangles. BodyParts3D 3.0: x = left, y = posterior,
 // z = superior (mm). three.js: x = right of screen, y = up, z = toward viewer
 // (m). Viewed from the front the patient's left is on screen right: (x, z, -y).
-function readV3(id) {
-  const buf = fs.readFileSync(path.join(V3_DIR, `${id}.stl`))
+async function readV3(id) {
+  const buf = await stlFile(id)
   const count = buf.readUInt32LE(80)
   const positions = new Float32Array(count * 9)
   for (let i = 0; i < count * 3; i++) {
@@ -150,7 +172,7 @@ const fromV3 = []
 for (const id of ALL_PARTS) {
   let meshes = await newerMeshes(id)
   if (!meshes.length) {
-    meshes = [readV3(id)]
+    meshes = [await readV3(id)]
     fromV3.push(id)
   }
   const { positions, indices } = merge(meshes)

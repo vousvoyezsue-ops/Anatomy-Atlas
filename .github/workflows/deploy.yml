@@ -1,8 +1,10 @@
 name: Deploy to GitHub Pages
 
+# Every pull request is built (model + site) as a check; only master deploys.
 on:
   push:
     branches: [master]
+  pull_request:
   workflow_dispatch:
 
 permissions:
@@ -11,7 +13,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -24,12 +26,24 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      # BodyParts3D sources and downloaded meshes, keyed by the pinned commits.
+      - uses: actions/cache@v4
+        with:
+          path: |
+            .sources
+            .cache
+          key: bodyparts3d-${{ hashFiles('scripts/fetch-sources.sh', 'scripts/build-models.mjs') }}
+          restore-keys: bodyparts3d-
+      - run: npm run sources
+      - run: npm run models
       - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
+      - if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
         with:
           path: dist
 
   deploy:
+    if: github.event_name != 'pull_request'
     needs: build
     runs-on: ubuntu-latest
     environment:
