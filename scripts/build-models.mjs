@@ -200,6 +200,7 @@ for (const mesh of doc.getRoot().listMeshes()) {
 }
 
 await doc.transform(quantize({ quantizePosition: 14 }))
+fs.mkdirSync(path.dirname(OUT), { recursive: true })
 await new NodeIO().registerExtensions([KHRMeshQuantization]).write(OUT, doc)
 console.log(`${ALL_PARTS.length} parts (${fromV3.length} from 3.0) → ${(fs.statSync(OUT).size / 1e6).toFixed(1)} MB`)
 console.log(`from 3.0: ${fromV3.join(' ')}`)
